@@ -3,5 +3,52 @@
 @import '../../assets/styles/tools/mixins';
 
 .Menu {
-    display: none;
+    @include center-flex();
+    position: fixed;
+    top: 0;
+    left: -110%;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    z-index: z(Menu);
+    transition: all ease-out .4s;
+}
+
+.icon-close {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    &::after {
+        @include pseudo(0, 8px, rgba(#fff, .5));
+        @include center-absolute(true, true);
+    }
+    &:hover {
+        &::after {
+            width: 200%;
+        }
+    }
+}
+
+.menu-items {
+    text-align: center;
+    &__item {
+        position: relative;
+        text-transform: uppercase;
+        font-family: $f-headers;
+        letter-spacing: .4em;
+        font-size: 28px;
+        margin-bottom: 1em;
+        cursor: pointer;
+        &::after {
+            @include pseudo(0, 8px, rgba(#fff, .5));
+            @include center-absolute(true, true);
+        }
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
 }
