@@ -8,19 +8,20 @@
   position: fixed;
   top: 0;
   left: -110%;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: #000;
   color: #fff;
-  z-index: 1;
+  z-index: 3;
   transition: all ease-out .4s; }
 
-.icon-close {
+.menu-close {
   position: absolute;
-  left: 1rem;
-  top: 1rem;
+  left: 32px;
+  top: 32px;
+  font-size: 28px;
   cursor: pointer; }
-  .icon-close::after {
+  .menu-close::after {
     position: absolute;
     content: "";
     background: rgba(255, 255, 255, 0.5);
@@ -30,7 +31,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .icon-close:hover::after {
+  .menu-close:hover::after {
     width: 200%; }
 
 .menu-items {

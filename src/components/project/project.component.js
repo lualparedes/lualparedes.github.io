@@ -7,15 +7,27 @@ import DoitImg from './doit.png';
 import LualImg from './lual.png';
 import GuiaImg from './guia.png';
 
+import { g } from '../../assets/scripts';
+
 export default class Project extends Component {
 
     constructor(props) {
         super(props);
     }
 
+    showModal() {
+        g('.js-modal').classList.add('a-modal-show');
+        g('.js-backdropModal').classList.add('a-backdrop-show');
+
+        if (g('.js-modal').classList.contains('a-modal-hide')) {
+            g('.js-modal').classList.remove('a-modal-hide');
+            g('.js-backdropModal').classList.remove('a-backdrop-hide');
+        }
+    }
+
     render() {
         return (
-            <div className="Projects">
+            <div className="Projects" id="projects">
                 <div className="project">
                     <div className="wrap">
                         <div className="project-content project-content--right">
@@ -44,7 +56,14 @@ export default class Project extends Component {
                             <h3 className="project-content__title">
                                 Sorter <br/>(WIP)
                             </h3>
-                            <div className="project-content__img project-content__img--left">
+                            <div 
+                                className="
+                                    project-content__img 
+                                    project-content__img--left
+                                    project-content__img--clickable
+                                "
+                                onClick={this.showModal}                                
+                            >
                                 <img src={SorterImg} alt="Project preview"/>
                             </div>
                             <p className="project-content__summary">

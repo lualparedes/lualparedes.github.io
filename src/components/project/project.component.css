@@ -35,7 +35,8 @@
     width: 8px;
     height: 100%;
     right: -8px;
-    top: 8px; }
+    top: 8px;
+    transition: all .25s ease-out; }
   .project-content__img::after {
     position: absolute;
     content: "";
@@ -43,7 +44,18 @@
     width: 100%;
     height: 8px;
     left: 8px;
-    bottom: -8px; }
+    bottom: -8px;
+    transition: all .25s ease-out; }
+  .project-content__img--clickable {
+    cursor: pointer; }
+    .project-content__img--clickable:hover::before {
+      width: 12px;
+      right: -12px;
+      top: 12px; }
+    .project-content__img--clickable:hover::after {
+      height: 12px;
+      left: 12px;
+      bottom: -12px; }
 
 .project-content__summary a {
   border-bottom: 1px dashed #fff; }

@@ -28,13 +28,29 @@
             @include pseudo(8px, 100%, #fff);
             right: -8px;
             top: 8px;
+            transition: all .25s ease-out;
         }
         &::after {
             @include pseudo(100%, 8px, #fff);
             left: 8px;
             bottom: -8px;
+            transition: all .25s ease-out;
         }
-
+        &--clickable {
+            cursor: pointer;
+            &:hover {
+                &::before {
+                    width: 12px;
+                    right: -12px;
+                    top: 12px;
+                }
+                &::after {
+                    height: 12px;
+                    left: 12px;
+                    bottom: -12px;
+                }
+            }
+        }
     }
     &__summary {
         a {

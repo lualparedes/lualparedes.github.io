@@ -9,7 +9,7 @@ export default class Contact extends Component {
 
     render() {
         return (
-            <div className="Contact">
+            <div className="Contact" id="contact">
                 <div className="wrap">
                     <h2 className="section-title">
                         Contact

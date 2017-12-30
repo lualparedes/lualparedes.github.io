@@ -11,3 +11,7 @@
 .column-block {
   padding: 1rem 0;
   border-top: 8px solid #000; }
+
+@media screen and (max-width: 375px) {
+  .EducationAndExperience .section-title {
+    font-size: 28px; } }

@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     left: -110%;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: #000;
     color: #fff;
@@ -15,10 +15,11 @@
     transition: all ease-out .4s;
 }
 
-.icon-close {
+.menu-close {
     position: absolute;
-    left: 1rem;
-    top: 1rem;
+    left: 32px;
+    top: 32px;
+    font-size: 28px;
     cursor: pointer;
     &::after {
         @include pseudo(0, 8px, rgba(#fff, .5));

@@ -9,7 +9,7 @@ export default class EducationAndExperience extends Component {
 
     render() {
         return (
-            <div className="EducationAndExperience">
+            <div className="EducationAndExperience" id="education-and-experience">
                 <div className="wrap">
                     <div className="row">
                         <div className="col-2 column-block">

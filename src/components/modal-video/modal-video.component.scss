@@ -2,3 +2,99 @@
 @import '../../assets/styles/tools/functions';
 @import '../../assets/styles/tools/mixins';
 
+// @notes
+// [1] It gets animated
+.backdrop {
+    @include center-flex();
+    position: fixed;
+    z-index: z(Modal);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(#000, .5);
+    transform: scale(0,0); // [1]
+    opacity: 0; // [1]
+}
+
+.modal-close {
+    color: #fff;
+    right: 32px;
+}
+
+// @notes
+// [1] It gets animated
+.modal {
+    opacity: 0; // [1]
+    top: -100px; // [1]
+    position: relative;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 32px 0 #000;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.a-backdrop-show {
+    animation: a-backdrop-show .3s ease-out forwards;
+}
+@keyframes a-backdrop-show {
+    0% {
+        transform: scale(0,0);
+        opacity: 0;
+    }
+    1% {
+        transform: scale(1,1);
+        opacity: 0;    
+    }
+    100% {
+        transform: scale(1,1);
+        opacity: 1;       
+    }
+}
+.a-backdrop-hide {
+    animation: a-backdrop-hide .3s ease-out forwards;
+}
+@keyframes a-backdrop-hide {
+    0% {
+        transform: scale(1,1);
+        opacity: 1;    
+    }
+    99% {
+        opacity: 0;
+        transform: scale(1,1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0,0);        
+    }
+}
+
+
+.a-modal-show {
+    animation: a-modal-show .3s ease-out forwards;
+}
+@keyframes a-modal-show {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;       
+    }
+}
+.a-modal-hide {
+    animation: a-modal-hide .3s ease-out forwards;
+}
+@keyframes a-modal-hide {
+    0% {
+        top: 0;
+        opacity: 1;    
+    }
+    100% {
+        top: -100px;
+        opacity: 0;      
+    }
+}

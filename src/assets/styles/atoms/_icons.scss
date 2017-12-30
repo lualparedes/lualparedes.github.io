@@ -19,8 +19,22 @@
 .icon-badge:before {
   content: "\e901";
 }
-.icon-close:before {
-  content: "\e902";
+.icon-close {
+  position: absolute;
+  top: 32px;
+  font-size: 28px;
+  &::before {
+    content: "\e902";
+  }
+  &::after {
+      @include pseudo(0, 8px, rgba(#fff, .5));
+      @include center-absolute(true, true);
+  }
+  &:hover {
+      &::after {
+          width: 200%;
+      }
+  }
 }
 .icon-play:before {
   content: "\e903";
