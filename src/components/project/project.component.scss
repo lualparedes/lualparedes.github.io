@@ -1,0 +1,76 @@
+@import '../../assets/styles/tools/variables';
+@import '../../assets/styles/tools/functions';
+@import '../../assets/styles/tools/mixins';
+
+.project {
+    @include center-flex();
+    height: 768px;
+    color: #fff;
+    &:nth-child(1) { background: #003f9d; }
+    &:nth-child(2) { background: #ed1d44; }
+    &:nth-child(3) { background: #00bc67; }
+    &:nth-child(4) { background: #2d4dec; }
+    &:nth-child(5) { background: #6c15af; }
+}
+
+.project-content {
+    &__title {
+        font-family: $f-headers;
+        font-size: 4rem;
+        line-height: .9;
+        margin-bottom: 2rem;
+    }
+    &__img {
+        border: 2px solid #fff;
+        margin-bottom: 2rem;
+        position: relative;
+        &::before {
+            @include pseudo(8px, 100%, #fff);
+            right: -8px;
+            top: 8px;
+        }
+        &::after {
+            @include pseudo(100%, 8px, #fff);
+            left: 8px;
+            bottom: -8px;
+        }
+
+    }
+    &__summary {
+        a {
+            border-bottom: 1px dashed #fff;
+            &:hover {
+                font-family: $f-headers;
+            } 
+        }
+    }
+    &__tech-stack {
+        text-transform: uppercase;
+        span {
+            font-family: $f-headers;
+        }
+    }
+}
+
+@media screen and (min-width: "720px") {
+    .project-content {
+        width: 40%;
+        position: relative;
+        &__img {
+            @include center-absolute(false, true);
+            width: 130%;
+            &--right {
+                right: 120%;
+            }
+            &--left {
+                left: 120%;
+            }
+        }
+        &--right {
+            margin-left: 60%;
+        }
+        &--left {
+            margin-right: 60%;
+        }
+    }
+}

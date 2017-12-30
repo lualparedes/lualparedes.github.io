@@ -1,0 +1,26 @@
+.wrap {
+    width: 80%;
+    margin: auto;
+    max-width: 760px;
+    &--wide {
+        max-width: 1024px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-2 {
+    width: 100%;
+}
+
+@media screen and (min-width: "720px") {
+    .col-2 {
+        width: 48%;
+        &:first-child {
+            margin-right: 4%;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import '../../assets/styles/tools/variables';
+@import '../../assets/styles/tools/functions';
+@import '../../assets/styles/tools/mixins';
+
+.Contact {
+    @include center-flex();
+    background: #000;
+    color: #fff;
+    min-height: 480px;
+}

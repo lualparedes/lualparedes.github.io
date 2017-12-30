@@ -1,0 +1,33 @@
+p {
+    margin-bottom: 1em;
+    line-height: 1.3;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+strong {
+    font-family: $f-headers;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-family: $f-headers;
+    letter-spacing: .4em;
+    font-size: 32px;
+    margin-bottom: 1em,
+}
+
+.mini-header {
+    font-family: $f-headers;
+}
+
+.biggie {
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width:"720px") {
+    .biggie {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,65 @@
+/* Colors */
+/* Gradients */
+/* Font stacks */
+.Hero {
+  display: flex;
+  min-height: 100vh;
+  padding: 4rem 0 2rem 0; }
+
+.hero-wrap {
+  position: relative; }
+
+.hero-text__scroll {
+  font-size: 3rem; }
+
+.hero-img {
+  display: none; }
+
+@keyframes a-scroll-moves {
+  from {
+    bottom: 16px; }
+  50% {
+    bottom: 0; }
+  to {
+    bottom: 16px; } }
+
+@keyframes a-badge-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@media screen and (min-width: 720px) {
+  .Hero {
+    max-height: 960px; }
+  .hero-text {
+    position: relative;
+    padding-top: 2rem;
+    width: 80%;
+    max-width: 720px; }
+    .hero-text__scroll {
+      position: absolute;
+      bottom: 0;
+      left: -72px;
+      animation: a-scroll-moves 1.2s ease 0s infinite forwards; }
+  .hero-img {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -2.5%;
+    width: 40%;
+    max-width: 360px;
+    z-index: -1; }
+    .hero-img__badge {
+      position: absolute;
+      right: -10%;
+      bottom: -32px;
+      font-size: 64px;
+      animation: a-badge-spin 16s linear 0s infinite forwards; } }
+
+@media screen and (min-width: 960px) {
+  .hero-text__scroll {
+    left: -96px; }
+  .hero-img__badge {
+    font-size: 128px;
+    bottom: -56px; } }
