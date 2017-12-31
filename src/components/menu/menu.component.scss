@@ -16,20 +16,7 @@
 }
 
 .menu-close {
-    position: absolute;
     left: 32px;
-    top: 32px;
-    font-size: 28px;
-    cursor: pointer;
-    &::after {
-        @include pseudo(0, 8px, rgba(#fff, .5));
-        @include center-absolute(true, true);
-    }
-    &:hover {
-        &::after {
-            width: 200%;
-        }
-    }
 }
 
 .menu-items {

@@ -11,7 +11,13 @@
 .column-block {
   padding: 1rem 0;
   border-top: 8px solid #000; }
+  .column-block:first-child {
+    margin-bottom: 32px; }
 
 @media screen and (max-width: 375px) {
   .EducationAndExperience .section-title {
     font-size: 28px; } }
+
+@media screen and (min-width: 720px) {
+  .column-block:first-child {
+    margin-bottom: 0; } }
