@@ -9,7 +9,7 @@ export default class Skills extends Component {
 
     render() {
         return (
-            <div className="Skills">
+            <div className="Skills" id="skills">
                 <div className="wrap">
                     <h3 className="skills-header section-title">
                         Skills

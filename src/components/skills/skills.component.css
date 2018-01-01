@@ -27,9 +27,9 @@
       top: -64px; }
   .skills-header {
     position: absolute;
-    left: -20%;
-    top: 50%;
-    transform: rotate(-90deg) translateY(-50%);
+    left: -22%;
+    top: 44%;
+    transform: rotate(-90deg);
     padding: 0;
     border-top: 0 solid #000; } }
 

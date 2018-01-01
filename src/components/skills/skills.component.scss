@@ -24,7 +24,8 @@
     }
 }
 // @notes
-// [1] For the sake of alignment
+// [1] For the sake of some alignment
+// [2] For the sake of centering
 @media screen and (min-width:"720px") {
     .Skills {
         padding-bottom: 0;
@@ -34,9 +35,9 @@
     }
     .skills-header {
         position: absolute;
-        left: -20%; // [1]
-        top: 50%;
-        transform: rotate(-90deg) translateY(-50%);
+        left: -22%; // [1]
+        top: 44%; // [2]
+        transform: rotate(-90deg);
         padding: 0;
         border-top: 0 solid #000;
     }
