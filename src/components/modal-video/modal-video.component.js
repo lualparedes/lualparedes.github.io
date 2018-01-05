@@ -28,7 +28,7 @@ export default class ModalVideo extends Component {
                     <div className="modal-close icon-close" onClick={this.hideModal}></div>
                     <div className="wrap">
                         <div className="modal js-modal">
-                            <iframe src="https://www.youtube-nocookie.com/embed/KmWzN0YTxZ4?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/_vT4qcszE6g" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
