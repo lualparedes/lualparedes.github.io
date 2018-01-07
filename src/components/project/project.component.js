@@ -40,8 +40,8 @@ export default class Project extends Component {
                             <p className="project-content__summary">
                                 Dashboard for managing the members registry of an
                                 excursionist club (Oikos). The code for the frontend
-                                is available <a href="https://github.com/lualparedes/oikos-registry">here</a> and a live version
-                                can be found <a href="https://lualparedes.github.io/oikos-registry/">here</a>.
+                                is available <a target="_blank" rel="noopener" href="https://github.com/lualparedes/oikos-registry">here</a> and a live version
+                                can be found <a target="_blank" rel="noopener" href="https://lualparedes.github.io/oikos-registry/">here</a>.
                             </p>
                             <p className="project-content__tech-stack">
                                 <span>Tech stack: </span> 
@@ -91,8 +91,8 @@ export default class Project extends Component {
                                 To do apps don’t have to be boring, so I decided
                                 to create a to-do app and gamify it drawing
                                 inspiration from Habitica. Check out the&nbsp;
-                                <a href="https://github.com/lualparedes/doit">code here</a> and the&nbsp;
-                                <a href="https://do-it-app-demo.firebaseapp.com/">live version here</a>.
+                                <a target="_blank" rel="noopener" href="https://github.com/lualparedes/doit">code here</a> and the&nbsp;
+                                <a target="_blank" rel="noopener" href="https://do-it-app-demo.firebaseapp.com/">live version here</a>.
                             </p>
                             <p className="project-content__tech-stack">
                                 <span>Tech stack: </span> 
@@ -114,7 +114,7 @@ export default class Project extends Component {
                                 My previous website, when I used to do freelance
                                 jobs and also offered design services. An archived
                                 version of this project can be found&nbsp;
-                                <a href="https://lual-production.firebaseapp.com/">here</a>.
+                                <a target="_blank" rel="noopener" href="https://lual-production.firebaseapp.com/">here</a>.
                             </p>
                             <p className="project-content__tech-stack">
                                 <span>Tech stack: </span> 
@@ -136,7 +136,7 @@ export default class Project extends Component {
                                 Website for Simón Bolívar University astronomy
                                 club. This was my first experience with static
                                 website generators (Jekyll). A live version
-                                can be found <a href="https://lualparedes.github.io/guia-web/">here</a>.
+                                can be found <a target="_blank" rel="noopener" href="https://guia-web-test.firebaseapp.com/">here</a>.
                             </p>
                             <p className="project-content__tech-stack">
                                 <span>Tech stack: </span> 
