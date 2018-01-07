@@ -7,6 +7,7 @@
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17"
   },
+  "homepage": "https://lualparedes.github.io/",
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
