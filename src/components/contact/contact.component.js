@@ -20,7 +20,7 @@ export default class Contact extends Component {
                                 Location
                             </h3>
                             <p>
-                                Currently based in Caracas (EST + 1 h), planning to move to Bogotá in 2018 (EST)
+                                Currently based in Caracas (EST + 1 h)
                             </p>
                         </div>
                         <div className="col-2">

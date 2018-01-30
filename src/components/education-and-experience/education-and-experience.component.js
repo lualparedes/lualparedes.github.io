@@ -26,7 +26,7 @@ export default class EducationAndExperience extends Component {
                                I’ve taken courses on algorithmic theory, logic, and discrete mathematics, as well as complementary courses on physics, calculus, and other topics.  
                             </p>
                             <p>
-                                However, political turmoil in my country has worked against my goal of finishing my degree, and since things are bound to get worse, I’ve made the decision to complete it elsewhere, most likely with a blended learning program, since now I’ll be working full time, and also because I learn faster now.
+                                However, political turmoil in my country has worked against my goal of finishing my degree. <span style={{ display:'none' }}>, and since things are bound to get worse, I’ve made the decision to complete it elsewhere, most likely with a blended learning program, since now I’ll be working full time, and also because I learn faster now.</span>
                             </p>
                         </div>
                         <div className="col-2 column-block">
