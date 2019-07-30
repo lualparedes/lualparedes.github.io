@@ -7,7 +7,7 @@ import DoitImg from './doit.png';
 import LualImg from './lual.png';
 import GuiaImg from './guia.png';
 
-import { g } from '../../assets/scripts';
+import { g } from '../../../assets/scripts';
 
 export default class Project extends Component {
 

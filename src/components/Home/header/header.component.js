@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './header.component.css';
 
-import { g } from '../../assets/scripts';
+import { g } from '../../../assets/scripts';
 
 export default class Header extends Component {
 

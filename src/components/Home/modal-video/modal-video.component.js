@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './modal-video.component.css';
 
-import { g } from '../../assets/scripts';
+import { g } from '../../../assets/scripts';
 
 export default class ModalVideo extends Component {
 
