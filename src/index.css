@@ -18,9 +18,16 @@
   font-style: normal; }
 
 /* Tools */
-/* Colors */
-/* Gradients */
-/* Font stacks */
+:root {
+  /* Colors */
+  --c-bg: #fff;
+  --c-text: #000;
+  --c-selection: rgba(#111, .5);
+  /* Font stacks */
+  --f-headers: 'hk_groteskbold', sans-serif;
+  --f-body: 'hk_groteskregular', sans-serif;
+  --f-base-size: 20px; }
+
 /* Base */
 p {
   margin-bottom: 1em;
@@ -29,17 +36,17 @@ p {
     margin-bottom: 0; }
 
 strong {
-  font-family: "hk_groteskbold", sans-serif; }
+  font-family: var(--f-headers); }
 
 .section-title {
   text-transform: uppercase;
-  font-family: "hk_groteskbold", sans-serif;
+  font-family: var(--f-headers);
   letter-spacing: .4em;
   font-size: 32px;
   margin-bottom: 1em; }
 
 .mini-header {
-  font-family: "hk_groteskbold", sans-serif; }
+  font-family: var(--f-headers); }
 
 .biggie {
   font-size: 1.5rem; }
@@ -59,19 +66,19 @@ strong {
   line-height: inherit;
   color: inherit; }
   *::selection {
-    background: rgba(17, 17, 17, 0.5);
-    color: rgba(238, 238, 238, 0.5); }
+    background: var(--c-selection);
+    color: #fff; }
 
 html {
-  font-family: "hk_groteskregular", sans-serif;
+  font-family: var(--f-body);
   font-weight: 300;
-  color: #000;
-  font-size: 20px;
+  color: var(--c-text);
+  font-size: var(--f-base-size);
   line-height: 1; }
 
 body {
   min-height: 100vh;
-  background: #fff; }
+  background: var(--c-bg); }
 
 table {
   border-collapse: collapse;
@@ -162,14 +169,14 @@ iframe {
     content: "\e902"; }
   .icon-close::after {
     position: absolute;
-    content: "";
+    content: '';
     background: rgba(255, 255, 255, 0.5);
     width: 0;
     height: 8px;
-    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    align-items: center; }
   .icon-close:hover::after {
     width: 200%; }
 
@@ -178,7 +185,3 @@ iframe {
 
 .icon-scroll:before {
   content: "\e904"; }
-
-/* Molecules */
-/* Organisms */
-/* Templates */

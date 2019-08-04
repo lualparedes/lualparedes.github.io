@@ -27,8 +27,15 @@
     content: "\e902";
   }
   &::after {
-      @include pseudo(0, 8px, rgba(#fff, .5));
-      @include center-absolute(true, true);
+      position: absolute;
+      content: '';
+      background: rgba(#fff, .5);
+      width: 0;
+      height: 8px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      align-items: center;
   }
   &:hover {
       &::after {

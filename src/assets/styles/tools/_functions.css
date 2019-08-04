@@ -1,13 +1,3 @@
-// Convert to rem
-// ¨¨¨¨¨¨¨¨¨¨¨¨¨¨
-// This function takes a value in px and returns the ratio of he entry with the
-// font size of the :root
-// @notes
-// [1] You need to divide by 1px in order to strip the unit
-@function rem($px) {
-	@return unquote(($px / ($f-base-size / 1px))+'rem'); // [1]
-}
-
 // Define z-index
 // ¨¨¨¨¨¨¨¨¨¨¨¨¨¨
 // Assigns a propper z-index value based on the position of the element in a 

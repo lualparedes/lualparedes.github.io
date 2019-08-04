@@ -7,19 +7,19 @@ p {
 }
 
 strong {
-    font-family: $f-headers;
+    font-family: var(--f-headers);
 }
 
 .section-title {
     text-transform: uppercase;
-    font-family: $f-headers;
+    font-family: var(--f-headers);
     letter-spacing: .4em;
     font-size: 32px;
     margin-bottom: 1em;
 }
 
 .mini-header {
-    font-family: $f-headers;
+    font-family: var(--f-headers);
 }
 
 .biggie {

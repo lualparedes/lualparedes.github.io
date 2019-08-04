@@ -9,22 +9,22 @@
     line-height: inherit;
     color: inherit;
     &::selection {
-        background: $c-selection;
-        color: invert($c-selection);
+        background: var(--c-selection);
+        color: #fff;
     }
 }
 
 html {
-    font-family: $f-body;
+    font-family: var(--f-body);
     font-weight: 300;
-    color: $c-text;
-    font-size: $f-base-size;
+    color: var(--c-text);
+    font-size: var(--f-base-size);
     line-height: 1;
 }
 
 body {
     min-height: 100vh;
-    background: $c-bg;
+    background: var(--c-bg);
 }
 
 table {

@@ -1,12 +1,11 @@
-/* Colors */
-/* Gradients */
-/* Font stacks */
 .Contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-  color: #fff;
-  min-height: 480px; }
-  .Contact .col-2:first-child {
-    margin-bottom: 1rem; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    min-height: 480px;
+    .col-2:first-child {
+        margin-bottom: 1rem;
+    }
+}
