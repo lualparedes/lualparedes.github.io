@@ -2,7 +2,9 @@
 
 # WIP
 /blog
-/new
+
+# build
+src/index.css
 
 # dependencies
 /node_modules
