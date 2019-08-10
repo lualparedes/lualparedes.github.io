@@ -1,47 +1,65 @@
 .Menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: -110%;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    color: #fff;
-    z-index: z(Menu);
-    transition: all ease-out .4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: -110%;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  z-index: var(--z-menu);
+  transition: all ease-out .4s;
 }
 
 .menu-close {
-    left: 32px;
+  left: 32px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    width: 0;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    &::after {
+      width: 200%;
+    }
+  }
 }
 
 .menu-items {
-    text-align: center;
-    &__item {
-        position: relative;
-        text-transform: uppercase;
-        font-family: var(--f-headers);
-        letter-spacing: .4em;
-        font-size: 28px;
-        margin-bottom: 1em;
-        cursor: pointer;
-        &::after {
-            position: absolute;
-            content: '';
-            background: rgba(#fff, .5);
-            width: 0;
-            height: 8px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            align-items: center;
-        }
-        &:hover {
-            &::after {
-                width: 100%;
-            }
-        }
+  text-align: center;
+  &__item {
+    position: relative;
+    text-transform: uppercase;
+    font-family: var(--f-headers);
+    letter-spacing: .4em;
+    font-size: 28px;
+    margin-bottom: 1em;
+    cursor: pointer;
+    &::after {
+      position: absolute;
+      content: '';
+      background: rgba(255, 255, 255, .5);
+      width: 0;
+      height: 8px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      align-items: center;
     }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
 }

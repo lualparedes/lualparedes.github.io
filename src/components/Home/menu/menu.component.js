@@ -4,11 +4,6 @@ import './menu.component.css';
 import { g } from '../../../assets/scripts';
 
 export default class Menu extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     closeMenu() {
         g('.js-Menu').style.left = '';
     }
