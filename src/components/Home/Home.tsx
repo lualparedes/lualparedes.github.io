@@ -193,10 +193,10 @@ export default class Home extends Component {
               <div className="modal js-modal">
                 <iframe
                   src="https://www.youtube.com/embed/_vT4qcszE6g"
-                  frameborder="0"
-                  gesture="media"
+                  data-frameborder="0"
+                  data-gesture="media"
                   allow="encrypted-media"
-                  allowfullscreen
+                  data-allowfullscreen
                   title="Sorter Project Video"
                 />
               </div>
