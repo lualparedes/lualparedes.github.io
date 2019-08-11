@@ -300,9 +300,7 @@
  * [1] It gets animated
  */
 .backdrop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
   position: fixed;
   z-index: var(--z-modal);
   top: 0;
@@ -354,6 +352,9 @@
 }
 
 .a-backdrop-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   animation: a-backdrop-show .3s ease-out forwards;
 }
 @keyframes a-backdrop-show {
