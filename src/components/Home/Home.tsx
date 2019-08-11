@@ -79,8 +79,8 @@ export default class Home extends Component {
                 <p className="project-content__summary">
                   Dashboard for managing the members registry of an
                   excursionist club (Oikos). The code for the frontend
-                  is available <a target="_blank" rel="noopener noreferer" href="https://github.com/lualparedes/oikos-registry">here</a> and a live version
-                  can be found <a target="_blank" rel="noopener noreferer" href="https://lualparedes.github.io/oikos-registry/">here</a>.
+                  is available <a target="_blank" rel="noopener noreferrer" href="https://github.com/lualparedes/oikos-registry">here</a> and a live version
+                  can be found <a target="_blank" rel="noopener noreferrer" href="https://lualparedes.github.io/oikos-registry/">here</a>.
                 </p>
                 <p className="project-content__tech-stack">
                   <span>Tech stack: </span> 
@@ -130,8 +130,8 @@ export default class Home extends Component {
                   To do apps don’t have to be boring, so I decided
                   to create a to-do app and gamify it drawing
                   inspiration from Habitica. Check out the&nbsp;
-                  <a target="_blank" rel="noopener noreferer" href="https://github.com/lualparedes/doit">code here</a> and the&nbsp;
-                  <a target="_blank" rel="noopener noreferer" href="https://do-it-app-demo.firebaseapp.com/">live version here</a>.
+                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/lualparedes/doit">code here</a> and the&nbsp;
+                  <a target="_blank" rel="noopener noreferrer" href="https://do-it-app-demo.firebaseapp.com/">live version here</a>.
                 </p>
                 <p className="project-content__tech-stack">
                   <span>Tech stack: </span> 
@@ -153,7 +153,7 @@ export default class Home extends Component {
                   My previous website, when I used to do freelance
                   jobs and also offered design services. An archived
                   version of this project can be found&nbsp;
-                  <a target="_blank" rel="noopener noreferer" href="https://lual-production.firebaseapp.com/">here</a>.
+                  <a target="_blank" rel="noopener noreferrer" href="https://lual-production.firebaseapp.com/">here</a>.
                 </p>
                 <p className="project-content__tech-stack">
                   <span>Tech stack: </span> 
@@ -175,7 +175,7 @@ export default class Home extends Component {
                   Website for Simón Bolívar University astronomy
                   club. This was my first experience with static
                   website generators (Jekyll). A live version
-                  can be found <a target="_blank" rel="noopener noreferer" href="https://guia-web-test.firebaseapp.com/">here</a>.
+                  can be found <a target="_blank" rel="noopener noreferrer" href="https://guia-web-test.firebaseapp.com/">here</a>.
                 </p>
                 <p className="project-content__tech-stack">
                   <span>Tech stack: </span> 
@@ -369,9 +369,9 @@ export default class Home extends Component {
         <div className="Footer">
           <p>Designed and coded with ❤️ by Luis Paredes</p>
           <p>
-            <a href="https://github.com/lualparedes" target="_blank" rel="noopener noreferer">GitHub</a> |&nbsp;
-            <a href="https://www.behance.net/lual" target="_blank" rel="noopener noreferer">Behance</a> |&nbsp;
-            <a href="https://www.linkedin.com/in/luisalbertoparedes/" target="_blank" rel="noopener noreferer">LinkedIn</a>
+            <a href="https://github.com/lualparedes" target="_blank" rel="noopener noreferrer">GitHub</a> |&nbsp;
+            <a href="https://www.behance.net/lual" target="_blank" rel="noopener noreferrer">Behance</a> |&nbsp;
+            <a href="https://www.linkedin.com/in/luisalbertoparedes/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </p>
         </div>
       </div>
