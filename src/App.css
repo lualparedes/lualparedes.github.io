@@ -11,6 +11,4 @@
 @import './assets/styles/atoms/icons.css';
 
 /* Components */
-@import './components/Home/header/header.component.css';
-@import './components/Home/menu/menu.component.css';
 @import './components/Home/Home.css';
