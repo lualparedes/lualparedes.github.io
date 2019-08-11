@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 
 import Emoji from '../Emoji';
 
-import Header from './header/header.component';
-import Menu from './menu/menu.component';
-
 import { g } from '../../assets/scripts';
 
 import Me from './me.png';
@@ -15,6 +12,19 @@ import LualImg from './lual.png';
 import GuiaImg from './guia.png';
 
 export default class Home extends Component {
+
+  openMenu() {
+    g('.js-Menu').style.left = 0;
+  }
+
+  closeMenu() {
+    g('.js-Menu').style.left = '';
+  }
+
+  goToSection(section: string) {
+    window.scroll(0, g('#'+section).offsetTop);
+    this.closeMenu();
+  }
 
   showModal() {
     g('.js-modal').classList.add('a-modal-show');
@@ -35,14 +45,57 @@ export default class Home extends Component {
     setTimeout(() => {
       g('.js-modal').classList.remove('a-modal-hide');
       g('.js-backdropModal').classList.remove('a-backdrop-hide');
-    }, 1000);        
+    }, 1000);
   }
 
   render() {
     return (
       <div className="Home">
-        <Header />
-        <Menu />
+        <div className="Header">
+          <div className="wrap wrap--wide">
+            <div className="icon-menu js-iconMenu" onClick={this.openMenu}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div className="Menu js-Menu">
+          <div className="icon-close menu-close" onClick={this.closeMenu}></div>
+          <ul className="menu-items">
+            <li 
+              className="menu-items__item" 
+              onClick={() => this.goToSection('projects')}
+            >
+              Projects
+            </li>
+            <li 
+              className="menu-items__item" 
+              onClick={() => this.goToSection('education-and-experience')}
+            >
+              Education
+            </li>
+            <li 
+              className="menu-items__item" 
+              onClick={() => this.goToSection('education-and-experience')}
+            >
+              Experience
+            </li>
+            <li 
+              className="menu-items__item" 
+              onClick={() => this.goToSection('skills')}
+            >
+              Skills
+            </li>
+            <li 
+              className="menu-items__item" 
+              onClick={() => this.goToSection('contact')}
+            >
+              Contact
+            </li>
+          </ul>
+        </div>
 
         <div className="Hero">
           <div className="hero-wrap wrap wrap--wide">
