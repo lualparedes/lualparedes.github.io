@@ -40,7 +40,7 @@ export default class Home extends Component<{}, IState> {
   }
 
   goToSection(section: string) {
-    window.scroll(0, document.getElementById('#'+section)!.offsetTop);
+    window.scroll(0, document.getElementById(section)!.offsetTop);
     this.closeMenu();
   }
 
