@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import Emoji from '../Emoji';
 
-import { g } from '../../assets/scripts';
-
 import Me from './me.png';
 import OikosImg from './oikos.png';
 import SorterImg from './sorter.png';
@@ -42,7 +40,7 @@ export default class Home extends Component<{}, IState> {
   }
 
   goToSection(section: string) {
-    window.scroll(0, g('#'+section).offsetTop);
+    window.scroll(0, document.getElementById('#'+section)!.offsetTop);
     this.closeMenu();
   }
 
