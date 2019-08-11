@@ -293,6 +293,18 @@ export default class Home extends Component<{}, IState> {
                   Experience
                 </h2>
                 <h3 className="mini-header">
+                  Frontend Developer
+                </h3>
+                <p>
+                  Talpor | August 2018 ─ Present
+                </p>
+                <h3 className="mini-header">
+                  Fullstack Developer (Volunteer)
+                </h3>
+                <p>
+                  Upchieve | March 2018 ─ March 2019
+                </p>
+                <h3 className="mini-header">
                   Designer & Developer
                 </h3>
                 <p>
