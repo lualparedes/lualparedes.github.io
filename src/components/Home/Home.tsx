@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Emoji from '../Emoji';
+
 import Header from './header/header.component';
 import Menu from './menu/menu.component';
 
@@ -361,13 +363,13 @@ export default class Home extends Component {
             <p className="biggie">
               <strong>I look forward to being part of your team!</strong><br/>
               Just <a href="mailto:lualdevelopment@gmail.com">shoot me 
-              a message</a> and I'll get back to you asap 😀
+              a message</a> and I'll get back to you asap <Emoji emoji="😀" />
             </p>
           </div>
         </div>
 
         <div className="Footer">
-          <p>Designed and coded with ❤️ by Luis Paredes</p>
+          <p>Designed and coded with <Emoji emoji="❤️" /> by Luis Paredes</p>
           <p>
             <a href="https://github.com/lualparedes" target="_blank" rel="noopener noreferrer">GitHub</a> |&nbsp;
             <a href="https://www.behance.net/lual" target="_blank" rel="noopener noreferrer">Behance</a> |&nbsp;
