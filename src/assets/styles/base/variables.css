@@ -1,0 +1,16 @@
+:root {
+  /* Colors */
+  --c-bg: #fff;
+  --c-text: #000;
+  --c-selection: rgba(#111, .5);
+
+  /* Font stacks */
+  --f-headers: 'hk_groteskbold', sans-serif;
+  --f-body: 'hk_groteskregular', sans-serif;
+  --f-base-size: 20px;
+
+  /* Z indexes*/
+  --z-header: 1;
+  --z-modal: 2;
+  --z-menu: 3;
+}
