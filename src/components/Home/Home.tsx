@@ -11,14 +11,34 @@ import DoitImg from './doit.png';
 import LualImg from './lual.png';
 import GuiaImg from './guia.png';
 
-export default class Home extends Component {
+interface IState {
+  showMenu: boolean;
+  showModal: boolean;
+}
+
+export default class Home extends Component<{}, IState> {
+
+  constructor(props: {}) {
+    super(props);
+
+    this.state = {
+      showMenu: false,
+      showModal: false,
+    };
+
+    this.openMenu = this.openMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
+    this.goToSection = this.goToSection.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+  }
 
   openMenu() {
-    g('.js-Menu').style.left = 0;
+    this.setState({ showMenu: true });
   }
 
   closeMenu() {
-    g('.js-Menu').style.left = '';
+    this.setState({ showMenu: false });
   }
 
   goToSection(section: string) {
@@ -27,28 +47,15 @@ export default class Home extends Component {
   }
 
   showModal() {
-    g('.js-modal').classList.add('a-modal-show');
-    g('.js-backdropModal').classList.add('a-backdrop-show');
-
-    if (g('.js-modal').classList.contains('a-modal-hide')) {
-      g('.js-modal').classList.remove('a-modal-hide');
-      g('.js-backdropModal').classList.remove('a-backdrop-hide');
-    }
+    this.setState({ showModal: true });
   }
 
   hideModal() {
-    g('.js-modal').classList.add('a-modal-hide');
-    g('.js-backdropModal').classList.add('a-backdrop-hide');
-    g('.js-modal').classList.remove('a-modal-show');
-    g('.js-backdropModal').classList.remove('a-backdrop-show');
-
-    setTimeout(() => {
-      g('.js-modal').classList.remove('a-modal-hide');
-      g('.js-backdropModal').classList.remove('a-backdrop-hide');
-    }, 1000);
+    this.setState({ showModal: false });
   }
 
   render() {
+    const { showMenu, showModal } = this.state;
     return (
       <div className="Home">
         <div className="Header">
@@ -61,7 +68,7 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <div className="Menu js-Menu">
+        <div className={`Menu js-Menu ${showMenu ? 'Menu--open' : ''}`}>
           <div className="icon-close menu-close" onClick={this.closeMenu}></div>
           <ul className="menu-items">
             <li 
@@ -242,10 +249,14 @@ export default class Home extends Component {
         </div>
 
         <div className="ModalVideo">
-          <div className="backdrop js-backdropModal">
+          <div className={
+            `backdrop js-backdropModal ${showModal ? 'a-backdrop-show' : 'a-backdrop-hide'}`
+          }>
             <div className="modal-close icon-close" onClick={this.hideModal}></div>
             <div className="wrap">
-              <div className="modal js-modal">
+              <div className={
+                `modal js-modal ${showModal ? 'a-modal-show' : 'a-modal-hide'}`
+              }>
                 <iframe
                   src="https://www.youtube.com/embed/_vT4qcszE6g"
                   data-frameborder="0"

@@ -48,6 +48,10 @@
   color: #fff;
   z-index: var(--z-menu);
   transition: all ease-out .4s;
+
+  &--open {
+    left: 0;
+  }
 }
 
 .menu-close {
