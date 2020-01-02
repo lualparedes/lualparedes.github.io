@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Emoji from '../Emoji';
+import Project from '../Project';
 
 import Me from './me.png';
 import OikosImg from './oikos.png';
@@ -69,32 +70,32 @@ export default class Home extends Component<{}, IState> {
         <div className={`Menu js-Menu ${showMenu ? 'Menu--open' : ''}`}>
           <div className="icon-close menu-close" onClick={this.closeMenu}></div>
           <ul className="menu-items">
-            <li 
-              className="menu-items__item" 
+            <li
+              className="menu-items__item"
               onClick={() => this.goToSection('projects')}
             >
               Projects
             </li>
-            <li 
-              className="menu-items__item" 
+            <li
+              className="menu-items__item"
               onClick={() => this.goToSection('education-and-experience')}
             >
               Education
             </li>
-            <li 
-              className="menu-items__item" 
+            <li
+              className="menu-items__item"
               onClick={() => this.goToSection('education-and-experience')}
             >
               Experience
             </li>
-            <li 
-              className="menu-items__item" 
+            <li
+              className="menu-items__item"
               onClick={() => this.goToSection('skills')}
             >
               Skills
             </li>
-            <li 
-              className="menu-items__item" 
+            <li
+              className="menu-items__item"
               onClick={() => this.goToSection('contact')}
             >
               Contact
@@ -106,13 +107,13 @@ export default class Home extends Component<{}, IState> {
           <div className="hero-wrap wrap wrap--wide">
             <div className="hero-text biggie">
               <p>
-                Hey! I’m Luis Paredes and <strong>I love building web experiences 
+                Hey! I’m Luis Paredes and <strong>I love building web experiences
                 that are visually rich and performant</strong>.
               </p>
               <p>
-                I’m a firm believer that <strong>good engineering and good 
-                design have to go hand-in-hand</strong>, and for this reason, 
-                I strive to accomplish exactly that in every single 
+                I’m a firm believer that <strong>good engineering and good
+                design have to go hand-in-hand</strong>, and for this reason,
+                I strive to accomplish exactly that in every single
                 project I create.
               </p>
               <div className="hero-text__scroll icon-scroll">
@@ -127,123 +128,60 @@ export default class Home extends Component<{}, IState> {
         </div>
 
         <div className="Projects" id="projects">
-          <div className="project">
-            <div className="wrap">
-              <div className="project-content project-content--right">
-                <h3 className="project-content__title">
-                  Oikos<br/> registry
-                </h3>
-                <div className="project-content__img project-content__img--right">
-                  <img src={OikosImg} alt="Project preview"/>
-                </div>
-                <p className="project-content__summary">
-                  Dashboard for managing the members registry of an
-                  excursionist club (Oikos). The code for the frontend
-                  is available <a target="_blank" rel="noopener noreferrer" href="https://github.com/lualparedes/oikos-registry">here</a> and a live version
-                  can be found <a target="_blank" rel="noopener noreferrer" href="https://lualparedes.github.io/oikos-registry/">here</a>.
-                </p>
-                <p className="project-content__tech-stack">
-                  <span>Tech stack: </span> 
-                  REACT, REDUX, MONGODB (MLAB), NODEJS, EXPRESS
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="wrap">
-              <div className="project-content project-content--left">
-                <h3 className="project-content__title">
-                  Sorter <br/>(WIP)
-                </h3>
-                <div 
-                  className="
-                    project-content__img 
-                    project-content__img--left
-                    project-content__img--clickable
-                  "
-                  onClick={this.showModal}
-                >
-                  <img src={SorterImg} alt="Project preview"/>
-                </div>
-                <p className="project-content__summary">
-                  I love YouTube, and I also love being organized, 
-                  so it became obvious that I needed to create my
-                  own app to organize my subscriptions!
-                </p>
-                <p className="project-content__tech-stack">
-                  <span>Tech stack: </span> 
-                  ANGULAR, FIREBASE DATABASE
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="wrap">
-              <div className="project-content project-content--right">
-                <h3 className="project-content__title">
-                  Do it! <br/>(MVP)
-                </h3>
-                <div className="project-content__img project-content__img--right">
-                  <img src={DoitImg} alt="Project preview"/>
-                </div>
-                <p className="project-content__summary">
-                  To do apps don’t have to be boring, so I decided
-                  to create a to-do app and gamify it drawing
-                  inspiration from Habitica. Check out the&nbsp;
-                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/lualparedes/doit">code here</a> and the&nbsp;
-                  <a target="_blank" rel="noopener noreferrer" href="https://do-it-app-demo.firebaseapp.com/">live version here</a>.
-                </p>
-                <p className="project-content__tech-stack">
-                  <span>Tech stack: </span> 
-                  VANILLA JS!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="wrap">
-              <div className="project-content project-content--left">
-                <h3 className="project-content__title">
-                  Lual <br/>website
-                </h3>
-                <div className="project-content__img project-content__img--left">
-                  <img src={LualImg} alt="Project preview"/>
-                </div>
-                <p className="project-content__summary">
-                  My previous website, when I used to do freelance
-                  jobs and also offered design services. An archived
-                  version of this project can be found&nbsp;
-                  <a target="_blank" rel="noopener noreferrer" href="https://lual-production.firebaseapp.com/">here</a>.
-                </p>
-                <p className="project-content__tech-stack">
-                  <span>Tech stack: </span> 
-                  JEKYLL
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="project">
-            <div className="wrap">
-              <div className="project-content project-content--right">
-                <h3 className="project-content__title">
-                  GUIA <br/>website
-                </h3>
-                <div className="project-content__img project-content__img--right">
-                  <img src={GuiaImg} alt="Project preview"/>
-                </div>
-                <p className="project-content__summary">
-                  Website for Simón Bolívar University astronomy
-                  club. This was my first experience with static
-                  website generators (Jekyll). A live version
-                  can be found <a target="_blank" rel="noopener noreferrer" href="https://guia-web-test.firebaseapp.com/">here</a>.
-                </p>
-                <p className="project-content__tech-stack">
-                  <span>Tech stack: </span> 
-                  Jekyll, Instagram API
-                </p>
-              </div>
-            </div>
-          </div>
+          <Project
+            description="Dashboard for managing the members registry of an
+            excursionist club (Oikos)"
+            img={OikosImg}
+            liveLink="https://lualparedes.github.io/oikos-registry/"
+            sourceLink="https://github.com/lualparedes/oikos-registry"
+            stack="REACT, REDUX, MONGODB (MLAB), NODEJS, EXPRESS"
+            title="Oikos registry"
+            variant="right"
+          />
+          <Project
+            description="I love YouTube, and I also love being organized,
+            so it became obvious that I needed to create my
+            own app to organize my subscriptions!"
+            img={SorterImg}
+            liveLink="https://lualparedes.github.io/oikos-registry/"
+            onClickImg={this.showModal}
+            sourceLink="https://github.com/lualparedes/oikos-registry"
+            stack="ANGULAR, FIREBASE DATABASE"
+            title="Sorter (WIP)"
+            variant="left"
+          />
+          <Project
+            description="To do apps don’t have to be boring, so I decided
+            to create a to-do app and gamify it drawing
+            inspiration from Habitica"
+            img={DoitImg}
+            liveLink="https://do-it-app-demo.firebaseapp.com/"
+            sourceLink="https://github.com/lualparedes/doit"
+            stack="VANILLA JS!"
+            title="Do it! (MVP)"
+            variant="right"
+          />
+          <Project
+            archived={true}
+            description="My previous website, when I used to do freelance
+            jobs and also offered design services"
+            img={LualImg}
+            liveLink="https://lual-production.firebaseapp.com/"
+            stack="JEKYLL"
+            title="Lual website"
+            variant="left"
+          />
+          <Project
+            archived={true}
+            description="Website for Simón Bolívar University astronomy
+            club. This was my first experience with static
+            website generators (Jekyll)"
+            img={GuiaImg}
+            liveLink="https://guia-web-test.firebaseapp.com/"
+            stack="Jekyll, Instagram API"
+            title="GUIA website"
+            variant="right"
+          />
         </div>
 
         <div className="ModalVideo">
@@ -279,10 +217,10 @@ export default class Home extends Component<{}, IState> {
                   Computer Engineering (in progress)
                 </h3>
                 <p>
-                   Universidad Simón Bolívar | 2011 ─ 
+                   Universidad Simón Bolívar | 2011 ─
                 </p>
                 <p>
-                   I’ve taken courses on algorithmic theory, logic, and discrete mathematics, as well as complementary courses on physics, calculus, and other topics.  
+                   I’ve taken courses on algorithmic theory, logic, and discrete mathematics, as well as complementary courses on physics, calculus, and other topics.
                 </p>
                 <p>
                   However, political turmoil in my country has worked against my goal of finishing my degree. <span style={{ display:'none' }}>, and since things are bound to get worse, I’ve made the decision to complete it elsewhere, most likely with a blended learning program, since now I’ll be working full time, and also because I learn faster now.</span>
@@ -320,7 +258,7 @@ export default class Home extends Component<{}, IState> {
             </div>
           </div>
         </div>
-        
+
         <div className="Skills" id="skills">
           <div className="wrap">
             <h3 className="skills-header section-title">
@@ -402,7 +340,7 @@ export default class Home extends Component<{}, IState> {
             </ul>
           </div>
         </div>
-        
+
         <div className="Contact" id="contact">
           <div className="wrap">
             <h2 className="section-title">
@@ -436,7 +374,7 @@ export default class Home extends Component<{}, IState> {
             </p>
             <p className="biggie">
               <strong>I look forward to being part of your team!</strong><br/>
-              Just <a href="mailto:lualdevelopment@gmail.com">shoot me 
+              Just <a href="mailto:lualdevelopment@gmail.com">shoot me
               a message</a> and I'll get back to you asap <Emoji emoji="😀" />
             </p>
           </div>
