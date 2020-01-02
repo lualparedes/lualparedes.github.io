@@ -1,0 +1,30 @@
+. cli/templates
+
+create-component() {
+  local DASH_CASED=$(sed -e "s/\([A-Z]\)/-\L\1/g" -e "s/^-//" <<< $1)
+
+  mkdir src/components/$1
+  touch src/components/$1/index.ts
+  touch src/components/$1/$1.tsx
+  touch src/components/$1/$1.test.tsx
+  touch src/components/$1/$1.css
+
+  echo "$INDEX" | sed "s/\[\[ ID \]\]/$1/g" >> src/components/$1/index.ts
+  echo "$COMPONENT" \
+    | sed -e "s/\[\[ ID \]\]/$1/g" -e "s/\[\[ ID_L \]\]/$DASH_CASED/g" \
+    >> src/components/$1/$1.tsx
+  echo "$TEST" | sed "s/\[\[ ID \]\]/$1/g" >> src/components/$1/$1.test.tsx
+  echo "$CSS" | sed "s/\[\[ ID_L \]\]/$DASH_CASED/g" >> src/components/$1/$1.css
+}
+
+if [ "$1" == "-c" ]
+then
+  create-component $2
+
+elif [ "$1" == "-v" ]
+then
+  echo "a view"
+
+else
+  echo "hello-world"
+fi
