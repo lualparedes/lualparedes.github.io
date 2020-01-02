@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import Emoji from '../Emoji';
-import Project from '../Project';
+import Emoji from '../../components/Emoji';
+import Project from '../../components/Project';
 
 import Me from './me.png';
 import OikosImg from './oikos.png';

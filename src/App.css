@@ -11,5 +11,7 @@
 @import './assets/styles/atoms/icons.css';
 
 /* Components */
-@import './components/Home/Home.css';
 @import './components/Project/Project.css';
+
+/* Views */
+@import './views/Home/Home.css';
