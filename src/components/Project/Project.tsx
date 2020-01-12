@@ -72,7 +72,7 @@ const Project = ({
               : (
                 <>
                 An archived version can be found&nbsp;
-                <a target="_blank" rel="noopener noreferrer" href="{liveLink}">here</a>.
+                <a target="_blank" rel="noopener noreferrer" href={liveLink}>here</a>.
                 </>
               )
             }
