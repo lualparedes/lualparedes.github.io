@@ -78,14 +78,16 @@
 
 .menu-items {
   text-align: center;
+
   &__item {
     position: relative;
     text-transform: uppercase;
-    font-family: var(--f-headers);
+    font-weight: bold;
     letter-spacing: .4em;
     font-size: 28px;
     margin-bottom: 1em;
     cursor: pointer;
+
     &::after {
       position: absolute;
       content: '';
@@ -97,6 +99,7 @@
       transform: translate(-50%,-50%);
       align-items: center;
     }
+
     &:hover {
       &::after {
         width: 100%;
@@ -408,10 +411,12 @@
   justify-content: center;
   align-items: center;
   min-height: 720px;
+
   a {
     text-decoration: underline;
+
     &:hover {
-      font-family: var(--f-headers);
+      font-weight: bold;
     }
   }
 }

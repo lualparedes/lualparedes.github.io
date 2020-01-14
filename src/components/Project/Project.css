@@ -15,6 +15,7 @@
 .project-content {
   &__title {
     font-family: var(--f-headers);
+    font-weight: bold;
     font-size: 4rem;
     line-height: .9;
     margin-bottom: 2rem;
@@ -73,7 +74,7 @@
       border-bottom: 1px dashed #fff;
 
       &:hover {
-        font-family: var(--f-headers);
+        font-weight: bold;
       }
     }
   }
@@ -83,6 +84,7 @@
 
     span {
       font-family: var(--f-headers);
+      font-weight: bold;
     }
   }
 }
