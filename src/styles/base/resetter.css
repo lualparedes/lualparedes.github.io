@@ -18,7 +18,7 @@ html {
     font-family: var(--f-body);
     font-weight: 300;
     color: var(--c-text);
-    font-size: var(--f-base-size);
+    font-size: var(--f-baseSize);
     line-height: 1;
 }
 
@@ -33,7 +33,7 @@ table {
 }
 
 h1, h2, h3,
-h4, h5, h6, 
+h4, h5, h6,
 pre, code {
     font-size:100%;
     font-weight:normal;

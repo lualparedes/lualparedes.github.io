@@ -1,5 +1,9 @@
-import React from "react";
-import { Link } from "gatsby";
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
+
+import { Context, defaultContext } from '../../context';
+import Header from '../Header';
+import SEO from '../SEO';
 
 interface IProps {
   children?: any;
@@ -7,38 +11,20 @@ interface IProps {
 }
 
 const Layout = ({ title, children }: IProps) => {
+  const [theme, setTheme] = useState(defaultContext[0]);
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-      }}
-    >
-      <header>
-        <h1
-          style={{
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      </header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
-    </div>
+    <Context.Provider value={[theme, setTheme]}>
+      <div className={`layout theme--${theme}`}>
+        <SEO title={title} />
+        <Header />
+        <main>{children}</main>
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      </div>
+    </Context.Provider>
   );
 };
 

@@ -11,6 +11,7 @@
 @import './atoms/icons.css';
 
 /* Components */
+@import '../components/Header/Header.css';
 @import '../components/Project/Project.css';
 
 /* Views */
