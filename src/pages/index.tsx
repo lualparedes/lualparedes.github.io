@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import SEO from "../components/SEO";
-import Home from "../views/Home";
+import SEO from '../components/SEO';
+import Home from '../views/Home';
 
 const BlogIndex = () => {
   return (

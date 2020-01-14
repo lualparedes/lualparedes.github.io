@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface IProps {
-  archived?: boolean,
+  archived?: boolean;
   description: string;
   img: string;
   liveLink: string;
@@ -21,12 +21,12 @@ const Project = ({
   sourceLink,
   stack,
   title,
-  variant
+  variant,
 }: IProps): JSX.Element => {
-  const variantClassContent = variant === 'right'
-      ? 'project-content--right'
-      : 'project-content--left';
-  const variantClassImg = variant === 'right'
+  const variantClassContent =
+    variant === 'right' ? 'project-content--right' : 'project-content--left';
+  const variantClassImg =
+    variant === 'right'
       ? 'project-content__img--right'
       : 'project-content__img--left';
 
@@ -35,9 +35,8 @@ const Project = ({
       <div className="wrap">
         <div className={`project-content ${variantClassContent}`}>
           <h3 className="project-content__title">{title}</h3>
-          {!!onClickImg
-            ? (
-              <>
+          {!!onClickImg ? (
+            <>
               <div
                 className={`
                   project-content__img
@@ -46,39 +45,43 @@ const Project = ({
                 `}
                 onClick={onClickImg}
               >
-                <img src={img} alt="Project preview"/>
+                <img src={img} alt="Project preview" />
               </div>
-              </>
-            )
-            : (
-              <>
+            </>
+          ) : (
+            <>
               <div className={`project-content__img ${variantClassImg}`}>
-                <img src={img} alt="Project preview"/>
+                <img src={img} alt="Project preview" />
               </div>
-              </>
-            )
-          }
+            </>
+          )}
           <p className="project-content__summary">
             {description}.&nbsp;
-            {!archived
-              ? (
-                <>
+            {!archived ? (
+              <>
                 The code for the frontend is available&nbsp;
-                <a target="_blank" rel="noopener noreferrer" href={sourceLink}>here</a>
+                <a target="_blank" rel="noopener noreferrer" href={sourceLink}>
+                  here
+                </a>
                 &nbsp;and a live version can be found&nbsp;
-                <a target="_blank" rel="noopener noreferrer" href={liveLink}>here</a>.
-                </>
-              )
-              : (
-                <>
+                <a target="_blank" rel="noopener noreferrer" href={liveLink}>
+                  here
+                </a>
+                .
+              </>
+            ) : (
+              <>
                 An archived version can be found&nbsp;
-                <a target="_blank" rel="noopener noreferrer" href={liveLink}>here</a>.
-                </>
-              )
-            }
+                <a target="_blank" rel="noopener noreferrer" href={liveLink}>
+                  here
+                </a>
+                .
+              </>
+            )}
           </p>
           <p className="project-content__tech-stack">
-            <span>Tech stack: </span>{stack}
+            <span>Tech stack: </span>
+            {stack}
           </p>
         </div>
       </div>

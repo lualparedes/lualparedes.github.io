@@ -1,8 +1,8 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from "../../components/Layout";
-import SEO from "../../components/SEO";
+import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 
 interface IProps {
   data: {
@@ -46,7 +46,7 @@ const BlogPostTemplate = ({ data, pageContext }: IProps) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
+        <hr />
       </article>
 
       <nav>

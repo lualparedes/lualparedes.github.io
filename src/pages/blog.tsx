@@ -1,8 +1,7 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import Layout from '../components/Layout';
 
 interface IProps {
   data: {
@@ -20,8 +19,7 @@ const BlogIndex = ({ data }: IProps) => {
   const posts = [];
 
   return (
-    <Layout location={location} title="Web Dev Blog">
-      <SEO title="Blog" />
+    <Layout title="Blog">
       {posts.length > 0 ? (
         posts.map(({ node }: any) => {
           const title = node.frontmatter.title || node.fields.slug;
@@ -46,9 +44,7 @@ const BlogIndex = ({ data }: IProps) => {
           );
         })
       ) : (
-        <p>
-          The first post will be written soon! Stay tuned!
-        </p>
+        <p>The first post will be written soon! Stay tuned!</p>
       )}
     </Layout>
   );

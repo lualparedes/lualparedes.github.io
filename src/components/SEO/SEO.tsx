@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 // import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 interface IProps {
   description?: string;
@@ -27,7 +27,7 @@ const SEO = ({ description, lang, meta, title }: IProps) => {
 
   const metaDescription = description || site.siteMetadata.description;
   const metadata = meta ? meta : [];
-  const language = lang ? lang : "en";
+  const language = lang ? lang : 'en';
 
   return (
     <Helmet

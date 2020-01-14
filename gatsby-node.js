@@ -49,7 +49,6 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 //     `
 //   );
 
-
 //   if (result.errors) {
 //     throw result.errors;
 //   }

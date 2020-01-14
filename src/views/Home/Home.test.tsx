@@ -31,13 +31,16 @@ describe('Home component', () => {
   });
 
   it('opens and closes modal', () => {
-    wrapper.find('*.project-content__img--clickable').first().simulate('click');
-    expect(wrapper.find('*.js-backdropModal')
-      .hasClass('a-backdrop-show'))
-      .toBe(true);
+    wrapper
+      .find('*.project-content__img--clickable')
+      .first()
+      .simulate('click');
+    expect(wrapper.find('*.js-backdropModal').hasClass('a-backdrop-show')).toBe(
+      true
+    );
     wrapper.find('*.modal-close').simulate('click');
-    expect(wrapper.find('*.modal-close')
-      .hasClass('a-backdrop-show'))
-      .toBe(false);
+    expect(wrapper.find('*.modal-close').hasClass('a-backdrop-show')).toBe(
+      false
+    );
   });
 });
