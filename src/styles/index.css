@@ -11,8 +11,11 @@
 @import './atoms/icons.css';
 
 /* Components */
+@import '../components/Button/Button.css';
 @import '../components/Header/Header.css';
+@import '../components/Layout/Layout.css';
 @import '../components/Project/Project.css';
+@import '../components/ThemeMenu/ThemeMenu.css';
 
 /* Views */
 @import '../views/Home/Home.css';

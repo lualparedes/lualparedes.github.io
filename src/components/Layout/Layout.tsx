@@ -6,7 +6,7 @@ import Header from '../Header';
 import SEO from '../SEO';
 
 interface IProps {
-  children?: any;
+  children?: JSX.Element | JSX.Element[];
   title: string;
 }
 
