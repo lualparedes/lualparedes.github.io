@@ -21,6 +21,7 @@ const ThemeMenu = (): JSX.Element => {
   const [theme, setTheme] = useContext(Context);
 
   const changeTheme = (themeMode: Theme) => () => {
+    window.localStorage.setItem('theme', themeMode);
     setTheme(themeMode);
   };
 
