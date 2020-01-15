@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
+import ReactDOM from 'react-dom';
 
-import ThemeMenu from '../ThemeMenu';
 import { Header } from './Header';
+import ThemeMenu from '../ThemeMenu';
 
 let wrapper: any;
 
