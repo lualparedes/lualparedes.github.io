@@ -11,7 +11,7 @@ const props = {
   sourceLink: '',
   stack: '',
   title: '',
-  variant: 'left',
+  variant: 'left' as any,
 };
 
 describe('Project component', () => {

@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext }: IProps) => {
   const { previous, next } = pageContext;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -31,7 +31,6 @@ const BlogPostTemplate = ({ data, pageContext }: IProps) => {
         <header>
           <h1
             style={{
-              marginTop: rhythm(1),
               marginBottom: 0,
             }}
           >

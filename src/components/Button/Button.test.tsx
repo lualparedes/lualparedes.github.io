@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { Button } from './Button';
 
-const props = {};
+const props = { children: '' };
 
 describe('Button component', () => {
   it('renders without crashing', () => {

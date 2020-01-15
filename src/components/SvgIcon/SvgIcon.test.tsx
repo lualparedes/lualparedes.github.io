@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 
 import { SvgIcon } from './SvgIcon';
 
-const props = {};
+const props = {
+  alt: '',
+  svg: '',
+};
 
 describe('SvgIcon component', () => {
   it('renders without crashing', () => {
