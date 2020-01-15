@@ -35,10 +35,16 @@ const Header = (): JSX.Element => {
           <li className="header-items__item">
             <Link to="blog">blog</Link>
           </li>
-          <li className="header-items__item" onClick={toggleThemeMenu}>
+          <li
+            className="header-items__item header-items__item--theme"
+            onClick={toggleThemeMenu}
+          >
             <span>theme</span>
           </li>
-          <li className="header-items__item" onClick={toggleSearchBox}>
+          <li
+            className="header-items__item header-items__item--search"
+            onClick={toggleSearchBox}
+          >
             <span>search</span>
           </li>
         </ul>
