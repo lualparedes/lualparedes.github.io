@@ -4,6 +4,8 @@ import { mount } from 'enzyme';
 
 import Home from './Home';
 
+window.scrollTo = jest.fn();
+
 let wrapper: any;
 
 describe('Home component', () => {
@@ -24,10 +26,12 @@ describe('Home component', () => {
   });
 
   it('navigates to the right section', () => {
-    // wrapper.find('div.js-iconMenu').simulate('click');
-    // wrapper.find('li.menu-items__item').first().simulate('click');
-    // console.log(window.scrollY)
-    // expect(window.scrollY).not.toBe(0);
+    wrapper.find('div.js-iconMenu').simulate('click');
+    wrapper
+      .find('li.menu-items__item')
+      .first()
+      .simulate('click');
+    expect(window.scrollTo).toHaveBeenCalled();
   });
 
   it('opens and closes modal', () => {
