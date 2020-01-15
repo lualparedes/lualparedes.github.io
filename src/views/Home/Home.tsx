@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Emoji from '../../components/Emoji';
 import Project from '../../components/Project';
@@ -19,8 +19,15 @@ const Home = (): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  const goToSection = (section: string) => {
-    window.scroll(0, document.getElementById(section)!.offsetTop);
+  const refs = {
+    projects: useRef(null),
+    educationAndExperience: useRef(null),
+    skills: useRef(null),
+    contact: useRef(null),
+  };
+
+  const goTo = (ref: any) => () => {
+    window.scrollTo(0, ref.current.offsetTop);
     setShowMenu(false);
   };
 
@@ -44,37 +51,28 @@ const Home = (): JSX.Element => {
         </div>
       </div>
 
-      <div className={`Menu js-Menu ${showMenu ? 'Menu--open' : ''}`}>
+      <div className={`Menu js-Menu${showMenu ? ' Menu--open' : ''}`}>
         <div className="icon-close menu-close" onClick={toggleMenu}></div>
         <ul className="menu-items">
-          <li
-            className="menu-items__item"
-            onClick={() => goToSection('projects')}
-          >
+          <li className="menu-items__item" onClick={goTo(refs.projects)}>
             Projects
           </li>
           <li
             className="menu-items__item"
-            onClick={() => goToSection('education-and-experience')}
+            onClick={goTo(refs.educationAndExperience)}
           >
             Education
           </li>
           <li
             className="menu-items__item"
-            onClick={() => goToSection('education-and-experience')}
+            onClick={goTo(refs.educationAndExperience)}
           >
             Experience
           </li>
-          <li
-            className="menu-items__item"
-            onClick={() => goToSection('skills')}
-          >
+          <li className="menu-items__item" onClick={goTo(refs.skills)}>
             Skills
           </li>
-          <li
-            className="menu-items__item"
-            onClick={() => goToSection('contact')}
-          >
+          <li className="menu-items__item" onClick={goTo(refs.contact)}>
             Contact
           </li>
         </ul>
@@ -108,7 +106,7 @@ const Home = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="Projects" id="projects">
+      <div className="Projects" ref={refs.projects}>
         <Project
           description="Dashboard for managing the members registry of an
           excursionist club (Oikos)"
@@ -191,7 +189,7 @@ const Home = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="EducationAndExperience" id="education-and-experience">
+      <div className="EducationAndExperience" ref={refs.educationAndExperience}>
         <div className="wrap">
           <div className="row">
             <div className="col-2 column-block">
@@ -231,7 +229,7 @@ const Home = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="Skills" id="skills">
+      <div className="Skills" ref={refs.skills}>
         <div className="wrap">
           <h3 className="skills-header section-title">Skills</h3>
           <ul className="skills-container">
@@ -311,7 +309,7 @@ const Home = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="Contact" id="contact">
+      <div className="Contact" ref={refs.contact}>
         <div className="wrap">
           <h2 className="section-title">Contact</h2>
           <div className="row">
