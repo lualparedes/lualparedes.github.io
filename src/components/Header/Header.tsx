@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
 import { Link } from 'gatsby';
+import React, { useContext, useState } from 'react';
 
 import { Context } from '../../context';
 
@@ -36,13 +36,17 @@ const Header = (): JSX.Element => {
             <Link to="blog">blog</Link>
           </li>
           <li
-            className="header-items__item header-items__item--theme"
+            className={`header-items__item header-items__item--theme${
+              showThemeMenu ? ' header-items__item--selected' : ''
+            }`}
             onClick={toggleThemeMenu}
           >
             <span>theme</span>
           </li>
           <li
-            className="header-items__item header-items__item--search"
+            className={`header-items__item header-items__item--search${
+              showSearchBox ? ' header-items__item--selected' : ''
+            }`}
             onClick={toggleSearchBox}
           >
             <span>search</span>
