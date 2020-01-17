@@ -8,12 +8,15 @@ interface IProps {
   variant?: 'contained' | 'text';
 }
 
-const IconButton = ({ children, onClick, variant }: IProps): JSX.Element => {
+const IconButton = ({
+  children,
+  onClick,
+  variant = 'text',
+}: IProps): JSX.Element => {
   const [theme] = useContext(Context);
-  const cssVariant = variant ? `icon-button--${variant}` : 'icon-button--text';
   return (
     <button
-      className={`theme--${theme} icon-button ${cssVariant}`}
+      className={`theme--${theme} icon-button icon-button--${variant}`}
       onClick={onClick}
     >
       {children}
