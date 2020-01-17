@@ -6,7 +6,7 @@ import { IconButton } from './IconButton';
 const props = {
   children: <img />,
   onClick: jest.fn(),
-  variant: 'contained',
+  variant: 'contained' as any,
 };
 
 describe('IconButton component', () => {
