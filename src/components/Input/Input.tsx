@@ -2,9 +2,13 @@ import React, { useContext } from 'react';
 
 import { Context } from '../../context';
 
-const Input = (): JSX.Element => {
+interface IProps {
+  className?: string;
+}
+
+const Input = ({ className = '' }: IProps): JSX.Element => {
   const [theme] = useContext(Context);
-  return <input className={`input theme--${theme}`} type="text" />;
+  return <input className={`input theme--${theme} ${className}`} type="text" />;
 };
 
 export { Input };
