@@ -6,6 +6,7 @@ import { Context } from '../../context';
 import Logo from '../Logo';
 import SearchBox from '../SearchBox';
 import ThemeMenu from '../ThemeMenu';
+import Transition from '../Transition';
 
 const Header = (): JSX.Element => {
   const [theme] = useContext(Context);
@@ -53,8 +54,12 @@ const Header = (): JSX.Element => {
           </li>
         </ul>
       </header>
-      {showThemeMenu && <ThemeMenu />}
-      {showSearchBox && <SearchBox />}
+      <Transition className="transition--theme-menu" inProp={showThemeMenu}>
+        <ThemeMenu />
+      </Transition>
+      <Transition className="transition--search-box" inProp={showSearchBox}>
+        <SearchBox />
+      </Transition>
     </>
   );
 };

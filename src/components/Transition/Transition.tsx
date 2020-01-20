@@ -11,6 +11,7 @@ interface IProps {
 
 const Transition = ({
   children,
+  className = '',
   direction = 'y',
   inProp,
   timeout = 50,
@@ -35,7 +36,11 @@ const Transition = ({
   };
 
   return (
-    <div className="transition" role="presentation" style={inlineStyles}>
+    <div
+      className={`transition ${className}`}
+      role="presentation"
+      style={inlineStyles}
+    >
       <div
         className={`transition__wrap${wrapStyles}${inProp ? ' in' : ''}`}
         ref={wrapRef}
