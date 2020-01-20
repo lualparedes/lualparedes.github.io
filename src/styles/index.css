@@ -19,6 +19,7 @@
 @import '../components/Project/Project.css';
 @import '../components/SearchBox/SearchBox.css';
 @import '../components/ThemeMenu/ThemeMenu.css';
+@import '../components/Transition/Transition.css';
 
 /* Views */
 @import '../views/Home/Home.css';

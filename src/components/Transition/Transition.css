@@ -1,0 +1,18 @@
+.transition {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+
+  &__wrap {
+    position: absolute;
+
+    &--slide-in-y {
+      top: -100%;
+      left: 0;
+
+      &.in {
+        top: 0;
+      }
+    }
+  }
+}
