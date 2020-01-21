@@ -1,4 +1,4 @@
-.header {
+.desktop-header {
   display: none;
   position: absolute;
   top: 0;
@@ -26,20 +26,20 @@
   }
 }
 
-.header-main {
+.desktop-header-main {
   background-color: var(--c-bg);
   color: var(--c-text);
   display: flex;
   width: min-content;
 }
 
-.header-logo {
+.desktop-header-logo {
   img {
     width: 48px;
   }
 }
 
-.header-items {
+.desktop-header-items {
   display: flex;
   font-weight: bold;
   font-size: 1.25rem;

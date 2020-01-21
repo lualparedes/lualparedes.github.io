@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
 import { Context, defaultContext } from '../../context';
-import Header from '../Header';
+import DesktopHeader from '../DesktopHeader';
 import SEO from '../SEO';
 
 interface IProps {
@@ -16,7 +16,7 @@ const Layout = ({ title, children }: IProps) => {
     <Context.Provider value={[theme, setTheme]}>
       <div className={`layout theme--${theme}`}>
         <SEO title={title} />
-        <Header />
+        <DesktopHeader />
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with

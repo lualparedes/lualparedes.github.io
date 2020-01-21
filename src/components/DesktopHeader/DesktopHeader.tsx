@@ -8,7 +8,7 @@ import SearchBox from '../SearchBox';
 import ThemeMenu from '../ThemeMenu';
 import Transition from '../Transition';
 
-const Header = (): JSX.Element => {
+const DesktopHeader = (): JSX.Element => {
   const [theme] = useContext(Context);
   const [showSearchBox, setShowSearchBox] = useState(false);
   const [showThemeMenu, setShowThemeMenu] = useState(false);
@@ -24,29 +24,29 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <div className={`header theme--${theme}`}>
-      <header className="header-main">
-        <Link className="header-logo" to="/">
+    <div className={`desktop-header theme--${theme}`}>
+      <header className="desktop-header-main">
+        <Link className="desktop-header-logo" to="/">
           <Logo />
         </Link>
-        <ul className="header-items">
-          <li className="header-items__item">
+        <ul className="desktop-header-items">
+          <li className="desktop-header-items__item">
             <Link to="about">me</Link>
           </li>
-          <li className="header-items__item">
+          <li className="desktop-header-items__item">
             <Link to="blog">blog</Link>
           </li>
           <li
-            className={`header-items__item header-items__item--theme${
-              showThemeMenu ? ' header-items__item--selected' : ''
+            className={`desktop-header-items__item desktop-header-items__item--theme${
+              showThemeMenu ? ' desktop-header-items__item--selected' : ''
             }`}
             onClick={toggleThemeMenu}
           >
             <span>theme</span>
           </li>
           <li
-            className={`header-items__item header-items__item--search${
-              showSearchBox ? ' header-items__item--selected' : ''
+            className={`desktop-header-items__item desktop-header-items__item--search${
+              showSearchBox ? ' desktop-header-items__item--selected' : ''
             }`}
             onClick={toggleSearchBox}
           >
@@ -64,4 +64,4 @@ const Header = (): JSX.Element => {
   );
 };
 
-export { Header };
+export { DesktopHeader };

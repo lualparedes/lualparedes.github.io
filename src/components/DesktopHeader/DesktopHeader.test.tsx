@@ -2,18 +2,18 @@ import React from 'react';
 import { mount } from 'enzyme';
 import ReactDOM from 'react-dom';
 
-import { Header } from './Header';
+import { DesktopHeader } from './DesktopHeader';
 
 let wrapper: any;
 
-describe('Header component', () => {
+describe('DesktopHeader component', () => {
   beforeAll(() => {
-    wrapper = mount(<Header />);
+    wrapper = mount(<DesktopHeader />);
   });
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Header />, div);
+    ReactDOM.render(<DesktopHeader />, div);
   });
 
   it('opens and closes search box', () => {
