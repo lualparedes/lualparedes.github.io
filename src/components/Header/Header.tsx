@@ -24,8 +24,8 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <>
-      <header className={`header theme--${theme}`}>
+    <div className={`header theme--${theme}`}>
+      <header className="header-main">
         <Link className="header-logo" to="/">
           <Logo />
         </Link>
@@ -60,7 +60,7 @@ const Header = (): JSX.Element => {
       <Transition className="transition--search-box" inProp={showSearchBox}>
         <SearchBox />
       </Transition>
-    </>
+    </div>
   );
 };
 

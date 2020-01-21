@@ -5,6 +5,8 @@
   background-color: var(--c-themeMenuBg);
   display: flex;
   width: min-content;
+  position: relative;
+  left: 86px;
 
   &.theme--light {
     --c-themeMenuBg: rgba(0, 0, 0, .12);

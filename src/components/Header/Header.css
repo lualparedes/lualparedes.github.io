@@ -1,7 +1,10 @@
 .header {
-  background-color: var(--c-bg);
-  color: var(--c-text);
-  display: flex;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min-content;
 
   &.theme--light {
     --c-hoverBar: rgba(0, 0, 0, .25);
@@ -17,6 +20,17 @@
     --c-hoverBar: rgba(255, 255, 255, .25);
     --c-selectedBg: rgba(255, 255, 255, .12);
   }
+
+  @media (min-width: 450px) {
+    display: block;
+  }
+}
+
+.header-main {
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  display: flex;
+  width: min-content;
 }
 
 .header-logo {
