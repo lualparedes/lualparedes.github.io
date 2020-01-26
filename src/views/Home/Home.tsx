@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 
 import Emoji from '../../components/Emoji';
+import MenuToggler from '../../components/MenuToggler';
 import Project from '../../components/Project';
 
 import Me from './me.png';
@@ -43,11 +44,7 @@ const Home = (): JSX.Element => {
     <div className="Home">
       <div className="Header">
         <div className="wrap wrap--wide">
-          <div className="icon-menu js-iconMenu" onClick={toggleMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <MenuToggler toggler={toggleMenu} />
         </div>
       </div>
 
