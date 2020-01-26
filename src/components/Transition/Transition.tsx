@@ -4,9 +4,9 @@ interface IProps {
   children: JSX.Element;
   direction?: 'x' | 'y';
   inProp: boolean;
-  timeout: number;
+  timeout?: number;
   timingFunction?: 'ease-in' | 'ease-out' | 'ease-in-out';
-  variant: 'slide' | 'fade';
+  variant?: 'slide' | 'fade';
 }
 
 const Transition = ({

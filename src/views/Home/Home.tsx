@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import Emoji from '../../components/Emoji';
 import MenuToggler from '../../components/MenuToggler';
 import Project from '../../components/Project';
+import SideMenu from '../../components/SideMenu';
 
 import Me from './me.png';
 import OikosImg from './oikos.png';
@@ -42,38 +43,18 @@ const Home = (): JSX.Element => {
 
   return (
     <div className="Home">
-      <div className="Header">
+      <header className="Header">
         <div className="wrap wrap--wide">
           <MenuToggler toggler={toggleMenu} />
         </div>
-      </div>
+      </header>
 
-      <div className={`Menu js-Menu${showMenu ? ' Menu--open' : ''}`}>
-        <div className="icon-close menu-close" onClick={toggleMenu}></div>
-        <ul className="menu-items">
-          <li className="menu-items__item" onClick={goTo(refs.projects)}>
-            Projects
-          </li>
-          <li
-            className="menu-items__item"
-            onClick={goTo(refs.educationAndExperience)}
-          >
-            Education
-          </li>
-          <li
-            className="menu-items__item"
-            onClick={goTo(refs.educationAndExperience)}
-          >
-            Experience
-          </li>
-          <li className="menu-items__item" onClick={goTo(refs.skills)}>
-            Skills
-          </li>
-          <li className="menu-items__item" onClick={goTo(refs.contact)}>
-            Contact
-          </li>
-        </ul>
-      </div>
+      <SideMenu
+        homeVariantContext={{ goTo, refs }}
+        open={showMenu}
+        toggleOpen={toggleMenu}
+        variant="home"
+      />
 
       <div className="Hero">
         <div className="hero-wrap wrap wrap--wide">

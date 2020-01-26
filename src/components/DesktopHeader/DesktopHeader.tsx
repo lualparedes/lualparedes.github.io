@@ -31,7 +31,7 @@ const DesktopHeader = (): JSX.Element => {
         </Link>
         <ul className="desktop-header-items">
           <li className="desktop-header-items__item">
-            <Link to="about">me</Link>
+            <Link to="/">me</Link>
           </li>
           <li className="desktop-header-items__item">
             <Link to="blog">blog</Link>

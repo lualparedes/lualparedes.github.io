@@ -9,7 +9,8 @@
   --z-modal: 2;
   --z-menu: 3;
 
-  --standardTransition: all 200ms ease-in-out;
+  --standardTransitionTime: 200ms;
+  --standardTransition: all var(--standardTransitionTime) ease-in-out;
 }
 
 .theme--light {

@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 import { Context, defaultContext } from '../../context';
 import DesktopHeader from '../DesktopHeader';
+import Header from '../Header';
 import SEO from '../SEO';
 
 interface IProps {
@@ -16,6 +17,7 @@ const Layout = ({ title, children }: IProps) => {
     <Context.Provider value={[theme, setTheme]}>
       <div className={`layout theme--${theme}`}>
         <SEO title={title} />
+        <Header />
         <DesktopHeader />
         <main>{children}</main>
         <footer>
