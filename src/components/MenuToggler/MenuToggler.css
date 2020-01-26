@@ -1,11 +1,22 @@
 .menu-toggler {
+  --iconColor: #000;
   width: 32px;
   cursor: pointer;
+
+  &.theme--light {
+    --iconColor: #000;
+  }
+  &.theme--dusk {
+    --iconColor: #000;
+  }
+  &.theme--dark {
+    --iconColor: #fff;
+  }
 
   span {
     display: block;
     height: 5px;
-    background: #000;
+    background: var(--iconColor);
     width: 100%;
     margin-bottom: 8px;
     transition: all ease-out .25s;

@@ -45,7 +45,7 @@ const Home = (): JSX.Element => {
     <div className="Home">
       <header className="Header">
         <div className="wrap wrap--wide">
-          <MenuToggler toggler={toggleMenu} />
+          <MenuToggler toggler={toggleMenu} variant="home" />
         </div>
       </header>
 
