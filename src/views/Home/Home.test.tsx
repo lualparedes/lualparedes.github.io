@@ -4,6 +4,8 @@ import { mount } from 'enzyme';
 
 import Home from './Home';
 
+window.scrollTo = jest.fn();
+
 let wrapper: any;
 
 describe('Home component', () => {
@@ -24,20 +26,25 @@ describe('Home component', () => {
   });
 
   it('navigates to the right section', () => {
-    // wrapper.find('div.js-iconMenu').simulate('click');
-    // wrapper.find('li.menu-items__item').first().simulate('click');
-    // console.log(window.scrollY)
-    // expect(window.scrollY).not.toBe(0);
+    wrapper.find('div.js-iconMenu').simulate('click');
+    wrapper
+      .find('li.menu-items__item')
+      .first()
+      .simulate('click');
+    expect(window.scrollTo).toHaveBeenCalled();
   });
 
   it('opens and closes modal', () => {
-    wrapper.find('*.project-content__img--clickable').first().simulate('click');
-    expect(wrapper.find('*.js-backdropModal')
-      .hasClass('a-backdrop-show'))
-      .toBe(true);
+    wrapper
+      .find('*.project-content__img--clickable')
+      .first()
+      .simulate('click');
+    expect(wrapper.find('*.js-backdropModal').hasClass('a-backdrop-show')).toBe(
+      true
+    );
     wrapper.find('*.modal-close').simulate('click');
-    expect(wrapper.find('*.modal-close')
-      .hasClass('a-backdrop-show'))
-      .toBe(false);
+    expect(wrapper.find('*.modal-close').hasClass('a-backdrop-show')).toBe(
+      false
+    );
   });
 });

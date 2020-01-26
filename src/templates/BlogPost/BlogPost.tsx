@@ -1,8 +1,8 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from "../../components/Layout";
-import SEO from "../../components/SEO";
+import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 
 interface IProps {
   data: {
@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext }: IProps) => {
   const { previous, next } = pageContext;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -31,7 +31,6 @@ const BlogPostTemplate = ({ data, pageContext }: IProps) => {
         <header>
           <h1
             style={{
-              marginTop: rhythm(1),
               marginBottom: 0,
             }}
           >
@@ -46,7 +45,7 @@ const BlogPostTemplate = ({ data, pageContext }: IProps) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
+        <hr />
       </article>
 
       <nav>

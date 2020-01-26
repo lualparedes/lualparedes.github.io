@@ -1,0 +1,30 @@
+.icon-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--standardTransition);
+  cursor: pointer;
+
+  &.theme--light {
+    --c-hover: rgba(0, 0, 0, .12);
+  }
+  &.theme--dusk {
+    --c-hover: rgba(0, 0, 0, .12);
+  }
+  &.theme--dark {
+    --c-hover: rgba(255, 255, 255, .12);
+  }
+
+  img {
+    width: 18px;
+  }
+
+  &--text {
+    &:hover {
+      background: var(--c-hover);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.transition {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+
+  &__wrap {
+    position: absolute;
+
+    &--slide-in-x {
+      top: 0;
+      left: -100%;
+
+      &.in {
+        transform: translateX(100%);
+      }
+    }
+
+    &--slide-in-y {
+      top: -100%;
+      left: 0;
+
+      &.in {
+        transform: translateY(100%);
+      }
+    }
+  }
+}

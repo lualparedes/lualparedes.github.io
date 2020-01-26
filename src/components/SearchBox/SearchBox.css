@@ -1,0 +1,29 @@
+.search-box {
+  display: flex;
+  height: 48px;
+  padding: 4px;
+  padding-left: 24px;
+  border-radius: 24px;
+  border-top-right-radius: 0;
+  background: var(--searchBoxBg);
+  width: 433px;
+
+  &.theme--light {
+    --searchBoxBg: rgba(0, 0, 0, .12);
+  }
+  &.theme--dusk {
+    --searchBoxBg: rgba(0, 0, 0, .12);
+  }
+  &.theme--dark {
+    --searchBoxBg: rgba(255, 255, 255, .12);
+  }
+
+  > * {
+    flex: 1 0 auto;
+  }
+
+  &__input {
+    width: 354px;
+    margin-right: 8px;
+  }
+}

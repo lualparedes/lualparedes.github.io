@@ -11,7 +11,18 @@
 @import './atoms/icons.css';
 
 /* Components */
+@import '../components/Button/Button.css';
+@import '../components/DesktopHeader/DesktopHeader.css';
+@import '../components/Header/Header.css';
+@import '../components/IconButton/IconButton.css';
+@import '../components/Input/Input.css';
+@import '../components/Layout/Layout.css';
+@import '../components/MenuToggler/MenuToggler.css';
 @import '../components/Project/Project.css';
+@import '../components/SearchBox/SearchBox.css';
+@import '../components/SideMenu/SideMenu.css';
+@import '../components/ThemeMenu/ThemeMenu.css';
+@import '../components/Transition/Transition.css';
 
 /* Views */
 @import '../views/Home/Home.css';
