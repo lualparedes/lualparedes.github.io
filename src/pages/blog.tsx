@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
+import Blog from '../views/Blog';
+import { IMarkdownRemark, IPost } from '../views/Blog';
 
 interface IProps {
   data: {
-    allMarkdownRemark: any;
+    allMarkdownRemark: IMarkdownRemark;
     site: {
       siteMetadata: {
         title: string;
@@ -15,48 +17,14 @@ interface IProps {
 }
 
 const BlogIndex = ({ data }: IProps) => {
-  // const posts = data.allMarkdownRemark.edges;
-  const posts: any[] = [];
-
   return (
     <Layout title="Blog">
-      {posts.length > 0 ? (
-        posts.map(({ node }: any) => {
-          const title = node.frontmatter.title || node.fields.slug;
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3>
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p>{node.frontmatter.description || node.excerpt}</p>
-              </section>
-            </article>
-          );
-        })
-      ) : (
-        <p>The first post will be written soon! Stay tuned!</p>
-      )}
+      <Blog data={data} />
     </Layout>
   );
 };
 
 export default BlogIndex;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;
 
 // export const pageQuery = graphql`
 //   query {
@@ -65,20 +33,30 @@ export const pageQuery = graphql`
 //         title
 //       }
 //     }
-//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           excerpt
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             title
-//             description
-//           }
-//         }
-//       }
-//     }
 //   }
 // `;
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`;

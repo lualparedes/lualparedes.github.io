@@ -25,4 +25,5 @@
 @import '../components/Transition/Transition.css';
 
 /* Views */
+@import '../views/Blog/Blog.css';
 @import '../views/Home/Home.css';
