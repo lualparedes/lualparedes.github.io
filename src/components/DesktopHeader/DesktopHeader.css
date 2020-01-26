@@ -26,7 +26,7 @@
   }
 }
 
-.desktop-header-main {
+.desktop-header-nav {
   background-color: var(--c-bg);
   color: var(--c-text);
   display: flex;

@@ -24,8 +24,8 @@ const DesktopHeader = (): JSX.Element => {
   };
 
   return (
-    <div className={`desktop-header theme--${theme}`}>
-      <header className="desktop-header-main">
+    <header className={`desktop-header theme--${theme}`}>
+      <nav className="desktop-header-nav">
         <Link className="desktop-header-logo" to="/">
           <Logo />
         </Link>
@@ -53,14 +53,14 @@ const DesktopHeader = (): JSX.Element => {
             <span>search</span>
           </li>
         </ul>
-      </header>
+      </nav>
       <Transition className="transition--theme-menu" inProp={showThemeMenu}>
         <ThemeMenu />
       </Transition>
       <Transition className="transition--search-box" inProp={showSearchBox}>
         <SearchBox />
       </Transition>
-    </div>
+    </header>
   );
 };
 
