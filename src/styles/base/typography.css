@@ -1,16 +1,25 @@
 @font-face {
-  font-family: 'hk_grotesk';
-  src: url('../../content/assets/fonts/hk_grotesk/hkgrotesk-bold-webfont.woff2') format('woff2'),
-     url('../../content/assets/fonts/hk_grotesk/hkgrotesk-bold-webfont.woff') format('woff');
-  font-weight: bold;
+  font-family: "Manrope";
+  src: url("../../content/assets/fonts/manrope/manrope-extrabold.woff2") format("woff2"),
+    url("../../content/assets/fonts/manrope/manrope-extrabold.woff") format("woff");
   font-style: normal;
+  font-weight: 800;
 }
+
 @font-face {
-  font-family: 'hk_grotesk';
-  src: url('../../content/assets/fonts/hk_grotesk/hkgrotesk-regular-webfont.woff2') format('woff2'),
-     url('../../content/assets/fonts/hk_grotesk/hkgrotesk-regular-webfont.woff') format('woff');
-  font-weight: normal;
+  font-family: "Manrope";
+  src: url("../../content/assets/fonts/manrope/manrope-bold.woff2") format("woff2"),
+    url("../../content/assets/fonts/manrope/manrope-bold.woff") format("woff");
   font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../../content/assets/fonts/manrope/manrope-regular.woff2") format("woff2"),
+    url("../../content/assets/fonts/manrope/manrope-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
@@ -25,7 +34,7 @@
 
 p {
   margin-bottom: 1em;
-  line-height: 1.3;
+  line-height: 1.4;
 
   &:last-child {
     margin-bottom: 0;
@@ -57,6 +66,6 @@ strong {
 
 @media screen and (min-width: 720px) {
   .biggie {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }

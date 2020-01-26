@@ -1,7 +1,7 @@
 :root {
   /* Font stacks */
-  --f-headers: 'hk_grotesk', sans-serif;
-  --f-body: 'hk_grotesk', sans-serif;
+  --f-headers: 'Manrope', sans-serif;
+  --f-body: 'Manrope', sans-serif;
   --f-baseSize: 20px;
 
   /* Z indexes*/

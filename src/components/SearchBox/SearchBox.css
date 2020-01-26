@@ -6,7 +6,7 @@
   border-radius: 24px;
   border-top-right-radius: 0;
   background: var(--searchBoxBg);
-  width: 433px;
+  width: 476px;
 
   &.theme--light {
     --searchBoxBg: rgba(0, 0, 0, .12);
@@ -23,7 +23,7 @@
   }
 
   &__input {
-    width: 354px;
+    width: 397px;
     margin-right: 8px;
   }
 }

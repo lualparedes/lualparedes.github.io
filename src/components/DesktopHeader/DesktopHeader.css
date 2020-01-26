@@ -41,14 +41,14 @@
 
 .desktop-header-items {
   display: flex;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 1.25rem;
 
   &__item {
     & > a,
     & > span {
       display: block;
-      padding: .4rem 1rem;
+      padding: .5rem 1rem;
       height: 48px;
       position: relative;
       cursor: pointer;

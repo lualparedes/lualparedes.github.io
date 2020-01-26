@@ -293,7 +293,7 @@ const Home = (): JSX.Element => {
           <div className="row">
             <div className="col-2">
               <h3 className="mini-header">Location</h3>
-              <p>Currently based in Caracas (EST + 1 h)</p>
+              <p>Currently based in Caracas (EST+1)</p>
             </div>
             <div className="col-2">
               <h3 className="mini-header">Email</h3>
@@ -312,11 +312,10 @@ const Home = (): JSX.Element => {
           <p className="biggie">Are you looking for a frontend developer?</p>
           <p className="biggie">
             <strong>I look forward to being part of your team!</strong>
-            <br />
+          </p>
+          <p className="biggie">
             Just{' '}
-            <a href="mailto:lualdevelopment@gmail.com">
-              shoot me a message
-            </a>{' '}
+            <a href="mailto:lualdevelopment@gmail.com">shoot me a message</a>{' '}
             and I'll get back to you asap <Emoji emoji="😀" />
           </p>
         </div>
