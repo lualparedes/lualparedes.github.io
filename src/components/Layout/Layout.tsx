@@ -8,16 +8,17 @@ import SEO from '../SEO';
 
 interface IProps {
   children?: JSX.Element | JSX.Element[];
+  headerTitle?: string;
   title: string;
 }
 
-const Layout = ({ title, children }: IProps) => {
+const Layout = ({ children, headerTitle, title }: IProps) => {
   const [theme, setTheme] = useState(defaultContext[0]);
   return (
     <Context.Provider value={[theme, setTheme]}>
       <div className={`layout theme--${theme}`}>
         <SEO title={title} />
-        <Header />
+        <Header title={headerTitle} />
         <DesktopHeader />
         <main>{children}</main>
         <footer>

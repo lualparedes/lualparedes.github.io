@@ -18,7 +18,7 @@ interface IProps {
 
 const BlogIndex = ({ data }: IProps) => {
   return (
-    <Layout title="Blog">
+    <Layout headerTitle="Blog" title="Blog">
       <Blog data={data} />
     </Layout>
   );
