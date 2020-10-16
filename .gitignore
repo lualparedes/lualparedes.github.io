@@ -1,5 +1,7 @@
 # Vim
 tags
+*.swp
+*.swo
 
 # Logs
 logs
