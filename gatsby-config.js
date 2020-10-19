@@ -12,6 +12,7 @@ module.exports = {
       options: {
         postCssPlugins: [
           require('postcss-import'),
+          require('postcss-mixins'),
           require(`postcss-preset-env`)({ stage: 0 }),
           require('postcss-nested'),
           require('autoprefixer'),

@@ -11,6 +11,13 @@
 
   --standardTransitionTime: 200ms;
   --standardTransition: all var(--standardTransitionTime) ease-in-out;
+
+  --borderRadius: 20px;
+}
+
+@define-mixin subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .theme--light {
