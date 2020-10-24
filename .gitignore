@@ -1,0 +1,5 @@
+node_modules
+tags
+*.sw*
+.cache
+public
