@@ -1,3 +1,8 @@
+# Vim
+tags
+*.swp
+*.swo
+
 # Logs
 logs
 *.log
@@ -57,6 +62,7 @@ typings/
 # gatsby files
 .cache/
 public
+content/blog
 
 # Mac files
 .DS_Store
