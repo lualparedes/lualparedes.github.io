@@ -3,3 +3,4 @@ tags
 *.sw*
 .cache
 public
+docs
