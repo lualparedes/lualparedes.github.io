@@ -45,6 +45,7 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
+    "deploy": "yarn build && gh-pages -d public",
     "build": "gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
