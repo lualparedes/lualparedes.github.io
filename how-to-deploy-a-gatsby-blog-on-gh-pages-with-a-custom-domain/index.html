@@ -1,0 +1,453 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.144438535f5bf2d33b6c.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden]{display:none}@font-face{font-family:manropethin;src:url(/static/manrope-thin-webfont-562447ce5381e9394710a5cd44f0f8bd.woff2) format("woff2"),url(/static/manrope-thin-webfont-997fdaa8227063694d551cecfafcb7c2.woff) format("woff");font-weight:100;font-style:normal}@font-face{font-family:manropelight;src:url(/static/manrope-light-webfont-3cd80ce91d6bd3622e792d6889572326.woff2) format("woff2"),url(/static/manrope-light-webfont-feb9166b7d6a1f2ef4e9b05c11641612.woff) format("woff");font-weight:300;font-style:normal}@font-face{font-family:manroperegular;src:url(/static/manrope-regular-webfont-3a3284b69c75a9a4b4f88176049590bc.woff2) format("woff2"),url(/static/manrope-regular-webfont-5778688aa4b76ee02e48fda6d257d7ca.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:manropemedium;src:url(/static/manrope-medium-webfont-22475f4e02ca5b32c9fa17d01fbcef1c.woff2) format("woff2"),url(/static/manrope-medium-webfont-8741fbf391cf2ce7b80d4f5f730864d0.woff) format("woff");font-weight:500;font-style:normal}@font-face{font-family:manropesemibold;src:url(/static/manrope-semibold-webfont-5f4007859dad46e155dff5b36f821a26.woff2) format("woff2"),url(/static/manrope-semibold-webfont-b96e5f6ce2732cd89425aeb18e4cd486.woff) format("woff");font-weight:600;font-style:normal}@font-face{font-family:manropebold;src:url(/static/manrope-bold-webfont-e9cece3ede116feae933170ca0eb5552.woff2) format("woff2"),url(/static/manrope-bold-webfont-d1891abb1759a414c61341936e2d44b6.woff) format("woff");font-weight:700;font-style:normal}@font-face{font-family:manropeextrabold;src:url(/static/manrope-extrabold-webfont-fb6c898f0ef8233cbcecf474856fc96c.woff2) format("woff2"),url(/static/manrope-extrabold-webfont-dae0a1abdc1684885c2c825dd9c0f430.woff) format("woff");font-weight:800;font-style:normal}:root{--maxWidth-none:"none";--maxWidth-xs:20rem;--maxWidth-sm:24rem;--maxWidth-md:28rem;--maxWidth-lg:32rem;--maxWidth-xl:36rem;--maxWidth-2xl:42rem;--maxWidth-3xl:48rem;--maxWidth-4xl:56rem;--maxWidth-full:"100%";--maxWidth-wrapper:var(--maxWidth-2xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontFamily-sans:"manropeextrabold",Montserrat,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--fontFamily-serif:"manropemedium","Merriweather","Georgia",Cambria,"Times New Roman",Times,serif;--font-body:var(--fontFamily-serif);--font-heading:var(--fontFamily-sans);--fontWeight-normal:400;--fontWeight-medium:500;--fontWeight-semibold:600;--fontWeight-bold:700;--fontWeight-extrabold:800;--fontWeight-black:900;--fontSize-root:16px;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--fontSize-0:0.833rem;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--color-primary:#0057ff;--color-text:#2e353f;--color-text-light:#4f5969;--color-heading:#1a202c;--color-heading-black:#000;--color-accent:#d1dce5}*,:after,:before{box-sizing:border-box}html{line-height:var(--lineHeight-normal);font-size:var(--fontSize-root);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{font-family:var(--font-body);font-size:var(--fontSize-1);color:var(--color-text)}footer{padding:var(--spacing-6) var(--spacing-0)}hr{background:var(--color-accent);height:1px;border:0}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);margin-top:var(--spacing-12);margin-bottom:var(--spacing-6);line-height:var(--lineHeight-tight);letter-spacing:-.025em}h2,h3,h4,h5,h6{font-weight:var(--fontWeight-bold);color:var(--color-heading)}h1{font-weight:var(--fontWeight-black);font-size:var(--fontSize-6);color:var(--color-heading-black)}h2{font-size:var(--fontSize-5)}h3{font-size:var(--fontSize-4)}h4{font-size:var(--fontSize-3)}h5{font-size:var(--fontSize-2)}h6{font-size:var(--fontSize-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}p{line-height:var(--lineHeight-relaxed);--baseline-multiplier:0.179;--x-height-multiplier:0.35;margin:var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{margin-left:var(--spacing-0);margin-right:var(--spacing-0);margin-bottom:var(--spacing-8);list-style-position:outside;list-style-image:none}ol li,ul li{padding-left:var(--spacing-0)}li>p,ol li,ul li{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{color:var(--color-text-light);margin-left:calc(var(--spacing-6)*-1);margin-right:var(--spacing-8);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);border-left:var(--spacing-1) solid var(--color-primary);font-size:var(--fontSize-2);font-style:italic;margin-bottom:var(--spacing-8)}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}table{width:100%;margin-bottom:var(--spacing-8);border-collapse:collapse;border-spacing:.25rem}table thead tr th{border-bottom:1px solid var(--color-accent)}a{color:var(--color-primary)}a:focus,a:hover{text-decoration:none}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5)}.global-wrapper[data-is-root-path=true] .bio{margin-bottom:var(--spacing-20)}.global-header{margin-bottom:var(--spacing-12)}.main-heading{font-size:var(--fontSize-7);margin:0}.post-list-item{margin-bottom:var(--spacing-8);margin-top:var(--spacing-8)}.post-list-item p{margin-bottom:var(--spacing-0)}.post-list-item h2{font-size:var(--fontSize-4);color:var(--color-primary);margin-bottom:var(--spacing-2);margin-top:var(--spacing-0)}.post-list-item header{margin-bottom:var(--spacing-4)}.header-link-home{font-weight:var(--fontWeight-bold);font-family:var(--font-heading);text-decoration:none;font-size:var(--fontSize-2)}.bio{display:flex;margin-bottom:var(--spacing-16);align-items:center}.bio-avatar,.bio p{margin-bottom:var(--spacing-0)}.bio-avatar{margin-right:var(--spacing-4);min-width:50px;border-radius:100%}.blog-post header h1{margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}.blog-post header p{font-size:var(--fontSize-2);font-family:var(--font-heading)}.blog-post-nav ul{margin:var(--spacing-0)}.gatsby-highlight{margin-bottom:var(--spacing-8)}@media (max-width:42rem){blockquote{padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);margin-left:var(--spacing-0)}ol,ul{list-style-position:inside}}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.24.79"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=98e5718b43dc45093bddce8cf42b9563" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=98e5718b43dc45093bddce8cf42b9563"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=98e5718b43dc45093bddce8cf42b9563"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=98e5718b43dc45093bddce8cf42b9563"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=98e5718b43dc45093bddce8cf42b9563"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=98e5718b43dc45093bddce8cf42b9563"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=98e5718b43dc45093bddce8cf42b9563"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=98e5718b43dc45093bddce8cf42b9563"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=98e5718b43dc45093bddce8cf42b9563"/><title data-react-helmet="true">How To Deploy A Gatsby Blog On GitHub Pages With A Custom Domain | Lual Dev</title><meta data-react-helmet="true" name="description" content="Detailed tutorial to create a blog using Gatsby and deploy it using GitHub Pages wiht a custom domain."/><meta data-react-helmet="true" property="og:title" content="How To Deploy A Gatsby Blog On GitHub Pages With A Custom Domain"/><meta data-react-helmet="true" property="og:description" content="Detailed tutorial to create a blog using Gatsby and deploy it using GitHub Pages wiht a custom domain."/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="lualdev"/><meta data-react-helmet="true" name="twitter:title" content="How To Deploy A Gatsby Blog On GitHub Pages With A Custom Domain"/><meta data-react-helmet="true" name="twitter:description" content="Detailed tutorial to create a blog using Gatsby and deploy it using GitHub Pages wiht a custom domain."/><link as="script" rel="preload" href="/webpack-runtime-33118e92ac0326297ce6.js"/><link as="script" rel="preload" href="/styles-755093da0c07f4b49226.js"/><link as="script" rel="preload" href="/framework-e2d419ac45d8ae41957a.js"/><link as="script" rel="preload" href="/app-51997545a25e2e548d94.js"/><link as="script" rel="preload" href="/commons-2deed94f9af5183baf9b.js"/><link as="script" rel="preload" href="/cd7d5f864fc9e15ed8adef086269b0aeff617554-1f93fa2c69781b8b58a9.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-5952f0a3628569676198.js"/><link as="fetch" rel="preload" href="/page-data/how-to-deploy-a-gatsby-blog-on-gh-pages-with-a-custom-domain/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2841359383.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/916993862.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Lual Dev</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">How To Deploy A Gatsby Blog On GitHub Pages With A Custom Domain</h1><p>November 06, 2020</p></header><section itemProp="articleBody"><p>GitHub Pages has become a very handy alternative for free, reliable and secure hosting for brochure sites and blogs. All you need to do to be able to use it is to have a GitHub account and be able to perform a few simple development tasks.</p>
+<p>In this post we’ll be learning how to use the service to launch a blog with our own custom domain.</p>
+<h2>Setting Up The Blog</h2>
+<p>As with any other type of website we need some HTML, CSS and JavaScript files to be served, and we can choose to either write them directly ourselves or use a tool that would render the files for us.</p>
+<p>Since we’re building a blog, the most sensible approach is to use a tool that outputs the final bundle for us.</p>
+<p>The universe of tools that can do this is huge, and you can use anything you want as long as you get a final plain HTML/CSS/JS
+bundle.</p>
+<p>The tool we’ll be using this time is Gatsby, one of the most popular static website generators.</p>
+<p>To build a blog with Gatsby, all you need to do is the following:</p>
+<h3>1. Install Gatsby’s CLI</h3>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm install -g gatsby-cli</code></pre></div>
+<h3>2. Choose a template</h3>
+<p>Go to the <a href="https://www.gatsbyjs.com/starters/">Gatsby Starters catalog</a> and pick the template that best suits your needs.</p>
+<p>If you want to spend some extra time building a custom theme it’s recommended to use a barebones template like <a href="https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-hello-world">gatsby-starter-hello-world</a> or <a href="https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-default">gatsby-starter-default</a>, but if you’d rather ship faster, you can pick a batteries included template like <a href="https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog">gatsby-starter-blog</a> or <a href="https://www.gatsbyjs.com/starters/aaaakshat/gatsby-starter-texblog">gatsby-starter-texblog</a>.</p>
+<h3>3. Download the template using Gatsby’s CLI</h3>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">gatsby new &lt;name-of-your-project&gt; &lt;starter-url&gt;</code></pre></div>
+<h3>4. Customize your website (optional)</h3>
+<p>The methods to change the visual appearance of your website will vary depending on the starter that you chose for your project, thus, the best place to look for the details on how to tweak the template appearance is the official documentation of the starter that you chose.</p>
+<p>Additionally, you can check <a href="https://www.gatsbyjs.com/docs/styling/">Gatsby’s documentation on styling</a> for a deeper look into how to customize the visual appearance of your website.</p>
+<h3>5. Create a GitHub repository</h3>
+<p>Create a public GitHub repository with the name <code class="language-text">&lt;your-gh-username&gt;.github.io</code>.</p>
+<h3>6. Add the repository as a remote.</h3>
+<p>Initialize a local git repository in your project’s directory:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">git init
+git add -A
+git commit -m &quot;Initial commit&quot;</code></pre></div>
+<p>Set up the GitHub repository as the main remote:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">git remote add origin &lt;gh-repo-url&gt;</code></pre></div>
+<h3>7. Push your customized website to GitHub.</h3>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">git push -u origin master</code></pre></div>
+<h2>Building</h2>
+<p>GitHub pages serves either a raw HTML/CSS/JS bundle or <code class="language-text">.md</code> files from a specific branch and directory. The branch could be, for instance, your current branch and the directory could be, for example, the root directory of the project or the default <code class="language-text">public</code> or <code class="language-text">dist</code> directories where most site generators output the final HTML/CSS/JS bundle.</p>
+<p>If you’ve been following along, you should already have all the development files of your website ready to build the output bundle. Producing the raw HTML/CSS/JS bundle is as simple as running <code class="language-text">gatsby build</code> or whatever script you have set up in <code class="language-text">package.json</code> for building the website.</p>
+<p>Most Gastby starters output the website bundle to the <code class="language-text">public</code> directory of your project, thus, running the build script of your project and setting your GitHub Pages configuration to publish from the <code class="language-text">public</code> directory of the current branch, is a valid approach to publish your website.</p>
+<p>However, it is a common practice to handle development files and output files separately, say, keeping the development files on one branch and the output bundle on another branch.</p>
+<p>You can apply this second approach manually or you can automate the proces using something like the command line tool <code class="language-text">gh-pages</code> —a very original name indeed 😜.</p>
+<p>To publish using <code class="language-text">gh-pages</code>:</p>
+<ol>
+<li>
+<p>Install <code class="language-text">gh-pages</code> globally:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">npm i -g gh-pages</code></pre></div>
+</li>
+<li>Run your build command.</li>
+<li>
+<p>Publish the website:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">gh-pages -d &lt;output-bundle-directory&gt;</code></pre></div>
+</li>
+</ol>
+<h2>Buying A Domain And Setting Up DNS Records</h2>
+<p>If you are fine with using <code class="language-text">&lt;your-gh-user&gt;.github.io</code> for the website, you can omit this section. However, GitHub Pages also allows you to use a custom domain if you decide to do so.</p>
+<p>First of all, you’ll need to buy the domain you want using Namecheap or the registrar of your preference. I’ll be explaining the process using Namecheap because it’s the registrar that I use, but even if you choose to use another registrar, the steps to follow will be quite similar.</p>
+<p>Buying a domain is just as simple as buying anything else online, however for the sake of completion I’ll list the steps that you need to follow using Namecheap:</p>
+<ol>
+<li>Go to Namecheap and check the availability of your domain using the domain searchbox.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/be60911009f6d9fea8ccb9457e3f29fa/cc6fe/buying-domain-1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClElEQVQoz22SW0jTYRiH//fdddONnQjLbHOzuYNT04jS1ixPOSXaRAsNQsqM6ASBSrqDa/9tbikeqs02a5WJGmTJjK6zoshO0EUUnaCLQvPw9LUkb3rh4f2+9/29P74PXsnrPI/X7cLj9SIL3B4PDqcLh6s9gd3pxLl4djracDjsOOytouaixe6i1SFmZTnBn3mJ91MsfPvEzBxLscD/Y+4XzAvhr+mE5vtPmJ79W0q0RZYqbdex1cSwVPaz1xKmTFC57yr7rVGstig22wA26wBVAtv+a1QLfbU1hrVC9CyRRYR2r7gLpAydD5O5B72xg41KN6nKCyhVHgyZAbQZfnQCvcZPtiFIljaAUdPBFl0QncKHNtWHfpNA5BxVgAJjN1J6uoxOmGn1ftSbvajVMgZ9ByVFIUoFxYVXMG3vxVLcT6k5RFH+ZSp295OnCQoTYa4Okq0IYCkIUVUSQVpj8JImTJQqGa3WT07WRTaud7NhXTvJK13sLOul5vR1dm3vI0sdQLHGTdraC2hSg2iV3RiVXWxRBDFl9rAntw8pu3GQFPHC1OR2Go4MMRGf4taNSYYGnzAYm2R4+CnxiddM3H/L+N03jN1+xv07L7lZ20wsI5+julPkavrITvGzVdWJVH7+HkmFPRgUfkpMYRoPj1JfO0x93Qgnj4/Rcm6C5rNxmgTnzsQ523iPMw3jnCjw0JR5jPp8H7rkAOasXh7E3yEtM/WxIq8L1SoZfVonRaYIh+pGOSAMtxVHWW3sYrn4TlLOJXaUDrCjMIpO34tKeUkQxpwbofHgCG9ef0usjhQeeUVT20PC3ZO8nPr6b+XmBTOz8zx48YXyBpkWT4jZxSX98PkHjx5/5FbsOc+fflqamZvnN+CFC/W6dffpAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Domain searchbox"
+        title="Domain searchbox"
+        src="/static/be60911009f6d9fea8ccb9457e3f29fa/f058b/buying-domain-1.png"
+        srcset="/static/be60911009f6d9fea8ccb9457e3f29fa/c26ae/buying-domain-1.png 158w,
+/static/be60911009f6d9fea8ccb9457e3f29fa/6bdcf/buying-domain-1.png 315w,
+/static/be60911009f6d9fea8ccb9457e3f29fa/f058b/buying-domain-1.png 630w,
+/static/be60911009f6d9fea8ccb9457e3f29fa/40601/buying-domain-1.png 945w,
+/static/be60911009f6d9fea8ccb9457e3f29fa/78612/buying-domain-1.png 1260w,
+/static/be60911009f6d9fea8ccb9457e3f29fa/cc6fe/buying-domain-1.png 1860w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ol start="2">
+<li>When you find the domain you want, click on add to cart. Some other buying options are displayed, though none of them are necessary to complete the tutorial.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5b1718837c7c03f3fd9a13a98a066838/cc6fe/buying-domain-2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABr0lEQVQoz42RTU/bQBCG89+RACcOJBzKgUuFgEq90JIEFYFaJFQhwYGcoJeolwgV107itTf27nr37czmo4lywfLjsbWzj2dma+36NlrNBvbaB2gRzf0WgnqIeqOJethE0Ah99ATBjN0dWg+xtRtiOwix32pjj+D9NSQDYDrC+y5LOLq1/yrsZkbN0KOiHFWWKKZTT1kUPiqlYKsK1RILswIc7dYaWlX0XsFaSxU6S7dFKgTi0QjJeOTj3ySBkDk0rTFmjnNuJoPGTV+h8zBB90niceB89TUuk5MUJUtKzIyBWEB/T6nKMVU/oSiU5mTf+u+hwNGPAh/6rzh6esO3vpu1vBBym4wxZn0oLCDcPFY0n7sXh8Nr4GXo8PNZ4/6XQVasCK11yPMSWZZ58jz3saTKFj/0Qmqp1A5RSmKjIEWCi/PPuP1+BR7dXDhL1tSOSFOkCyYTjCmWWm9IGZlL/HmL8PH4BF++dv2BLSvkNoQoif9Clsd8UDSGVSFT0bxz6iCKIpycnqHT6foTXmtZSkVtCi8VJGJhJiUkzZQFWBHyZp53HMc4PfuEXu9yKfwHDRfqNxt7uiwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Add to cart"
+        title="Add to cart"
+        src="/static/5b1718837c7c03f3fd9a13a98a066838/f058b/buying-domain-2.png"
+        srcset="/static/5b1718837c7c03f3fd9a13a98a066838/c26ae/buying-domain-2.png 158w,
+/static/5b1718837c7c03f3fd9a13a98a066838/6bdcf/buying-domain-2.png 315w,
+/static/5b1718837c7c03f3fd9a13a98a066838/f058b/buying-domain-2.png 630w,
+/static/5b1718837c7c03f3fd9a13a98a066838/40601/buying-domain-2.png 945w,
+/static/5b1718837c7c03f3fd9a13a98a066838/78612/buying-domain-2.png 1260w,
+/static/5b1718837c7c03f3fd9a13a98a066838/cc6fe/buying-domain-2.png 1860w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ol start="3">
+<li>Click on the Checkout button.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/be8fd9484f9889c42e944678b9adc8f1/cc6fe/buying-domain-3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoElEQVQoz32SzW7UQBCE95l5Eq6RkDgiJW8AQsoxAiEgwAmURUhZZf0zu+Px/NsuqsfjJScsf9remXF1ddm75dcHhMMDjAvIKWGaJjjvEUKAJ+M41joinDt4reDVE7wd8dhbKOPhnEWIkWctdgvWa8oZiYsXUixr5VoW3kTKZwAz74x5ntd9siuHuXAeBvRKXWi7DgPdJToWcmWuZDbLbBxHAxc8RdcWu9KHgsaN6CnQGoOGtLUWnrSG4jiKaxKDcw5t00Bz70COg1ndboLicH8YcGw6qL4ruUV2L9kxzxQT9qotUxhirWUkqeyLuESkzIyYN8Flxqc/FOwURjOUcRaOIA8YOpD/X/bf2fCIkzqVhjKViFrrKJDx/tsM7S6CC377R2g7IFJEhORtC1JHPoifH+H0CUmyy/kiWBymjHf3MyN5luGP3qHpTyWbhsjBDRGwtbb8XGTktbYFTBYvXie8/Tz9c2h9zYtdc3WXq5vidvutiIlJYH23B17eAtdf6VDCF0o3ZiMf9bb2P856wOLOuH8IuL2+w3RzBf3mFf4Cr14EVsr3V9cAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Checkout button"
+        title="Checkout button"
+        src="/static/be8fd9484f9889c42e944678b9adc8f1/f058b/buying-domain-3.png"
+        srcset="/static/be8fd9484f9889c42e944678b9adc8f1/c26ae/buying-domain-3.png 158w,
+/static/be8fd9484f9889c42e944678b9adc8f1/6bdcf/buying-domain-3.png 315w,
+/static/be8fd9484f9889c42e944678b9adc8f1/f058b/buying-domain-3.png 630w,
+/static/be8fd9484f9889c42e944678b9adc8f1/40601/buying-domain-3.png 945w,
+/static/be8fd9484f9889c42e944678b9adc8f1/78612/buying-domain-3.png 1260w,
+/static/be8fd9484f9889c42e944678b9adc8f1/cc6fe/buying-domain-3.png 1860w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ol start="4">
+<li>Confirm or edit your order. You may want to buy more years if you don’t want to have to renew the domain every year.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/73f07eaa745be5c887bb0773beb49053/cc6fe/buying-domain-4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzUlEQVQoz61RXU8TQRSdX6+xlLYLSKMBW7A+KCHRKDGaIhEVY6yiQjQatL6obcm27sfszM7X8c50BaOvTnL2zt479845Z1hUu4BWfQGNaAktQrMVYWGxQWiiVq9A+3rjX9Tqi4iWlhEtr6BBfT4yxJ8BMcP/WiwTJZKcQ0iBn0mCoihor/H2q8b+e4O9Y403Qw1rDZTWFRScA/oPH+DGZge9jQ7Wr7ZxfaMLlqQJJqenmM5myAtBd2gcDh3uDSROvhcYjiR6+wqTaQ7raKgx4ELCGo3+wSFWbu1i7fYTrN15ips7j8E4MeKcWAkBKSUNtBgnwN2BxYuPCs8+aOweWchSUc0RUwIx9Cfvbx3h4NI6Xra38Kp5Dd32azA/xA9TSgX4VVIzL/Vf7rj5NwSDlMqb3XfYudhBf3Ube60erqwOwNI0RRzH0Pp8wHg0xo9pDFnlPCt/sbUWGSkqghIgMcA34jAmTKt/5k0Wsgxm+wa//OPkeR5yzrmQl2UJQ9HnStoHJc8fgfcuz1lYHZgzpcrwwpLk+gZN8KoMDfr9b/6Aq1QQGajJCPLLp5DzF3s7WMpL5FycScJZ0c0Nq+Dm5oVzWZbRQ/Jzd329ir8AaQ/gzge+bPAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Order confirmation"
+        title="Order confirmation"
+        src="/static/73f07eaa745be5c887bb0773beb49053/f058b/buying-domain-4.png"
+        srcset="/static/73f07eaa745be5c887bb0773beb49053/c26ae/buying-domain-4.png 158w,
+/static/73f07eaa745be5c887bb0773beb49053/6bdcf/buying-domain-4.png 315w,
+/static/73f07eaa745be5c887bb0773beb49053/f058b/buying-domain-4.png 630w,
+/static/73f07eaa745be5c887bb0773beb49053/40601/buying-domain-4.png 945w,
+/static/73f07eaa745be5c887bb0773beb49053/78612/buying-domain-4.png 1260w,
+/static/73f07eaa745be5c887bb0773beb49053/cc6fe/buying-domain-4.png 1860w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ol start="5">
+<li>After confirming your order, you’ll be asked to login or create an account to complete the checkout process.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/937617ffd052da72b5314404ff5e9ac0/cc6fe/buying-domain-5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAByklEQVQoz41STU/bQBD1j68EsZ0GjKCtIHwG0h6rXgpx4qTtpYgIKEfOiZI4xvG3vXb8OrNOQiUutfS0s++9mZ0ZWTG0LezUNbzfMbBr7EGvN1DTdKh6XeLfWKvVoKoq1No2NF3Hu20NW3oDxv4BGrsGDj5+ggL7GQjnKPEfX5ECSwGISF6jHEiKV7ksSygvQQg/jBAmMbw4RpplELmAEAIZQeQ54iRBTFpGMXNZXki9IF+eV55s5VfuhkPcdEz0+gOYVh+dbm8Ds9fDjdnF/eMjHv48wSTOGvwg3pJx5bNWXguDn7+gdKjY+XkL7fZnXFxconl88oom4xhdLkSPnZ6eoXV5JfnDw+YGR0dNqbXbX6BEUQTP85DQWFmaYkkjlAUtZrmkcXLJ83g8srtYIAgCcA7fU/Kzzucaiuu6mEwmsmggaF+03HQFTmZ9/eh0OpWn7/sIw3BTmOM1r/BlQS/7lPzS+QbnbB9O6wPc66/EVUZOYs9oNHqD8XiM2czGfD6X3k1Bj6o797ewre+w+9dwhr8lxxp3wmeVPINt27JzLsC84zjyLjvkPWX8qzDoZ6S/rALHxLFW0E45mYvxyU3InZPG3a/HZfwFgzfKPE350W4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Account creation"
+        title="Account creation"
+        src="/static/937617ffd052da72b5314404ff5e9ac0/f058b/buying-domain-5.png"
+        srcset="/static/937617ffd052da72b5314404ff5e9ac0/c26ae/buying-domain-5.png 158w,
+/static/937617ffd052da72b5314404ff5e9ac0/6bdcf/buying-domain-5.png 315w,
+/static/937617ffd052da72b5314404ff5e9ac0/f058b/buying-domain-5.png 630w,
+/static/937617ffd052da72b5314404ff5e9ac0/40601/buying-domain-5.png 945w,
+/static/937617ffd052da72b5314404ff5e9ac0/78612/buying-domain-5.png 1260w,
+/static/937617ffd052da72b5314404ff5e9ac0/cc6fe/buying-domain-5.png 1860w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ol start="6">
+<li>Complete the checkout process as you’d usually do in any other online store.</li>
+</ol>
+<p>Now that you have the domain, it’s time to make it point to GitHub Pages servers:</p>
+<ol>
+<li>Go to your account dashboard and click on the Manage button of the domain you want to use.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/0ec6b42fb8ebae42dad69c34d6d52922/cc6fe/dns-config-1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.835443037974684%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABwUlEQVQoz4VQPW8TQRS8P4QcIgowgdRxEoKgRXThZ1BB4jvbATlCoqQioqKlQCiJlBYQNkmkpKLIpwHf3d5+7w5v1+cUaVhp9kvvzZuZZLOzjn6vi1ev+2hnHaSdLrIak3sPWZeQpUhTQnud/jp4mXbxok011LPR30TW28AbQoLLI4CNYPG/FSo8QcdX2NW1Cl+WSN4Nhnj79Ru2hgNwIVAUBXJCOJXWMMbAWhupipLhYvQbjBqd0ZCC4+T0DPl4DE213jskC48eY36hhSerz1BVFRhjV6gqXhcSHUHEgSWsFFDKQiqNMh+D//0Do1Qcmty+00SjcROt1hIVTUwEgkgytXLtHRaTHts/KQhKQlcSzhronS0kd+/NY2b2FpZXHoJzDiFltC7r09R2HRFGOAfrfMzz8MTj+QeH4/PJkDx9Sgqbc7jRmMHi0gNUQkJTgySbkrJTBB6ICYb+NZHreDoIcpMzgd0Dh0/fLd7veax99EHhfSIky8sr4KNTcFbG5qmiQBYGhHtQK4lo8q9gNcOvkcPnAQ2RBS5zi6Q5VxOSQlExqKCGlE1zu8pveqdhiNZ9zI0Jj919jy8/DLaHDv8AEqV5A2nkNUAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Account dashboard"
+        title="Account dashboard"
+        src="/static/0ec6b42fb8ebae42dad69c34d6d52922/f058b/dns-config-1.png"
+        srcset="/static/0ec6b42fb8ebae42dad69c34d6d52922/c26ae/dns-config-1.png 158w,
+/static/0ec6b42fb8ebae42dad69c34d6d52922/6bdcf/dns-config-1.png 315w,
+/static/0ec6b42fb8ebae42dad69c34d6d52922/f058b/dns-config-1.png 630w,
+/static/0ec6b42fb8ebae42dad69c34d6d52922/40601/dns-config-1.png 945w,
+/static/0ec6b42fb8ebae42dad69c34d6d52922/78612/dns-config-1.png 1260w,
+/static/0ec6b42fb8ebae42dad69c34d6d52922/cc6fe/dns-config-1.png 1860w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ol start="2">
+<li>Move to the Advanced DNS tab.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/98ea12da02eb5250d61a951b5eb67b18/cc6fe/dns-config-2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACQ0lEQVQoz31SSWsUURDu3yIBEWMWhAQ0RIILxMT96NkfIOhNTyrJLNlISEguggdBgsshF8EJEeJBUTIoQUdGM446SU8708v0/l735/dmRMzFhqKq36v66quvnrY4ncXC3AwWl1eQy08hk8sjS5/dF08jl80gm8kgl5nA1FQedyfzuJfhPXNm5xcwv7iEpZlZaGmliHCvAi+I8P9P0CTSMEAsOye+3J+ROg60kTOjGDw+jAuXLkPXdRiGAb3RwK9mE03TbJupvGXDpFm2jQfrLoplGyIw4bkWLMtiDn2rBW1gYBDd3T0YGzuHXYLoLGh5HoRk+zRFmiSIhWhbGIs207dfJFZeJKjbAuU9gSASkIlAFMfQ8mtruPPsKZbXCzBcF9V6HS6p7xH4E+NvbBIzMYwiCCGRyAhVQ+L5lsDL7RhPXgsUPkjexeyfQrt26zau3riJ6xOTiMIQvmJHXyiVMLe5iUfFYluKWm0XjaaJ3VoVDzcc6HUDvvkdSCysvvJQqztsJqD19fSh60AXTp88BdN28ONPoUWWFTL8TE0lx1cs/SBgEZu9F9jaSThuiMdvArwrS2pJTSmLNnRiBL39RzF+8QpsfQfl0jZsAiumdY5rEqS9YyZHHFsBqwbbJLfxMcZXQ90naHBxSmft2NAwjvT24+z4eY7scxlK4BSJWgYLJXX5+yzUkv75V0DKYmrbsq3OyArs4KHDGOWWY98DIp8PrAWXC3I4tu/77dgj44Bslakzzwt47ncg3Rac1fsQP6v4DXFMt2t7jA1NAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Advanced DNS tab"
+        title="Advanced DNS tab"
+        src="/static/98ea12da02eb5250d61a951b5eb67b18/f058b/dns-config-2.png"
+        srcset="/static/98ea12da02eb5250d61a951b5eb67b18/c26ae/dns-config-2.png 158w,
+/static/98ea12da02eb5250d61a951b5eb67b18/6bdcf/dns-config-2.png 315w,
+/static/98ea12da02eb5250d61a951b5eb67b18/f058b/dns-config-2.png 630w,
+/static/98ea12da02eb5250d61a951b5eb67b18/40601/dns-config-2.png 945w,
+/static/98ea12da02eb5250d61a951b5eb67b18/78612/dns-config-2.png 1260w,
+/static/98ea12da02eb5250d61a951b5eb67b18/cc6fe/dns-config-2.png 1860w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ol start="3">
+<li>Create 4 A Records pointing to each of the IPs provided by GitHub Pages (<a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">source of the IPs</a>).</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f15aa5869df65f9dac8536d3c9c28969/cc6fe/dns-config-3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjklEQVQoz4VSO07DQBD1WRAS/4RfEZEAiqgIBG5AywFooCNtao4BRcqcIWeAGoKQY3vjv/2YN3idFEhZ6Wl2Z3fezrwZp316jubBEa76twiCANPpN+I4VkRRBK6yLGu7Ck6rdYJGYx/9m1u4rquEvu8rSGgfpmmKoihWEw5HIwzeXvEyHiOWIBOGCJldkqilj+A+E8I0z2skWaZ39qyE988D3D0+4WE4RCoP+IiXBbMSm1ckoXxgzxaZnCMh5D6W+0xinX0pd31tHRfdCyTitA/lu7pEkjOTvPKrplYKIaFlLGVxOuddNA+P0ZOmqE4VkTYBqC0Di9J6Fks/5z1LJ2G7c4a95gF61zfahMAYBffz+RyRaErrzmYw4g+psYX4Pc+DERv4HjLJ0iHZxtYOeld9Fd7/+YH79YmZdPxbMJNuM8ATy4/mQmSWQB/vjQlEQ8mQM7i5vYvL3vWfHuxYHKnASdU9lUHKKio9l5FX8kwmE7y/fywIWTIHmxlw6XBXc6gNyqVBDP5n9qyGbNovc1HSvxzGIXQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="A Records list"
+        title="A Records list"
+        src="/static/f15aa5869df65f9dac8536d3c9c28969/f058b/dns-config-3.png"
+        srcset="/static/f15aa5869df65f9dac8536d3c9c28969/c26ae/dns-config-3.png 158w,
+/static/f15aa5869df65f9dac8536d3c9c28969/6bdcf/dns-config-3.png 315w,
+/static/f15aa5869df65f9dac8536d3c9c28969/f058b/dns-config-3.png 630w,
+/static/f15aa5869df65f9dac8536d3c9c28969/40601/dns-config-3.png 945w,
+/static/f15aa5869df65f9dac8536d3c9c28969/78612/dns-config-3.png 1260w,
+/static/f15aa5869df65f9dac8536d3c9c28969/cc6fe/dns-config-3.png 1860w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h2>Configuring GitHub Pages And Deploying</h2>
+<p>The final step to publish your website using GitHub Pages is simply performing a couple of modifications in your repository settings:</p>
+<ol>
+<li>Go to the Settings tab of your repository and scroll to the GitHub Pages section.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8b1a4d6df3e2d26acced645be648a222/9040f/gh-pages-config-1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 18.354430379746837%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApUlEQVQY05WOgQ7DIAhE+//fuS1L67SiVgXtDW33ASO53AvI4WKowgTGRoyP8nuveDlWVTxsxVO9cIO0BpZLMR2gEMEsCMpV/cgFISYsjiJ8yDCO4GOG9QnrxysXrJZg6YDzdIekuWjdPoM8hal13bDvfgYvIoKm14f33ifnnCHMk0dvzGS+adrrl/fbdVZTgpSC8zyxBL0w4FcjYDNGf+Hwb42cLworN9q81ROFAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Settings tab"
+        title="Settings tab"
+        src="/static/8b1a4d6df3e2d26acced645be648a222/f058b/gh-pages-config-1.png"
+        srcset="/static/8b1a4d6df3e2d26acced645be648a222/c26ae/gh-pages-config-1.png 158w,
+/static/8b1a4d6df3e2d26acced645be648a222/6bdcf/gh-pages-config-1.png 315w,
+/static/8b1a4d6df3e2d26acced645be648a222/f058b/gh-pages-config-1.png 630w,
+/static/8b1a4d6df3e2d26acced645be648a222/40601/gh-pages-config-1.png 945w,
+/static/8b1a4d6df3e2d26acced645be648a222/78612/gh-pages-config-1.png 1260w,
+/static/8b1a4d6df3e2d26acced645be648a222/9040f/gh-pages-config-1.png 1613w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ol start="2">
+<li>Chose the branch/directory combination that points to the place where your exported website files are (<code class="language-text">gh-pages</code>/<code class="language-text">root</code> if you decided to use the <code class="language-text">gh-pages</code> utility).</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/e751c/gh-pages-config-2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 15.822784810126581%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAf0lEQVQI122O0Q7DIAhF/f8v3aa2KqutoNxhs6VbsktOAB8OupQzlrRCuoCFf2jSDL7guQsO6ZDRMXSgG+MLR/TE7f5AjAu8DyiFEEKEN+ZbLgXLmkBEIJupNqQ6TKw4826fOLaLxaSTYILW2AQZ0SRb3e3nA9t+4F9UFWfpxQvfz+ob3a1nbgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Branch-directory inputs"
+        title="Branch-directory inputs"
+        src="/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/f058b/gh-pages-config-2.png"
+        srcset="/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/c26ae/gh-pages-config-2.png 158w,
+/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/6bdcf/gh-pages-config-2.png 315w,
+/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/f058b/gh-pages-config-2.png 630w,
+/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/40601/gh-pages-config-2.png 945w,
+/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/e751c/gh-pages-config-2.png 1123w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ol start="3">
+<li>Introduce the domain that you bought in the Custom domain input box.</li>
+</ol>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/3afb6c06724f94513ea3e4981217c338/e751c/gh-pages-config-3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 19.62025316455696%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAh0lEQVQY06VQbQ5CIQzj/qcUf8p7EGDDOD4qm74DGJc0KV1pCk5EoFhr4b9ZluG8v+PmPWJKIGKUWlGJUEo1XkpBzopsmnqI2Xjde3oKUpvg17RYd54RMSaE48AjBLTWdhCBuWGMgd47RCHdeFftq3/OEzIWxlzW0l1Pvgxae2zTnL9/gd59AxKUOaIVB0qUAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Custom domain input"
+        title="Custom domain input"
+        src="/static/3afb6c06724f94513ea3e4981217c338/f058b/gh-pages-config-3.png"
+        srcset="/static/3afb6c06724f94513ea3e4981217c338/c26ae/gh-pages-config-3.png 158w,
+/static/3afb6c06724f94513ea3e4981217c338/6bdcf/gh-pages-config-3.png 315w,
+/static/3afb6c06724f94513ea3e4981217c338/f058b/gh-pages-config-3.png 630w,
+/static/3afb6c06724f94513ea3e4981217c338/40601/gh-pages-config-3.png 945w,
+/static/3afb6c06724f94513ea3e4981217c338/e751c/gh-pages-config-3.png 1123w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ol start="4">
+<li>Save the changes.</li>
+</ol>
+<h2>Conclusion</h2>
+<p>Congratulations! 🎉  If you followed all the steps, now you have an official personal website!</p></section><hr/><footer><div class="bio"><div class="bio-avatar gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIEA//EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAYy6qmuqDWax4wA//8QAGxAAAgMAAwAAAAAAAAAAAAAAAQIAAxEQEjL/2gAIAQEAAQUCuYhQHr4fJgyeiR1UMZ//xAAZEQEAAgMAAAAAAAAAAAAAAAABAAIQISL/2gAIAQMBAT8BDFXhg6n/xAAVEQEBAAAAAAAAAAAAAAAAAAAQQf/aAAgBAgEBPwEp/8QAGxAAAQUBAQAAAAAAAAAAAAAAAQAQEiExAkH/2gAIAQEABj8CrSh1OQYE+LGtU3//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhUTFB/9oACAEBAAE/IdXjJeDqhj1Mpl9AwpiixWkKT40i6f/aAAwDAQACAAMAAAAQXO8+/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQAQESH/2gAIAQMBAT8QBNpF9jY7P//EABcRAQEBAQAAAAAAAAAAAAAAAAEAECH/2gAIAQIBAT8QVxOJL//EAB0QAQACAgIDAAAAAAAAAAAAAAERIQAQMUGBkaH/2gAIAQEAAT8QDhFlez8yBVQpRFidBAhJIeLrKPChHhnRqGSo6wwmnlN1lWojtz//2Q==" alt="Luis Paredes (Lual)" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/0734378bc6349368b4fbb4a4eecc921a/340ed/profile-pic.jpg 1x,
+/static/0734378bc6349368b4fbb4a4eecc921a/32ce1/profile-pic.jpg 1.5x,
+/static/0734378bc6349368b4fbb4a4eecc921a/04d41/profile-pic.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/0734378bc6349368b4fbb4a4eecc921a/340ed/profile-pic.jpg 1x,
+/static/0734378bc6349368b4fbb4a4eecc921a/32ce1/profile-pic.jpg 1.5x,
+/static/0734378bc6349368b4fbb4a4eecc921a/04d41/profile-pic.jpg 2x" src="/static/0734378bc6349368b4fbb4a4eecc921a/340ed/profile-pic.jpg" alt="Luis Paredes (Lual)" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Luis Paredes (Lual)</strong><br/>Building a better world, one line of code at a time.<br/><a href="https://twitter.com/lualdev">Follow the blog on Twitter.</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/hello-world/">← <!-- -->Holamundo</a></li><li></li></ul></nav></main><footer>© <!-- -->2020</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/how-to-deploy-a-gatsby-blog-on-gh-pages-with-a-custom-domain/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-b51087faa551b97588ee.js"],"app":["/app-51997545a25e2e548d94.js"],"component---src-pages-404-js":["/component---src-pages-404-js-aa9f1cbcc6f3aed265f6.js"],"component---src-pages-index-js":["/component---src-pages-index-js-a46e6d8c592d9e85002c.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-343e65b8f05e179e3233.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-5952f0a3628569676198.js"]};/*]]>*/</script><script src="/polyfill-b51087faa551b97588ee.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-5952f0a3628569676198.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-1f93fa2c69781b8b58a9.js" async=""></script><script src="/commons-2deed94f9af5183baf9b.js" async=""></script><script src="/app-51997545a25e2e548d94.js" async=""></script><script src="/framework-e2d419ac45d8ae41957a.js" async=""></script><script src="/styles-755093da0c07f4b49226.js" async=""></script><script src="/webpack-runtime-33118e92ac0326297ce6.js" async=""></script></body></html>

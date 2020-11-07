@@ -1,4 +1,449 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lual Dev]]></title><description><![CDATA[Web development blog.]]></description><link>https://lual.dev</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 28 Oct 2020 14:19:59 GMT</lastBuildDate><item><title><![CDATA[Holamundo]]></title><description><![CDATA[Hello world! I finally started writing and I hope to be able to keep doing so on a consistent basis. This is not the first blog that I start…]]></description><link>https://lual.dev/hello-world/</link><guid isPermaLink="false">https://lual.dev/hello-world/</guid><pubDate>Sat, 24 Oct 2020 01:30:36 GMT</pubDate><content:encoded>&lt;p&gt;Hello world! I finally started writing and I hope to be able to keep doing so on a consistent basis.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lual Dev]]></title><description><![CDATA[Web development blog.]]></description><link>https://lual.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 07 Nov 2020 03:07:40 GMT</lastBuildDate><item><title><![CDATA[How To Deploy A Gatsby Blog On GitHub Pages With A Custom Domain]]></title><description><![CDATA[GitHub Pages has become a very handy alternative for free, reliable and secure hosting for brochure sites and blogs. All you need to do to…]]></description><link>https://lual.dev/how-to-deploy-a-gatsby-blog-on-gh-pages-with-a-custom-domain/</link><guid isPermaLink="false">https://lual.dev/how-to-deploy-a-gatsby-blog-on-gh-pages-with-a-custom-domain/</guid><pubDate>Fri, 06 Nov 2020 15:36:10 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Pages has become a very handy alternative for free, reliable and secure hosting for brochure sites and blogs. All you need to do to be able to use it is to have a GitHub account and be able to perform a few simple development tasks.&lt;/p&gt;
+&lt;p&gt;In this post we’ll be learning how to use the service to launch a blog with our own custom domain.&lt;/p&gt;
+&lt;h2&gt;Setting Up The Blog&lt;/h2&gt;
+&lt;p&gt;As with any other type of website we need some HTML, CSS and JavaScript files to be served, and we can choose to either write them directly ourselves or use a tool that would render the files for us.&lt;/p&gt;
+&lt;p&gt;Since we’re building a blog, the most sensible approach is to use a tool that outputs the final bundle for us.&lt;/p&gt;
+&lt;p&gt;The universe of tools that can do this is huge, and you can use anything you want as long as you get a final plain HTML/CSS/JS
+bundle.&lt;/p&gt;
+&lt;p&gt;The tool we’ll be using this time is Gatsby, one of the most popular static website generators.&lt;/p&gt;
+&lt;p&gt;To build a blog with Gatsby, all you need to do is the following:&lt;/p&gt;
+&lt;h3&gt;1. Install Gatsby’s CLI&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install -g gatsby-cli&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;2. Choose a template&lt;/h3&gt;
+&lt;p&gt;Go to the &lt;a href=&quot;https://www.gatsbyjs.com/starters/&quot;&gt;Gatsby Starters catalog&lt;/a&gt; and pick the template that best suits your needs.&lt;/p&gt;
+&lt;p&gt;If you want to spend some extra time building a custom theme it’s recommended to use a barebones template like &lt;a href=&quot;https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-hello-world&quot;&gt;gatsby-starter-hello-world&lt;/a&gt; or &lt;a href=&quot;https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-default&quot;&gt;gatsby-starter-default&lt;/a&gt;, but if you’d rather ship faster, you can pick a batteries included template like &lt;a href=&quot;https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog&quot;&gt;gatsby-starter-blog&lt;/a&gt; or &lt;a href=&quot;https://www.gatsbyjs.com/starters/aaaakshat/gatsby-starter-texblog&quot;&gt;gatsby-starter-texblog&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;3. Download the template using Gatsby’s CLI&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby new &amp;lt;name-of-your-project&amp;gt; &amp;lt;starter-url&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;4. Customize your website (optional)&lt;/h3&gt;
+&lt;p&gt;The methods to change the visual appearance of your website will vary depending on the starter that you chose for your project, thus, the best place to look for the details on how to tweak the template appearance is the official documentation of the starter that you chose.&lt;/p&gt;
+&lt;p&gt;Additionally, you can check &lt;a href=&quot;https://www.gatsbyjs.com/docs/styling/&quot;&gt;Gatsby’s documentation on styling&lt;/a&gt; for a deeper look into how to customize the visual appearance of your website.&lt;/p&gt;
+&lt;h3&gt;5. Create a GitHub repository&lt;/h3&gt;
+&lt;p&gt;Create a public GitHub repository with the name &lt;code class=&quot;language-text&quot;&gt;&amp;lt;your-gh-username&amp;gt;.github.io&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;6. Add the repository as a remote.&lt;/h3&gt;
+&lt;p&gt;Initialize a local git repository in your project’s directory:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git init
+git add -A
+git commit -m &amp;quot;Initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Set up the GitHub repository as the main remote:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git remote add origin &amp;lt;gh-repo-url&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;7. Push your customized website to GitHub.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git push -u origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Building&lt;/h2&gt;
+&lt;p&gt;GitHub pages serves either a raw HTML/CSS/JS bundle or &lt;code class=&quot;language-text&quot;&gt;.md&lt;/code&gt; files from a specific branch and directory. The branch could be, for instance, your current branch and the directory could be, for example, the root directory of the project or the default &lt;code class=&quot;language-text&quot;&gt;public&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;dist&lt;/code&gt; directories where most site generators output the final HTML/CSS/JS bundle.&lt;/p&gt;
+&lt;p&gt;If you’ve been following along, you should already have all the development files of your website ready to build the output bundle. Producing the raw HTML/CSS/JS bundle is as simple as running &lt;code class=&quot;language-text&quot;&gt;gatsby build&lt;/code&gt; or whatever script you have set up in &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; for building the website.&lt;/p&gt;
+&lt;p&gt;Most Gastby starters output the website bundle to the &lt;code class=&quot;language-text&quot;&gt;public&lt;/code&gt; directory of your project, thus, running the build script of your project and setting your GitHub Pages configuration to publish from the &lt;code class=&quot;language-text&quot;&gt;public&lt;/code&gt; directory of the current branch, is a valid approach to publish your website.&lt;/p&gt;
+&lt;p&gt;However, it is a common practice to handle development files and output files separately, say, keeping the development files on one branch and the output bundle on another branch.&lt;/p&gt;
+&lt;p&gt;You can apply this second approach manually or you can automate the proces using something like the command line tool &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; —a very original name indeed 😜.&lt;/p&gt;
+&lt;p&gt;To publish using &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Install &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; globally:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm i -g gh-pages&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Run your build command.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Publish the website:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gh-pages -d &amp;lt;output-bundle-directory&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Buying A Domain And Setting Up DNS Records&lt;/h2&gt;
+&lt;p&gt;If you are fine with using &lt;code class=&quot;language-text&quot;&gt;&amp;lt;your-gh-user&amp;gt;.github.io&lt;/code&gt; for the website, you can omit this section. However, GitHub Pages also allows you to use a custom domain if you decide to do so.&lt;/p&gt;
+&lt;p&gt;First of all, you’ll need to buy the domain you want using Namecheap or the registrar of your preference. I’ll be explaining the process using Namecheap because it’s the registrar that I use, but even if you choose to use another registrar, the steps to follow will be quite similar.&lt;/p&gt;
+&lt;p&gt;Buying a domain is just as simple as buying anything else online, however for the sake of completion I’ll list the steps that you need to follow using Namecheap:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to Namecheap and check the availability of your domain using the domain searchbox.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/be60911009f6d9fea8ccb9457e3f29fa/cc6fe/buying-domain-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClElEQVQoz22SW0jTYRiH//fdddONnQjLbHOzuYNT04jS1ixPOSXaRAsNQsqM6ASBSrqDa/9tbikeqs02a5WJGmTJjK6zoshO0EUUnaCLQvPw9LUkb3rh4f2+9/29P74PXsnrPI/X7cLj9SIL3B4PDqcLh6s9gd3pxLl4djracDjsOOytouaixe6i1SFmZTnBn3mJ91MsfPvEzBxLscD/Y+4XzAvhr+mE5vtPmJ79W0q0RZYqbdex1cSwVPaz1xKmTFC57yr7rVGstig22wA26wBVAtv+a1QLfbU1hrVC9CyRRYR2r7gLpAydD5O5B72xg41KN6nKCyhVHgyZAbQZfnQCvcZPtiFIljaAUdPBFl0QncKHNtWHfpNA5BxVgAJjN1J6uoxOmGn1ftSbvajVMgZ9ByVFIUoFxYVXMG3vxVLcT6k5RFH+ZSp295OnCQoTYa4Okq0IYCkIUVUSQVpj8JImTJQqGa3WT07WRTaud7NhXTvJK13sLOul5vR1dm3vI0sdQLHGTdraC2hSg2iV3RiVXWxRBDFl9rAntw8pu3GQFPHC1OR2Go4MMRGf4taNSYYGnzAYm2R4+CnxiddM3H/L+N03jN1+xv07L7lZ20wsI5+julPkavrITvGzVdWJVH7+HkmFPRgUfkpMYRoPj1JfO0x93Qgnj4/Rcm6C5rNxmgTnzsQ523iPMw3jnCjw0JR5jPp8H7rkAOasXh7E3yEtM/WxIq8L1SoZfVonRaYIh+pGOSAMtxVHWW3sYrn4TlLOJXaUDrCjMIpO34tKeUkQxpwbofHgCG9ef0usjhQeeUVT20PC3ZO8nPr6b+XmBTOz8zx48YXyBpkWT4jZxSX98PkHjx5/5FbsOc+fflqamZvnN+CFC/W6dffpAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Domain searchbox&quot;
+        title=&quot;Domain searchbox&quot;
+        src=&quot;/static/be60911009f6d9fea8ccb9457e3f29fa/f058b/buying-domain-1.png&quot;
+        srcset=&quot;/static/be60911009f6d9fea8ccb9457e3f29fa/c26ae/buying-domain-1.png 158w,
+/static/be60911009f6d9fea8ccb9457e3f29fa/6bdcf/buying-domain-1.png 315w,
+/static/be60911009f6d9fea8ccb9457e3f29fa/f058b/buying-domain-1.png 630w,
+/static/be60911009f6d9fea8ccb9457e3f29fa/40601/buying-domain-1.png 945w,
+/static/be60911009f6d9fea8ccb9457e3f29fa/78612/buying-domain-1.png 1260w,
+/static/be60911009f6d9fea8ccb9457e3f29fa/cc6fe/buying-domain-1.png 1860w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;When you find the domain you want, click on add to cart. Some other buying options are displayed, though none of them are necessary to complete the tutorial.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5b1718837c7c03f3fd9a13a98a066838/cc6fe/buying-domain-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABr0lEQVQoz42RTU/bQBCG89+RACcOJBzKgUuFgEq90JIEFYFaJFQhwYGcoJeolwgV107itTf27nr37czmo4lywfLjsbWzj2dma+36NlrNBvbaB2gRzf0WgnqIeqOJethE0Ah99ATBjN0dWg+xtRtiOwix32pjj+D9NSQDYDrC+y5LOLq1/yrsZkbN0KOiHFWWKKZTT1kUPiqlYKsK1RILswIc7dYaWlX0XsFaSxU6S7dFKgTi0QjJeOTj3ySBkDk0rTFmjnNuJoPGTV+h8zBB90niceB89TUuk5MUJUtKzIyBWEB/T6nKMVU/oSiU5mTf+u+hwNGPAh/6rzh6esO3vpu1vBBym4wxZn0oLCDcPFY0n7sXh8Nr4GXo8PNZ4/6XQVasCK11yPMSWZZ58jz3saTKFj/0Qmqp1A5RSmKjIEWCi/PPuP1+BR7dXDhL1tSOSFOkCyYTjCmWWm9IGZlL/HmL8PH4BF++dv2BLSvkNoQoif9Clsd8UDSGVSFT0bxz6iCKIpycnqHT6foTXmtZSkVtCi8VJGJhJiUkzZQFWBHyZp53HMc4PfuEXu9yKfwHDRfqNxt7uiwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Add to cart&quot;
+        title=&quot;Add to cart&quot;
+        src=&quot;/static/5b1718837c7c03f3fd9a13a98a066838/f058b/buying-domain-2.png&quot;
+        srcset=&quot;/static/5b1718837c7c03f3fd9a13a98a066838/c26ae/buying-domain-2.png 158w,
+/static/5b1718837c7c03f3fd9a13a98a066838/6bdcf/buying-domain-2.png 315w,
+/static/5b1718837c7c03f3fd9a13a98a066838/f058b/buying-domain-2.png 630w,
+/static/5b1718837c7c03f3fd9a13a98a066838/40601/buying-domain-2.png 945w,
+/static/5b1718837c7c03f3fd9a13a98a066838/78612/buying-domain-2.png 1260w,
+/static/5b1718837c7c03f3fd9a13a98a066838/cc6fe/buying-domain-2.png 1860w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Click on the Checkout button.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/be8fd9484f9889c42e944678b9adc8f1/cc6fe/buying-domain-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoElEQVQoz32SzW7UQBCE95l5Eq6RkDgiJW8AQsoxAiEgwAmURUhZZf0zu+Px/NsuqsfjJScsf9remXF1ddm75dcHhMMDjAvIKWGaJjjvEUKAJ+M41joinDt4reDVE7wd8dhbKOPhnEWIkWctdgvWa8oZiYsXUixr5VoW3kTKZwAz74x5ntd9siuHuXAeBvRKXWi7DgPdJToWcmWuZDbLbBxHAxc8RdcWu9KHgsaN6CnQGoOGtLUWnrSG4jiKaxKDcw5t00Bz70COg1ndboLicH8YcGw6qL4ruUV2L9kxzxQT9qotUxhirWUkqeyLuESkzIyYN8Flxqc/FOwURjOUcRaOIA8YOpD/X/bf2fCIkzqVhjKViFrrKJDx/tsM7S6CC377R2g7IFJEhORtC1JHPoifH+H0CUmyy/kiWBymjHf3MyN5luGP3qHpTyWbhsjBDRGwtbb8XGTktbYFTBYvXie8/Tz9c2h9zYtdc3WXq5vidvutiIlJYH23B17eAtdf6VDCF0o3ZiMf9bb2P856wOLOuH8IuL2+w3RzBf3mFf4Cr14EVsr3V9cAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Checkout button&quot;
+        title=&quot;Checkout button&quot;
+        src=&quot;/static/be8fd9484f9889c42e944678b9adc8f1/f058b/buying-domain-3.png&quot;
+        srcset=&quot;/static/be8fd9484f9889c42e944678b9adc8f1/c26ae/buying-domain-3.png 158w,
+/static/be8fd9484f9889c42e944678b9adc8f1/6bdcf/buying-domain-3.png 315w,
+/static/be8fd9484f9889c42e944678b9adc8f1/f058b/buying-domain-3.png 630w,
+/static/be8fd9484f9889c42e944678b9adc8f1/40601/buying-domain-3.png 945w,
+/static/be8fd9484f9889c42e944678b9adc8f1/78612/buying-domain-3.png 1260w,
+/static/be8fd9484f9889c42e944678b9adc8f1/cc6fe/buying-domain-3.png 1860w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;Confirm or edit your order. You may want to buy more years if you don’t want to have to renew the domain every year.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/73f07eaa745be5c887bb0773beb49053/cc6fe/buying-domain-4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABzUlEQVQoz61RXU8TQRSdX6+xlLYLSKMBW7A+KCHRKDGaIhEVY6yiQjQatL6obcm27sfszM7X8c50BaOvTnL2zt479845Z1hUu4BWfQGNaAktQrMVYWGxQWiiVq9A+3rjX9Tqi4iWlhEtr6BBfT4yxJ8BMcP/WiwTJZKcQ0iBn0mCoihor/H2q8b+e4O9Y403Qw1rDZTWFRScA/oPH+DGZge9jQ7Wr7ZxfaMLlqQJJqenmM5myAtBd2gcDh3uDSROvhcYjiR6+wqTaQ7raKgx4ELCGo3+wSFWbu1i7fYTrN15ips7j8E4MeKcWAkBKSUNtBgnwN2BxYuPCs8+aOweWchSUc0RUwIx9Cfvbx3h4NI6Xra38Kp5Dd32azA/xA9TSgX4VVIzL/Vf7rj5NwSDlMqb3XfYudhBf3Ube60erqwOwNI0RRzH0Pp8wHg0xo9pDFnlPCt/sbUWGSkqghIgMcA34jAmTKt/5k0Wsgxm+wa//OPkeR5yzrmQl2UJQ9HnStoHJc8fgfcuz1lYHZgzpcrwwpLk+gZN8KoMDfr9b/6Aq1QQGajJCPLLp5DzF3s7WMpL5FycScJZ0c0Nq+Dm5oVzWZbRQ/Jzd329ir8AaQ/gzge+bPAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Order confirmation&quot;
+        title=&quot;Order confirmation&quot;
+        src=&quot;/static/73f07eaa745be5c887bb0773beb49053/f058b/buying-domain-4.png&quot;
+        srcset=&quot;/static/73f07eaa745be5c887bb0773beb49053/c26ae/buying-domain-4.png 158w,
+/static/73f07eaa745be5c887bb0773beb49053/6bdcf/buying-domain-4.png 315w,
+/static/73f07eaa745be5c887bb0773beb49053/f058b/buying-domain-4.png 630w,
+/static/73f07eaa745be5c887bb0773beb49053/40601/buying-domain-4.png 945w,
+/static/73f07eaa745be5c887bb0773beb49053/78612/buying-domain-4.png 1260w,
+/static/73f07eaa745be5c887bb0773beb49053/cc6fe/buying-domain-4.png 1860w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;After confirming your order, you’ll be asked to login or create an account to complete the checkout process.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/937617ffd052da72b5314404ff5e9ac0/cc6fe/buying-domain-5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAByklEQVQoz41STU/bQBD1j68EsZ0GjKCtIHwG0h6rXgpx4qTtpYgIKEfOiZI4xvG3vXb8OrNOQiUutfS0s++9mZ0ZWTG0LezUNbzfMbBr7EGvN1DTdKh6XeLfWKvVoKoq1No2NF3Hu20NW3oDxv4BGrsGDj5+ggL7GQjnKPEfX5ECSwGISF6jHEiKV7ksSygvQQg/jBAmMbw4RpplELmAEAIZQeQ54iRBTFpGMXNZXki9IF+eV55s5VfuhkPcdEz0+gOYVh+dbm8Ds9fDjdnF/eMjHv48wSTOGvwg3pJx5bNWXguDn7+gdKjY+XkL7fZnXFxconl88oom4xhdLkSPnZ6eoXV5JfnDw+YGR0dNqbXbX6BEUQTP85DQWFmaYkkjlAUtZrmkcXLJ83g8srtYIAgCcA7fU/Kzzucaiuu6mEwmsmggaF+03HQFTmZ9/eh0OpWn7/sIw3BTmOM1r/BlQS/7lPzS+QbnbB9O6wPc66/EVUZOYs9oNHqD8XiM2czGfD6X3k1Bj6o797ewre+w+9dwhr8lxxp3wmeVPINt27JzLsC84zjyLjvkPWX8qzDoZ6S/rALHxLFW0E45mYvxyU3InZPG3a/HZfwFgzfKPE350W4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Account creation&quot;
+        title=&quot;Account creation&quot;
+        src=&quot;/static/937617ffd052da72b5314404ff5e9ac0/f058b/buying-domain-5.png&quot;
+        srcset=&quot;/static/937617ffd052da72b5314404ff5e9ac0/c26ae/buying-domain-5.png 158w,
+/static/937617ffd052da72b5314404ff5e9ac0/6bdcf/buying-domain-5.png 315w,
+/static/937617ffd052da72b5314404ff5e9ac0/f058b/buying-domain-5.png 630w,
+/static/937617ffd052da72b5314404ff5e9ac0/40601/buying-domain-5.png 945w,
+/static/937617ffd052da72b5314404ff5e9ac0/78612/buying-domain-5.png 1260w,
+/static/937617ffd052da72b5314404ff5e9ac0/cc6fe/buying-domain-5.png 1860w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;Complete the checkout process as you’d usually do in any other online store.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now that you have the domain, it’s time to make it point to GitHub Pages servers:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to your account dashboard and click on the Manage button of the domain you want to use.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0ec6b42fb8ebae42dad69c34d6d52922/cc6fe/dns-config-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.835443037974684%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABwUlEQVQoz4VQPW8TQRS8P4QcIgowgdRxEoKgRXThZ1BB4jvbATlCoqQioqKlQCiJlBYQNkmkpKLIpwHf3d5+7w5v1+cUaVhp9kvvzZuZZLOzjn6vi1ev+2hnHaSdLrIak3sPWZeQpUhTQnud/jp4mXbxok011LPR30TW28AbQoLLI4CNYPG/FSo8QcdX2NW1Cl+WSN4Nhnj79Ru2hgNwIVAUBXJCOJXWMMbAWhupipLhYvQbjBqd0ZCC4+T0DPl4DE213jskC48eY36hhSerz1BVFRhjV6gqXhcSHUHEgSWsFFDKQiqNMh+D//0Do1Qcmty+00SjcROt1hIVTUwEgkgytXLtHRaTHts/KQhKQlcSzhronS0kd+/NY2b2FpZXHoJzDiFltC7r09R2HRFGOAfrfMzz8MTj+QeH4/PJkDx9Sgqbc7jRmMHi0gNUQkJTgySbkrJTBB6ICYb+NZHreDoIcpMzgd0Dh0/fLd7veax99EHhfSIky8sr4KNTcFbG5qmiQBYGhHtQK4lo8q9gNcOvkcPnAQ2RBS5zi6Q5VxOSQlExqKCGlE1zu8pveqdhiNZ9zI0Jj919jy8/DLaHDv8AEqV5A2nkNUAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Account dashboard&quot;
+        title=&quot;Account dashboard&quot;
+        src=&quot;/static/0ec6b42fb8ebae42dad69c34d6d52922/f058b/dns-config-1.png&quot;
+        srcset=&quot;/static/0ec6b42fb8ebae42dad69c34d6d52922/c26ae/dns-config-1.png 158w,
+/static/0ec6b42fb8ebae42dad69c34d6d52922/6bdcf/dns-config-1.png 315w,
+/static/0ec6b42fb8ebae42dad69c34d6d52922/f058b/dns-config-1.png 630w,
+/static/0ec6b42fb8ebae42dad69c34d6d52922/40601/dns-config-1.png 945w,
+/static/0ec6b42fb8ebae42dad69c34d6d52922/78612/dns-config-1.png 1260w,
+/static/0ec6b42fb8ebae42dad69c34d6d52922/cc6fe/dns-config-1.png 1860w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Move to the Advanced DNS tab.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/98ea12da02eb5250d61a951b5eb67b18/cc6fe/dns-config-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACQ0lEQVQoz31SSWsUURDu3yIBEWMWhAQ0RIILxMT96NkfIOhNTyrJLNlISEguggdBgsshF8EJEeJBUTIoQUdGM446SU8708v0/l735/dmRMzFhqKq36v66quvnrY4ncXC3AwWl1eQy08hk8sjS5/dF08jl80gm8kgl5nA1FQedyfzuJfhPXNm5xcwv7iEpZlZaGmliHCvAi+I8P9P0CTSMEAsOye+3J+ROg60kTOjGDw+jAuXLkPXdRiGAb3RwK9mE03TbJupvGXDpFm2jQfrLoplGyIw4bkWLMtiDn2rBW1gYBDd3T0YGzuHXYLoLGh5HoRk+zRFmiSIhWhbGIs207dfJFZeJKjbAuU9gSASkIlAFMfQ8mtruPPsKZbXCzBcF9V6HS6p7xH4E+NvbBIzMYwiCCGRyAhVQ+L5lsDL7RhPXgsUPkjexeyfQrt26zau3riJ6xOTiMIQvmJHXyiVMLe5iUfFYluKWm0XjaaJ3VoVDzcc6HUDvvkdSCysvvJQqztsJqD19fSh60AXTp88BdN28ONPoUWWFTL8TE0lx1cs/SBgEZu9F9jaSThuiMdvArwrS2pJTSmLNnRiBL39RzF+8QpsfQfl0jZsAiumdY5rEqS9YyZHHFsBqwbbJLfxMcZXQ90naHBxSmft2NAwjvT24+z4eY7scxlK4BSJWgYLJXX5+yzUkv75V0DKYmrbsq3OyArs4KHDGOWWY98DIp8PrAWXC3I4tu/77dgj44Bslakzzwt47ncg3Rac1fsQP6v4DXFMt2t7jA1NAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Advanced DNS tab&quot;
+        title=&quot;Advanced DNS tab&quot;
+        src=&quot;/static/98ea12da02eb5250d61a951b5eb67b18/f058b/dns-config-2.png&quot;
+        srcset=&quot;/static/98ea12da02eb5250d61a951b5eb67b18/c26ae/dns-config-2.png 158w,
+/static/98ea12da02eb5250d61a951b5eb67b18/6bdcf/dns-config-2.png 315w,
+/static/98ea12da02eb5250d61a951b5eb67b18/f058b/dns-config-2.png 630w,
+/static/98ea12da02eb5250d61a951b5eb67b18/40601/dns-config-2.png 945w,
+/static/98ea12da02eb5250d61a951b5eb67b18/78612/dns-config-2.png 1260w,
+/static/98ea12da02eb5250d61a951b5eb67b18/cc6fe/dns-config-2.png 1860w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Create 4 A Records pointing to each of the IPs provided by GitHub Pages (&lt;a href=&quot;https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain&quot;&gt;source of the IPs&lt;/a&gt;).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f15aa5869df65f9dac8536d3c9c28969/cc6fe/dns-config-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.89873417721519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjklEQVQoz4VSO07DQBD1WRAS/4RfEZEAiqgIBG5AywFooCNtao4BRcqcIWeAGoKQY3vjv/2YN3idFEhZ6Wl2Z3fezrwZp316jubBEa76twiCANPpN+I4VkRRBK6yLGu7Ck6rdYJGYx/9m1u4rquEvu8rSGgfpmmKoihWEw5HIwzeXvEyHiOWIBOGCJldkqilj+A+E8I0z2skWaZ39qyE988D3D0+4WE4RCoP+IiXBbMSm1ckoXxgzxaZnCMh5D6W+0xinX0pd31tHRfdCyTitA/lu7pEkjOTvPKrplYKIaFlLGVxOuddNA+P0ZOmqE4VkTYBqC0Di9J6Fks/5z1LJ2G7c4a95gF61zfahMAYBffz+RyRaErrzmYw4g+psYX4Pc+DERv4HjLJ0iHZxtYOeld9Fd7/+YH79YmZdPxbMJNuM8ATy4/mQmSWQB/vjQlEQ8mQM7i5vYvL3vWfHuxYHKnASdU9lUHKKio9l5FX8kwmE7y/fywIWTIHmxlw6XBXc6gNyqVBDP5n9qyGbNovc1HSvxzGIXQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;A Records list&quot;
+        title=&quot;A Records list&quot;
+        src=&quot;/static/f15aa5869df65f9dac8536d3c9c28969/f058b/dns-config-3.png&quot;
+        srcset=&quot;/static/f15aa5869df65f9dac8536d3c9c28969/c26ae/dns-config-3.png 158w,
+/static/f15aa5869df65f9dac8536d3c9c28969/6bdcf/dns-config-3.png 315w,
+/static/f15aa5869df65f9dac8536d3c9c28969/f058b/dns-config-3.png 630w,
+/static/f15aa5869df65f9dac8536d3c9c28969/40601/dns-config-3.png 945w,
+/static/f15aa5869df65f9dac8536d3c9c28969/78612/dns-config-3.png 1260w,
+/static/f15aa5869df65f9dac8536d3c9c28969/cc6fe/dns-config-3.png 1860w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Configuring GitHub Pages And Deploying&lt;/h2&gt;
+&lt;p&gt;The final step to publish your website using GitHub Pages is simply performing a couple of modifications in your repository settings:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to the Settings tab of your repository and scroll to the GitHub Pages section.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8b1a4d6df3e2d26acced645be648a222/9040f/gh-pages-config-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 18.354430379746837%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApUlEQVQY05WOgQ7DIAhE+//fuS1L67SiVgXtDW33ASO53AvI4WKowgTGRoyP8nuveDlWVTxsxVO9cIO0BpZLMR2gEMEsCMpV/cgFISYsjiJ8yDCO4GOG9QnrxysXrJZg6YDzdIekuWjdPoM8hal13bDvfgYvIoKm14f33ifnnCHMk0dvzGS+adrrl/fbdVZTgpSC8zyxBL0w4FcjYDNGf+Hwb42cLworN9q81ROFAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Settings tab&quot;
+        title=&quot;Settings tab&quot;
+        src=&quot;/static/8b1a4d6df3e2d26acced645be648a222/f058b/gh-pages-config-1.png&quot;
+        srcset=&quot;/static/8b1a4d6df3e2d26acced645be648a222/c26ae/gh-pages-config-1.png 158w,
+/static/8b1a4d6df3e2d26acced645be648a222/6bdcf/gh-pages-config-1.png 315w,
+/static/8b1a4d6df3e2d26acced645be648a222/f058b/gh-pages-config-1.png 630w,
+/static/8b1a4d6df3e2d26acced645be648a222/40601/gh-pages-config-1.png 945w,
+/static/8b1a4d6df3e2d26acced645be648a222/78612/gh-pages-config-1.png 1260w,
+/static/8b1a4d6df3e2d26acced645be648a222/9040f/gh-pages-config-1.png 1613w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Chose the branch/directory combination that points to the place where your exported website files are (&lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt;/&lt;code class=&quot;language-text&quot;&gt;root&lt;/code&gt; if you decided to use the &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; utility).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/e751c/gh-pages-config-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 15.822784810126581%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAf0lEQVQI122O0Q7DIAhF/f8v3aa2KqutoNxhs6VbsktOAB8OupQzlrRCuoCFf2jSDL7guQsO6ZDRMXSgG+MLR/TE7f5AjAu8DyiFEEKEN+ZbLgXLmkBEIJupNqQ6TKw4826fOLaLxaSTYILW2AQZ0SRb3e3nA9t+4F9UFWfpxQvfz+ob3a1nbgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Branch-directory inputs&quot;
+        title=&quot;Branch-directory inputs&quot;
+        src=&quot;/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/f058b/gh-pages-config-2.png&quot;
+        srcset=&quot;/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/c26ae/gh-pages-config-2.png 158w,
+/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/6bdcf/gh-pages-config-2.png 315w,
+/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/f058b/gh-pages-config-2.png 630w,
+/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/40601/gh-pages-config-2.png 945w,
+/static/f9a1fd6d3dfdec4f819d1e2a3eee3408/e751c/gh-pages-config-2.png 1123w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Introduce the domain that you bought in the Custom domain input box.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3afb6c06724f94513ea3e4981217c338/e751c/gh-pages-config-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 19.62025316455696%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAh0lEQVQY06VQbQ5CIQzj/qcUf8p7EGDDOD4qm74DGJc0KV1pCk5EoFhr4b9ZluG8v+PmPWJKIGKUWlGJUEo1XkpBzopsmnqI2Xjde3oKUpvg17RYd54RMSaE48AjBLTWdhCBuWGMgd47RCHdeFftq3/OEzIWxlzW0l1Pvgxae2zTnL9/gd59AxKUOaIVB0qUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Custom domain input&quot;
+        title=&quot;Custom domain input&quot;
+        src=&quot;/static/3afb6c06724f94513ea3e4981217c338/f058b/gh-pages-config-3.png&quot;
+        srcset=&quot;/static/3afb6c06724f94513ea3e4981217c338/c26ae/gh-pages-config-3.png 158w,
+/static/3afb6c06724f94513ea3e4981217c338/6bdcf/gh-pages-config-3.png 315w,
+/static/3afb6c06724f94513ea3e4981217c338/f058b/gh-pages-config-3.png 630w,
+/static/3afb6c06724f94513ea3e4981217c338/40601/gh-pages-config-3.png 945w,
+/static/3afb6c06724f94513ea3e4981217c338/e751c/gh-pages-config-3.png 1123w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;Save the changes.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Congratulations! 🎉  If you followed all the steps, now you have an official personal website!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Holamundo]]></title><description><![CDATA[Hello world! I finally started writing and I hope to be able to keep doing so on a consistent basis. This is not the first blog that I start…]]></description><link>https://lual.dev/hello-world/</link><guid isPermaLink="false">https://lual.dev/hello-world/</guid><pubDate>Sat, 24 Oct 2020 01:30:36 GMT</pubDate><content:encoded>&lt;p&gt;Hello world! I finally started writing and I hope to be able to keep doing so on a consistent basis.&lt;/p&gt;
 &lt;p&gt;This is not the first blog that I start, but it is the first one that gets me as excited as I am with this new venture. It probably has to do with having a more mature set of interests now, and knowing that programming and in particular, web development is one of the most important items in that set.&lt;/p&gt;
 &lt;h2&gt;What’s in it for you&lt;/h2&gt;
 &lt;p&gt;If you happen to have a keen interest in solving interesting problems using Javascript, Python and related technologies, while being as effective and productive as possible, then, chances are that you’ll find something of value here.&lt;/p&gt;
