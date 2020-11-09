@@ -1,5 +1,5 @@
 ---
-title: How To Deploy A Gatsby Blog On GitHub Pages With A Custom Domain
+title: How to Deploy a Gatsby Blog on GitHub Pages with a Custom Domain
 date: "2020-11-06T15:36:10.454Z"
 description: "Detailed tutorial to create a blog using Gatsby and deploy it using GitHub Pages wiht a custom domain."
 ---
@@ -8,7 +8,7 @@ GitHub Pages has become a very handy alternative for free, reliable and secure h
 
 In this post we'll be learning how to use the service to launch a blog with our own custom domain.
 
-## Setting Up The Blog
+## Setting Up the Blog
 
 As with any other type of website we need some HTML, CSS and JavaScript files to be served, and we can choose to either write them directly ourselves or use a tool that would render the files for us.
 
@@ -92,7 +92,7 @@ npm i -g gh-pages
 gh-pages -d <output-bundle-directory>
 ```
 
-## Buying A Domain And Setting Up DNS Records
+## Buying a Domain and Setting Up DNS Records
 
 If you are fine with using `<your-gh-user>.github.io` for the website, you can omit this section. However, GitHub Pages also allows you to use a custom domain if you decide to do so.
 
@@ -136,7 +136,7 @@ Now that you have the domain, it's time to make it point to GitHub Pages servers
 ![A Records list](./dns-config-3.png)
 
 
-## Configuring GitHub Pages And Deploying
+## Configuring GitHub Pages and Deploying
 
 The final step to publish your website using GitHub Pages is simply performing a couple of modifications in your repository settings:
 1. Go to the Settings tab of your repository and scroll to the GitHub Pages section.
