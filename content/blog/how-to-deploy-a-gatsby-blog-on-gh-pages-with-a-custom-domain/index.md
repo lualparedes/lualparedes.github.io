@@ -96,11 +96,11 @@ gh-pages -d <output-bundle-directory>
 
 If you are fine with using `<your-gh-user>.github.io` for the website, you can omit this section. However, GitHub Pages also allows you to use a custom domain if you decide to do so.
 
-First of all, you'll need to buy the domain you want using Namecheap or the registrar of your preference. I'll be explaining the process using Namecheap because it's the registrar that I use, but even if you choose to use another registrar, the steps to follow will be quite similar.
+First of all, you'll need to buy the domain you want using [Namecheap](https://namecheap.pxf.io/5WkAN) or the registrar of your preference. I'll be explaining the process using Namecheap because it's the registrar that I use, but even if you choose to use another registrar, the steps to follow will be quite similar.
 
 Buying a domain is just as simple as buying anything else online, however for the sake of completion I'll list the steps that you need to follow using Namecheap:
 
-1. Go to Namecheap and check the availability of your domain using the domain searchbox.
+1. [Go to Namecheap](https://namecheap.pxf.io/5WkAN) and check the availability of your domain using the domain searchbox.
 
 ![Domain searchbox](./buying-domain-1.png)
 
