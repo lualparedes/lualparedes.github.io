@@ -1,6 +1,250 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lual Dev]]></title><description><![CDATA[Web development blog.]]></description><link>https://lual.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 07 Nov 2020 03:07:40 GMT</lastBuildDate><item><title><![CDATA[How To Deploy A Gatsby Blog On GitHub Pages With A Custom Domain]]></title><description><![CDATA[GitHub Pages has become a very handy alternative for free, reliable and secure hosting for brochure sites and blogs. All you need to do to…]]></description><link>https://lual.dev/how-to-deploy-a-gatsby-blog-on-gh-pages-with-a-custom-domain/</link><guid isPermaLink="false">https://lual.dev/how-to-deploy-a-gatsby-blog-on-gh-pages-with-a-custom-domain/</guid><pubDate>Fri, 06 Nov 2020 15:36:10 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Pages has become a very handy alternative for free, reliable and secure hosting for brochure sites and blogs. All you need to do to be able to use it is to have a GitHub account and be able to perform a few simple development tasks.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Lual Dev]]></title><description><![CDATA[Web development blog.]]></description><link>https://lual.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Nov 2020 15:28:19 GMT</lastBuildDate><item><title><![CDATA[What Is the Django Admin and How to Use It]]></title><description><![CDATA[Django is one of the most popular web frameworks, it has been around for more than a decade and among its many distinctive features is the…]]></description><link>https://lual.dev/what-is-the-django-admin-and-how-to-use-it/</link><guid isPermaLink="false">https://lual.dev/what-is-the-django-admin-and-how-to-use-it/</guid><pubDate>Sun, 15 Nov 2020 03:22:14 GMT</pubDate><content:encoded>&lt;p&gt;Django is one of the most popular web frameworks, it has been around for more than a decade and among its many distinctive features is the prebuilt administration dashboard that comes with it.&lt;/p&gt;
+&lt;h2&gt;What the Django Admin Is&lt;/h2&gt;
+&lt;p&gt;The Django admin is simply a Django app (a module that allows you to do a especific set of tasks using Django) that provides you with a simple interface to perform CRUD operations on the models that are configured to be shown in the admin website.&lt;/p&gt;
+&lt;p&gt;It is meant to be a simple way to manage the model instances of your project without the need to spend extra time developing a custom UI to be able to do so.&lt;/p&gt;
+&lt;p&gt;However, it does provide the developer with a lot of customization options that offer features such as custom permissions, custom form validation and even support for using custom templates for the admin interface.&lt;/p&gt;
+&lt;h2&gt;What the Django Admin Is Not&lt;/h2&gt;
+&lt;p&gt;Even though, the Django Admin supports a lot of customization, as a rule of thumb, if you are planing to create a dashboard to visualize your data in a way that differs a lot from the original design of the Django admin templates, then chances are that you’d be better off creating your own admin panel from scratch, with an arquitecture tailored to your specific needs.&lt;/p&gt;
+&lt;p&gt;Keep in mind that Django Admin is meant to provide you a basic visual interface to manage your model instances &lt;em&gt;whithout&lt;/em&gt; having to spend too much time on creating the interface, therefore, expending too much time customizing the admin defeats the initial purpose of this Django app.&lt;/p&gt;
+&lt;h2&gt;Basic Setup&lt;/h2&gt;
+&lt;p&gt;The Django admin comes installed by default when initializing your project using the &lt;code class=&quot;language-text&quot;&gt;startproject&lt;/code&gt; command. All you need to enter the interface is to start the server, go to &lt;code class=&quot;language-text&quot;&gt;/admin/&lt;/code&gt; and log in with an admin user (use the &lt;code class=&quot;language-text&quot;&gt;createsuperuser&lt;/code&gt; command to create a user with admin permissions if you don’t have one already).&lt;/p&gt;
+&lt;p&gt;If for some reason you didn’t initialize your project using the &lt;code class=&quot;language-text&quot;&gt;starproject&lt;/code&gt; command and you need to set up the Django admin manually, all you need to do is to make sure that the needed apps are listed in &lt;code class=&quot;language-text&quot;&gt;INSTALLED_APPS&lt;/code&gt; and the &lt;code class=&quot;language-text&quot;&gt;TEMPLATES&lt;/code&gt; setting is configured &lt;a href=&quot;https://docs.djangoproject.com/en/dev/ref/contrib/admin/#overview&quot;&gt;as described in the official docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Architectural Overview&lt;/h2&gt;
+&lt;p&gt;The focus of this section is not to understand the inner workings of the Django admin but rather to explain the main architectural patterns that you’ll need to understand as a developer using the Django admin app.&lt;/p&gt;
+&lt;p&gt;There are three main classes and one function that represent the core of the Django admin architecture, namely: the classes &lt;code class=&quot;language-text&quot;&gt;django.contrib.admin.ModelAdmin&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;django.contrib.admin.InlineModelAdmin&lt;/code&gt;, and &lt;code class=&quot;language-text&quot;&gt;django.contrib.admin.AdminSite&lt;/code&gt; and the function &lt;code class=&quot;language-text&quot;&gt;admin.site.register()&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;register()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;If the default Django admin interface fulfills all your needs, all you need to do to be able to add a specific Model to the admin is to register your model using &lt;code class=&quot;language-text&quot;&gt;django.contrib.admin.site.register()&lt;/code&gt; as follows:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# myapp/admin.py&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; django&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;contrib &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; admin
+
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; myproject&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;myapp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;models &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; MyModel
+
+
+admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;site&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;register&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;MyModel&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin&lt;/code&gt; is a class that contains all the information needed to define the specifics of the interface used to handle a particular model.&lt;/p&gt;
+&lt;p&gt;This is the class that allows you to define custom permissions, and any big or small UI modifications for the admin interface used for a particular model.&lt;/p&gt;
+&lt;p&gt;You associate a particular model with a specific &lt;code class=&quot;language-text&quot;&gt;ModelAdmin&lt;/code&gt; as follows:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# myapp/admin.py&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; django&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;contrib &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; admin
+
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; myproject&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;myapp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;models &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; MyModel
+
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;MyModelAdmin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ModelAdmin&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;pass&lt;/span&gt;
+
+
+admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;site&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;register&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;MyModel&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; MyModelAdmin&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Alternatively, you can associate the model with its &lt;code class=&quot;language-text&quot;&gt;ModelAdmin&lt;/code&gt; using the &lt;code class=&quot;language-text&quot;&gt;register()&lt;/code&gt; decorator:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# myapp/admin.py&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; django&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;contrib &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; admin
+
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; myproject&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;myapp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;models &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; MyModel
+
+
+&lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;register&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;MyModel&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;MyModelAdmin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ModelAdmin&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;pass&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;InlineModelAdmin&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;It is very common to have models associated with other models, for example, a &lt;code class=&quot;language-text&quot;&gt;Photo&lt;/code&gt; model can be associated with an &lt;code class=&quot;language-text&quot;&gt;Author&lt;/code&gt; model, and you could register both &lt;code class=&quot;language-text&quot;&gt;Photo&lt;/code&gt;, and &lt;code class=&quot;language-text&quot;&gt;Author&lt;/code&gt; to the admin, which will result in having separate admin interfaces to manage the objects of each type.&lt;/p&gt;
+&lt;p&gt;However, you may want to be able to edit the information of the photos created by a particular author without having to leave the author page. For this and similar cases, we use the &lt;code class=&quot;language-text&quot;&gt;InlineModelAdmin&lt;/code&gt; class to describe how the related model interface will be shown inside the admin interface of the parent model.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;InlineModelAdmin&lt;/code&gt; is never used directly, but rather through the subclasses &lt;code class=&quot;language-text&quot;&gt;TabularInline&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;StackedInline&lt;/code&gt;. These two classes have the same exact attributes and methods, save for the template they use to display the inline form.&lt;/p&gt;
+&lt;p&gt;This is how you’d use &lt;code class=&quot;language-text&quot;&gt;TabularInline&lt;/code&gt; for example:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# photos/admin.py&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; django&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;contrib &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; admin
+
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; myproject&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;photos&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;models &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Author&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Photo
+
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;PhotoInline&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;TabularInline&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Photo
+
+
+&lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;register&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Author&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AuthorAdmin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ModelAdmin&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    inlines &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;PhotoInline&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# assuming that there&apos;s a FK to Author in Photo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;resulting in a “tabular” inline form:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8fb4b133a1ebff94c8884f277040f127/b30aa/tabular_inline_form.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.86075949367089%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA9UlEQVQoz6WSUW7CMAyGc/977G0S2zgBj6BN7A2JaVygDaxJUZvE6U+cKCggJFLN0ic3rf3btSPeNjsst79Yfh+SD7x//eBltcXicx/PH5W8rncQ6iSh/47wZgDI4WqeMNsmgnCOYKyDDd4RwU8TyHtMrBmen0E+kc6AeFgofJxLNqG1hlIKwzDAGAMKXTrnoq+BY3M85wt5lGjbFl3XgcXHcYzUduXDeHIOI3IFa22swC/Z11opGDssDyUcWAM3k/Njh1JKNE2Dvu+vv1orVsJ5PEeRBG7nUm7t6dW73/J/rs1Dwe6scVJnjGEGaTlpQXPJy70AnUaoFqR7LokAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Tabular inline form&quot;
+        title=&quot;Tabular inline form&quot;
+        src=&quot;/static/8fb4b133a1ebff94c8884f277040f127/f058b/tabular_inline_form.png&quot;
+        srcset=&quot;/static/8fb4b133a1ebff94c8884f277040f127/c26ae/tabular_inline_form.png 158w,
+/static/8fb4b133a1ebff94c8884f277040f127/6bdcf/tabular_inline_form.png 315w,
+/static/8fb4b133a1ebff94c8884f277040f127/f058b/tabular_inline_form.png 630w,
+/static/8fb4b133a1ebff94c8884f277040f127/40601/tabular_inline_form.png 945w,
+/static/8fb4b133a1ebff94c8884f277040f127/78612/tabular_inline_form.png 1260w,
+/static/8fb4b133a1ebff94c8884f277040f127/b30aa/tabular_inline_form.png 1405w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Substituting &lt;code class=&quot;language-text&quot;&gt;TabularInline&lt;/code&gt; by &lt;code class=&quot;language-text&quot;&gt;StackedInline&lt;/code&gt; results in a “stacked” inline form:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a886b262119d256879c801625325799f/b30aa/stacked_inline_form.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.48101265822784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA8UlEQVQ4y72TYW6DMAyFc//bdN0xKq1/+4MdgIpCk2gBgvNqp6JiKETZqtbSJ3BIYvs9oXaHE/bHivl+ik/m46uCckYDCJD4MR1sdwGNPUAe/wnVXTVc34P4zmH0GBk/TZGJKAuFAKIFnKv55sCJsIywqh5We1OoXwdCKBorVfwxsjGGxxzhvY/P+T3H1j5ZU23bxkQqNk2Duq5hrYVzLq6RaPUHYofDMMR2JzZi+TGn1ebIJbrkNCw2JddVtkOt9UNgGV2YRU9RbIpENOVcZkqq+2iKHJabJUqMeKkp7/lTrlbjolmz/m7GbMwWyz0p024TyeZKF4H0jwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Stacked inline form&quot;
+        title=&quot;Stacked inline form&quot;
+        src=&quot;/static/a886b262119d256879c801625325799f/f058b/stacked_inline_form.png&quot;
+        srcset=&quot;/static/a886b262119d256879c801625325799f/c26ae/stacked_inline_form.png 158w,
+/static/a886b262119d256879c801625325799f/6bdcf/stacked_inline_form.png 315w,
+/static/a886b262119d256879c801625325799f/f058b/stacked_inline_form.png 630w,
+/static/a886b262119d256879c801625325799f/40601/stacked_inline_form.png 945w,
+/static/a886b262119d256879c801625325799f/78612/stacked_inline_form.png 1260w,
+/static/a886b262119d256879c801625325799f/b30aa/stacked_inline_form.png 1405w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;AdminSite&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Each Django admin site is represented by an &lt;code class=&quot;language-text&quot;&gt;AdminSite&lt;/code&gt; class. In most cases, you don’t have to use this class, however, if you happen to want to edit aspects of the admin site that are not associated with a particular model but rather are more general in nature, this is the class that allows you to perform those customizations.&lt;/p&gt;
+&lt;h2&gt;How to Customize the Django Admin&lt;/h2&gt;
+&lt;p&gt;Even though the Django admin is a full-fledged application with a default configuration that suits general needs, chances are that you may want to tweak the default interface a little bit to better suit the particular needs of your project.&lt;/p&gt;
+&lt;p&gt;For example, you may want to customize the default values to be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Filter the listed objects depending on a specific set of conditions.&lt;/li&gt;
+&lt;li&gt;Display only the main attributes of a model instead of displaying all attributes.&lt;/li&gt;
+&lt;li&gt;Create handy utilities to edit batches of objects instead of editing each object individually.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Django admin allows you to perform all of the customizations mentioned in the examples and much more with only minor tweaks to the default values.&lt;/p&gt;
+&lt;p&gt;In the following sections we’ll go into more detail on which class methods and attributes are used for customizing the admin.&lt;/p&gt;
+&lt;h3&gt;Basic UI Customization&lt;/h3&gt;
+&lt;p&gt;Django admin allows you to perform simple UI changes such as specifying what attributes to display and what filtering to use without having to write too much code.&lt;/p&gt;
+&lt;p&gt;Below is a list of the most useful methods and attributes available to perform this type of tasks on pages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.get_queryset()&lt;/code&gt;: override this method to filter the objects that you want to display in the admin. For example, if we have a system for a blog or a similar publication we may want to only allow authors to see the articles that they’ve written. We can fulfill this requirement using something like this:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# myapp/admin.py&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; django&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;contrib &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; admin
+
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; myproject&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;myapp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;models &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; BlogPost
+
+
+&lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;register&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;BlogPost&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BlogPostAdmin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ModelAdmin&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;get_queryset&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get_queryset&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;author&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.exclude&lt;/code&gt; / &lt;code class=&quot;language-text&quot;&gt;ModelAdmin.get_exclude(request, object=None)&lt;/code&gt;: set the attribute to a list containing the names of the fields you don’t want to display in the change and add pages. Alternativelly, you can determine this list programatically using the method version.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.fields&lt;/code&gt; / &lt;code class=&quot;language-text&quot;&gt;ModelAdmin.get_fields(request, object=None)&lt;/code&gt;: set the attribute to a list with the names of the fields you want to display in the change and add pages. Alternativelly, you can determine the value using the method version.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.inlines&lt;/code&gt; / &lt;code class=&quot;language-text&quot;&gt;ModelAdmin.get_inlines(request, object)&lt;/code&gt;: this attribute needs to be set with a list containing the inline classes you want to include in the admin interface of the parent model. Since Django 3.0, you can also use the method version to determine the list of inlines programatically.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.list_display&lt;/code&gt; / &lt;code class=&quot;language-text&quot;&gt;ModelAdmin.get_list_display(request)&lt;/code&gt;: this pair is the equivalent of &lt;code class=&quot;language-text&quot;&gt;fields&lt;/code&gt; / &lt;code class=&quot;language-text&quot;&gt;get_fields()&lt;/code&gt; for the change list page.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.list_display_links&lt;/code&gt; / &lt;code class=&quot;language-text&quot;&gt;ModelAdmin.get_list_display_links(request, list_display)&lt;/code&gt;: set the attribute to a list containing the names of the fields that should link to the change page. Use the method version to determine this list programatically.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.list_editable&lt;/code&gt;: set it to a list with the names of the fields you’d like to edit directly in the change list page.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;InlineModelAdmin.readonly_fields&lt;/code&gt;: set it to a list containing the names of the fields you don’t want to be editable in the add and change pages.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.sortable_by&lt;/code&gt; / &lt;code class=&quot;language-text&quot;&gt;ModelAdmin.get_sortable_by(request)&lt;/code&gt;: set the attribute to a list containing the names of the fields that will allow sorting in the change list page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Inlines also offer a similar set of attributes to perform basic UI customization:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;InlineModelAdmin.exclude&lt;/code&gt;: use it exactly as the &lt;code class=&quot;language-text&quot;&gt;ModelAdmin&lt;/code&gt; attribute.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;InlineModelAdmin.fields&lt;/code&gt;: Ídem.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;InlineModelAdmin.readonly_fields&lt;/code&gt;: Ídem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Advanced UI Customization&lt;/h3&gt;
+&lt;p&gt;If you want to apply custom Django templates to the admin, you can do so by overriding the following properties depending on the page you’d like to customize:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.change_list_template&lt;/code&gt;: set this attribute to the path to a custom template to be used for the change list page (&lt;code class=&quot;language-text&quot;&gt;changelist_view()&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.add_form_template&lt;/code&gt;: set this attribute to the path to a custom template to be used for the add page (&lt;code class=&quot;language-text&quot;&gt;add_view()&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.change_form_template&lt;/code&gt;: set this attribute to the path to a custom template to be used for the change page (&lt;code class=&quot;language-text&quot;&gt;change_view()&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.delete_confirmation_template&lt;/code&gt;: set it to a path to a custom template to be used by &lt;code class=&quot;language-text&quot;&gt;delete_view()&lt;/code&gt; as a delete confirmation page.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.delete_selected_confirmation_template&lt;/code&gt;: set it to a path to a custom template to be used by the &lt;code class=&quot;language-text&quot;&gt;delete_selected&lt;/code&gt; action method —see next section to learn more about actions— as a delete confirmation page.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.object_history_template&lt;/code&gt;: set it to a path to a custom template to be used by &lt;code class=&quot;language-text&quot;&gt;history_view()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ModelAdmin.popup_response_template&lt;/code&gt;: set it to a path to a custom template to be used by &lt;code class=&quot;language-text&quot;&gt;response_add()&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;response_change()&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;response_delete()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Actions&lt;/h2&gt;
+&lt;p&gt;Actions are functions that allow you to perform a task on several objects. By default, Django admin comes with the delete action, but it also allows you to create your own actions.&lt;/p&gt;
+&lt;p&gt;For instance, say that you have a &lt;code class=&quot;language-text&quot;&gt;BlogPost&lt;/code&gt; that has a boolean field that determines whether or not it is published and you have several post drafts you want to mark as published. You could change the &lt;code class=&quot;language-text&quot;&gt;published&lt;/code&gt; values of each object one by one, or you could create an action that allows you to batch edit the posts just as follows:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# myapp/admin.py&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; django&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;contrib &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; admin
+
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; myproject&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;myapp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;models &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; BlogPost
+
+
+&lt;span class=&quot;token comment&quot;&gt;# Define a function that takes the current ModelAdmin, the HTTPRequest&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# that triggers the action and the QuerySet containing the objects&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# selected by the user as parameters.&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;publish_selected&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;modeladmin&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; queryset&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    queryset&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;update&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;published&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Add a description that will be used to identify the action in the&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# action dropdown widget&lt;/span&gt;
+publish_selected&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;short_description &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Publish selected&apos;&lt;/span&gt;
+
+&lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;register&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;BlogPost&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BlogPostAdmin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;admin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ModelAdmin&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    list_display &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;published&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    actions &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;publish_selected&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# Register the action&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/afe4207dfc1c055d8896be413e540fe1/01645/admin_action.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.9746835443038%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsTAAALEwEAmpwYAAABCUlEQVQY042QTUsDMRCG86u8ilCsLdUqiNSTUH9VL/UDVDyt3gWt4qLYPahgSy+CsJAuqN1lkt3N5MMxvShS7MuTMJC8M2/CSi/lhYi0a63dfGIAkOd54UVmqsn/r816MY0opeTj8edk8kErTXmSxHFMIYqCmuZ0c+ZkynoWBLXq8vpao9mobzRXK0uL+3tdOhNC+FDlT+iJAIJznqYZQz06Cg4qmzv17d1aq11ttRdWtrrHHedeS/WCeog4+IUeFtmjhCeFA5r8cDfqdS4uT8Kb8yg8DXuH11fPb6FzfWP71v0lQrg16t65iIF4B0iszSimR06xdjZGTAuGaFSpjaUP/MZ4qHBz8AWeCrV8TptAFwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Django admin action dropdown&quot;
+        title=&quot;Django admin action dropdown&quot;
+        src=&quot;/static/afe4207dfc1c055d8896be413e540fe1/f058b/admin_action.png&quot;
+        srcset=&quot;/static/afe4207dfc1c055d8896be413e540fe1/c26ae/admin_action.png 158w,
+/static/afe4207dfc1c055d8896be413e540fe1/6bdcf/admin_action.png 315w,
+/static/afe4207dfc1c055d8896be413e540fe1/f058b/admin_action.png 630w,
+/static/afe4207dfc1c055d8896be413e540fe1/40601/admin_action.png 945w,
+/static/afe4207dfc1c055d8896be413e540fe1/01645/admin_action.png 1091w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;We’ve seen what the Django admin is, when to use it and how to perform handy customizations to its interface.&lt;/p&gt;
+&lt;p&gt;You should be able to use the Django admin with confidence with this essential knowledge, however, it is also recommended to take a look at the &lt;a href=&quot;https://docs.djangoproject.com/en/dev/ref/contrib/admin/#module-django.contrib.admin&quot;&gt;official docs&lt;/a&gt; if you happen to want to go deeper into the topic.&lt;/p&gt;
+&lt;p&gt;Happy coding! 😊.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to Deploy a Gatsby Blog on GitHub Pages with a Custom Domain]]></title><description><![CDATA[GitHub Pages has become a very handy alternative for free, reliable and secure hosting for brochure sites and blogs. All you need to do to…]]></description><link>https://lual.dev/how-to-deploy-a-gatsby-blog-on-gh-pages-with-a-custom-domain/</link><guid isPermaLink="false">https://lual.dev/how-to-deploy-a-gatsby-blog-on-gh-pages-with-a-custom-domain/</guid><pubDate>Fri, 06 Nov 2020 15:36:10 GMT</pubDate><content:encoded>&lt;p&gt;GitHub Pages has become a very handy alternative for free, reliable and secure hosting for brochure sites and blogs. All you need to do to be able to use it is to have a GitHub account and be able to perform a few simple development tasks.&lt;/p&gt;
 &lt;p&gt;In this post we’ll be learning how to use the service to launch a blog with our own custom domain.&lt;/p&gt;
-&lt;h2&gt;Setting Up The Blog&lt;/h2&gt;
+&lt;h2&gt;Setting Up the Blog&lt;/h2&gt;
 &lt;p&gt;As with any other type of website we need some HTML, CSS and JavaScript files to be served, and we can choose to either write them directly ourselves or use a tool that would render the files for us.&lt;/p&gt;
 &lt;p&gt;Since we’re building a blog, the most sensible approach is to use a tool that outputs the final bundle for us.&lt;/p&gt;
 &lt;p&gt;The universe of tools that can do this is huge, and you can use anything you want as long as you get a final plain HTML/CSS/JS
@@ -46,12 +290,12 @@ git commit -m &amp;quot;Initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/di
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gh-pages -d &amp;lt;output-bundle-directory&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;Buying A Domain And Setting Up DNS Records&lt;/h2&gt;
+&lt;h2&gt;Buying a Domain and Setting Up DNS Records&lt;/h2&gt;
 &lt;p&gt;If you are fine with using &lt;code class=&quot;language-text&quot;&gt;&amp;lt;your-gh-user&amp;gt;.github.io&lt;/code&gt; for the website, you can omit this section. However, GitHub Pages also allows you to use a custom domain if you decide to do so.&lt;/p&gt;
-&lt;p&gt;First of all, you’ll need to buy the domain you want using Namecheap or the registrar of your preference. I’ll be explaining the process using Namecheap because it’s the registrar that I use, but even if you choose to use another registrar, the steps to follow will be quite similar.&lt;/p&gt;
+&lt;p&gt;First of all, you’ll need to buy the domain you want using &lt;a href=&quot;https://namecheap.pxf.io/5WkAN&quot;&gt;Namecheap&lt;/a&gt; or the registrar of your preference. I’ll be explaining the process using Namecheap because it’s the registrar that I use, but even if you choose to use another registrar, the steps to follow will be quite similar.&lt;/p&gt;
 &lt;p&gt;Buying a domain is just as simple as buying anything else online, however for the sake of completion I’ll list the steps that you need to follow using Namecheap:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Go to Namecheap and check the availability of your domain using the domain searchbox.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://namecheap.pxf.io/5WkAN&quot;&gt;Go to Namecheap&lt;/a&gt; and check the availability of your domain using the domain searchbox.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -238,7 +482,7 @@ git commit -m &amp;quot;Initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/di
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0ec6b42fb8ebae42dad69c34d6d52922/cc6fe/dns-config-1.png&quot;
+    href=&quot;/static/d174459a6bccba2a2155b43c2862b72c/cc6fe/dns-config-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -251,13 +495,13 @@ git commit -m &amp;quot;Initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/di
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Account dashboard&quot;
         title=&quot;Account dashboard&quot;
-        src=&quot;/static/0ec6b42fb8ebae42dad69c34d6d52922/f058b/dns-config-1.png&quot;
-        srcset=&quot;/static/0ec6b42fb8ebae42dad69c34d6d52922/c26ae/dns-config-1.png 158w,
-/static/0ec6b42fb8ebae42dad69c34d6d52922/6bdcf/dns-config-1.png 315w,
-/static/0ec6b42fb8ebae42dad69c34d6d52922/f058b/dns-config-1.png 630w,
-/static/0ec6b42fb8ebae42dad69c34d6d52922/40601/dns-config-1.png 945w,
-/static/0ec6b42fb8ebae42dad69c34d6d52922/78612/dns-config-1.png 1260w,
-/static/0ec6b42fb8ebae42dad69c34d6d52922/cc6fe/dns-config-1.png 1860w&quot;
+        src=&quot;/static/d174459a6bccba2a2155b43c2862b72c/f058b/dns-config-1.png&quot;
+        srcset=&quot;/static/d174459a6bccba2a2155b43c2862b72c/c26ae/dns-config-1.png 158w,
+/static/d174459a6bccba2a2155b43c2862b72c/6bdcf/dns-config-1.png 315w,
+/static/d174459a6bccba2a2155b43c2862b72c/f058b/dns-config-1.png 630w,
+/static/d174459a6bccba2a2155b43c2862b72c/40601/dns-config-1.png 945w,
+/static/d174459a6bccba2a2155b43c2862b72c/78612/dns-config-1.png 1260w,
+/static/d174459a6bccba2a2155b43c2862b72c/cc6fe/dns-config-1.png 1860w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -334,7 +578,7 @@ git commit -m &amp;quot;Initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/di
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;Configuring GitHub Pages And Deploying&lt;/h2&gt;
+&lt;h2&gt;Configuring GitHub Pages and Deploying&lt;/h2&gt;
 &lt;p&gt;The final step to publish your website using GitHub Pages is simply performing a couple of modifications in your repository settings:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Go to the Settings tab of your repository and scroll to the GitHub Pages section.&lt;/li&gt;
@@ -445,9 +689,9 @@ git commit -m &amp;quot;Initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/di
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Congratulations! 🎉  If you followed all the steps, now you have an official personal website!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Holamundo]]></title><description><![CDATA[Hello world! I finally started writing and I hope to be able to keep doing so on a consistent basis. This is not the first blog that I start…]]></description><link>https://lual.dev/hello-world/</link><guid isPermaLink="false">https://lual.dev/hello-world/</guid><pubDate>Sat, 24 Oct 2020 01:30:36 GMT</pubDate><content:encoded>&lt;p&gt;Hello world! I finally started writing and I hope to be able to keep doing so on a consistent basis.&lt;/p&gt;
 &lt;p&gt;This is not the first blog that I start, but it is the first one that gets me as excited as I am with this new venture. It probably has to do with having a more mature set of interests now, and knowing that programming and in particular, web development is one of the most important items in that set.&lt;/p&gt;
-&lt;h2&gt;What’s in it for you&lt;/h2&gt;
+&lt;h2&gt;What’s in It for You&lt;/h2&gt;
 &lt;p&gt;If you happen to have a keen interest in solving interesting problems using Javascript, Python and related technologies, while being as effective and productive as possible, then, chances are that you’ll find something of value here.&lt;/p&gt;
 &lt;p&gt;I’ll be documenting new things I learn in my personal journey as a developer, and I’ll make my best to provide as much value as possible in every post I write.&lt;/p&gt;
-&lt;h2&gt;Final thoughts&lt;/h2&gt;
+&lt;h2&gt;Final Thoughts&lt;/h2&gt;
 &lt;p&gt;If this looks like something you’d like to keep an eye on, you can do so following &lt;a href=&quot;https://twitter.com/lualdev/&quot;&gt;@lualdev on Twitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I’ll be posting weekly-ish, see you in the next post! :).&lt;/p&gt;</content:encoded></item></channel></rss>
