@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Subscribe from "../components/subscribe"
+import Subscribe from "../components/Subscribe"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -31,8 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <Subscribe />
-        <hr />
-        <footer>
+        <footer style={{ marginTop: '64px' }}>
           <Bio />
         </footer>
       </article>

@@ -1,0 +1,92 @@
+.Subscribe {
+  padding: 64px 40px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--cardShadow);
+  position: relative;
+}
+.Subscribe__description {
+  font-size: var(--fontSize-4);
+  line-height: 1.25;
+}
+.Subscribe::before {
+  content: 'Subscribe';
+  font-weight: 900;
+  opacity: 0.1;
+  position: absolute;
+  right: -55px;
+  bottom: 60%;
+  transform: rotate(-90deg) scale(10);
+  width: min-content;
+  display: block;
+}
+.Subscribe::after {
+  content: 'Subscribe';
+  font-weight: 900;
+  opacity: 0.1;
+  position: absolute;
+  right: 40px;
+  bottom: 88%;
+  transform: rotate(-90deg) scale(10);
+  width: min-content;
+  display: block;
+}
+
+.label {
+  padding-left: 16px;
+  font-weight: 700;
+}
+
+.in {
+  width: 100%;
+  padding: 0 16px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+.in:focus {
+  border-color: var(--color-primary);
+}
+.in--subscribe {
+  max-width: 400px;
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  background: var(--color-primary);
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+.btn__label {
+  position: relative;
+  top: 1px;
+}
+.btn--submit {
+  margin-top: var(--spacing-6);
+}
+.btn::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: calc(100% + 8px);
+  transform: translate(-50%, -50%);
+  border-radius: 24px;
+  border: 2px solid var(--color-primary);
+  height: calc(40px + 8px);
+  position: absolute;
+  transition: var(--transition-standard);
+  display: none;
+}
+.btn:hover::after {
+  display: block;
+}

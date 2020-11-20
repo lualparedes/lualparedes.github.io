@@ -1,6 +1,6 @@
 /* CSS Custom Properties Definitions */
 @font-face {
-    font-family: 'manropethin';
+    font-family: 'manrope';
     src: url('../content/assets/manrope-thin-webfont.woff2') format('woff2'),
          url('../content/assets/manrope-thin-webfont.woff') format('woff');
     font-weight: 100;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: 'manropelight';
+    font-family: 'manrope';
     src: url('../content/assets/manrope-light-webfont.woff2') format('woff2'),
          url('../content/assets/manrope-light-webfont.woff') format('woff');
     font-weight: 300;
@@ -16,7 +16,7 @@
 }
 
 @font-face {
-    font-family: 'manroperegular';
+    font-family: 'manrope';
     src: url('../content/assets/manrope-regular-webfont.woff2') format('woff2'),
          url('../content/assets/manrope-regular-webfont.woff') format('woff');
     font-weight: 400;
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-    font-family: 'manropemedium';
+    font-family: 'manrope';
     src: url('../content/assets/manrope-medium-webfont.woff2') format('woff2'),
          url('../content/assets/manrope-medium-webfont.woff') format('woff');
     font-weight: 500;
@@ -32,7 +32,7 @@
 }
 
 @font-face {
-    font-family: 'manropesemibold';
+    font-family: 'manrope';
     src: url('../content/assets/manrope-semibold-webfont.woff2') format('woff2'),
          url('../content/assets/manrope-semibold-webfont.woff') format('woff');
     font-weight: 600;
@@ -40,7 +40,7 @@
 }
 
 @font-face {
-    font-family: 'manropebold';
+    font-family: 'manrope';
     src: url('../content/assets/manrope-bold-webfont.woff2') format('woff2'),
          url('../content/assets/manrope-bold-webfont.woff') format('woff');
     font-weight: 700;
@@ -48,7 +48,7 @@
 }
 
 @font-face {
-    font-family: 'manropeextrabold';
+    font-family: 'manrope';
     src: url('../content/assets/manrope-extrabold-webfont.woff2') format('woff2'),
          url('../content/assets/manrope-extrabold-webfont.woff') format('woff');
     font-weight: 800;
@@ -82,10 +82,10 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: "manropeextrabold", Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+  --fontFamily-sans: "manrope", Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "manropemedium", "Merriweather", "Georgia", Cambria, "Times New Roman",
+  --fontFamily-serif: "manrope", "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
@@ -110,11 +110,15 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #0057ff;
+  --color-secondary: #4081ff;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --transition-standard: all 100ms ease-out;
+  --radius: 20px;
+  --cardShadow: 0 12px 32px rgba(0, 0, 0, 0.25);
 }
 
 /* HTML elements */
@@ -126,6 +130,7 @@
 }
 
 html {
+  font-weight: 500;
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;

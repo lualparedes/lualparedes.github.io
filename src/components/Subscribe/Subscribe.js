@@ -1,10 +1,15 @@
 import React from "react";
 import Image from "gatsby-image";
 
+import IconArrowForward from "../icons/IconArrowForward";
+import ButtonIcon from "../ButtonIcon";
+
+import "./style.css";
+
 const Subscribe = () => {
   return (
-    <div className="subscribe">
-      <p>
+    <div className="Subscribe">
+      <p className="Subscribe__description">
         Web dev content,
         <br /> delivered weekly
       </p>
@@ -20,22 +25,26 @@ const Subscribe = () => {
         >
           <div id="mc_embed_signup_scroll">
             <div className="mc-field-group">
-              <label for="mce-NAME">Name </label>
+              <label for="mce-NAME" className="label">
+                Name
+              </label>
               <input
                 type="text"
                 defaultValue=""
                 name="NAME"
-                className="required"
+                className="required in in--subscribe"
                 id="mce-NAME"
               />
             </div>
             <div className="mc-field-group">
-              <label for="mce-EMAIL">Email </label>
+              <label for="mce-EMAIL" className="label">
+                Email
+              </label>
               <input
                 type="email"
                 defaultValue=""
                 name="EMAIL"
-                className="required email"
+                className="required email in in--subscribe"
                 id="mce-EMAIL"
               />
             </div>
@@ -43,15 +52,17 @@ const Subscribe = () => {
               <div
                 className="response"
                 id="mce-error-response"
-                style={{display: 'none'}}
+                style={{ display: "none" }}
               ></div>
               <div
                 className="response"
                 id="mce-success-response"
-                style={{display: 'none'}}
+                style={{ display: "none" }}
               ></div>
             </div>
-            <div style={{position: 'absolute', left: -5000, ariaHidden: 'true'}}>
+            <div
+              style={{ position: "absolute", left: -5000, ariaHidden: "true" }}
+            >
               <input
                 type="text"
                 name="b_81f5f28fdffec0498a75c1527_cff01cbe3f"
@@ -60,13 +71,17 @@ const Subscribe = () => {
               />
             </div>
             <div className="clear">
-              <input
+              <button
                 type="submit"
-                value="Subscribe"
                 name="subscribe"
                 id="mc-embedded-subscribe"
-                className="button"
-              />
+                className="button btn btn--submit"
+              >
+                <span class="btn__label">Subscribe</span>
+                <ButtonIcon>
+                  <IconArrowForward />
+                </ButtonIcon>
+              </button>
             </div>
           </div>
         </form>
@@ -75,4 +90,4 @@ const Subscribe = () => {
   );
 };
 
-export default Subscribe;
+export { Subscribe };
