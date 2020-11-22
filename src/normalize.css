@@ -116,6 +116,13 @@ samp {
   font-size: 1em; /* 2 */
 }
 
+kbd {
+  background: var(--color-prism-background);
+  padding: 4px 10px;
+  border-bottom: 3px solid var(--color-blockShadow);
+  border-radius: 8px;
+}
+
 /**
  * Add the correct font size in all browsers.
  */
@@ -154,6 +161,7 @@ sup {
 
 img {
   border-style: none;
+  width: 100%;
 }
 
 /* Forms
