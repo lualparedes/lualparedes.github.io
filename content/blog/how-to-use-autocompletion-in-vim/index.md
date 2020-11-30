@@ -6,7 +6,7 @@ description: "A comprehensive guide covering all completion modes available in V
 
 One of the coolest features that can make you more productive with Vim is autocompletion.
 
-As with anything else, there are many plugins for this topic, but they toolset that Vim offers out of the box in this regard is powerful on its own.
+As with anything else, there are many plugins for this topic, but the toolset that Vim offers out of the box in this regard is powerful on its own.
 
 In this post, we'll be taking a look at how to navigate, accept or reject completion suggestions, and when and how to use each of the submodes that allow you to complete a particular type of words.
 
@@ -134,7 +134,7 @@ Notice that:
 - ⚠️ <kbd>CTRL</kbd> + <kbd>S</kbd> suspends display in many Unix terminals. Don't panic if you did it by accident! You can reactivate your display using <kbd>CTRL</kbd> + <kbd>Q</kbd> 😉.
 - If there's a spelling error in the line you're editing, the cursor will jump to the misspelled word and the options available for completion will be based on that word instead of the word you were initially editing when you entered this submode.
 
-## Complete Words Using Custom Function
+## Complete Words Using Custom Completion
 
 If none of the default completion types satisfies your needs, you can create your own completion function and access it using `^X^U`(**u**ser defined completion) in insert or replace mode. All you need to do is to create a function that matches the format defined in the documentation (`:h complete-functions`), and then set the `completefunc` value to your custom function:
 ```vim
