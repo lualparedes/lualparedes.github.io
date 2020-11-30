@@ -131,7 +131,7 @@ au FileType {filetype} set omnifunc={custom omni function}
 If the `spell` option is active (`:set spell`), you can complete words in the language used for spelling correction using `^X^S` or `^Xs` in insert or replace mode.
 
 Notice that:
-- ⚠️ <kdb>CTRL</kdb> + <kdb>S</kdb> suspends display in many Unix terminals. Don't panic if you did it by accident! You can reactivate your display using <kdb>CTRL</kdb> + <kdb>Q</kdb> 😉.
+- ⚠️ <kbd>CTRL</kbd> + <kbd>S</kbd> suspends display in many Unix terminals. Don't panic if you did it by accident! You can reactivate your display using <kbd>CTRL</kbd> + <kbd>Q</kbd> 😉.
 - If there's a spelling error in the line you're editing, the cursor will jump to the misspelled word and the options available for completion will be based on that word instead of the word you were initially editing when you entered this submode.
 
 ## Complete Words Using Custom Function
