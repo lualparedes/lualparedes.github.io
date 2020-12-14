@@ -10,8 +10,8 @@ const Subscribe = () => {
   return (
     <div className="Subscribe">
       <p className="Subscribe__description">
-        Web dev content,
-        <br /> delivered weekly
+        Subscribe for more<br />
+        web development tips!
       </p>
       <div id="mc_embed_signup">
         <form
