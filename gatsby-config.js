@@ -8,7 +8,7 @@ module.exports = {
     description: 'Web development blog.',
     siteUrl: 'https://lual.dev',
     social: {
-      twitter: `lualdev`,
+      telegram: 'lualdev',
     },
   },
   plugins: [

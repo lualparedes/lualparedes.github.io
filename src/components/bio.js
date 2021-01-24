@@ -26,7 +26,7 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            telegram
           }
         }
       }
@@ -55,8 +55,8 @@ const Bio = () => {
         <p>
           Written by <strong>{author.name}</strong><br/>
           {author?.summary || null}<br/>
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            Follow the blog on Twitter.
+          <a href={`https://t.me/${social?.telegram}`}>
+            Follow the blog on Telegram.
           </a>
         </p>
       )}
